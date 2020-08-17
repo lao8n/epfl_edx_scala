@@ -1,0 +1,6 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\Downloads\reactive-async\async\src\main\scala\async\Async.scala:100:12: constructor cannot be instantiated to expected type;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : scala.util.Failure[T][0m
+[0m[[0m[31merror[0m] [0m[0m required: Throwable[0m
+[0m[[0m[31merror[0m] [0m[0m      case Failure(error) => {[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
