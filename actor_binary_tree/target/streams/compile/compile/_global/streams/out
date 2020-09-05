@@ -1,0 +1,7 @@
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala:55:25: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0m  import BinaryTreeNode._[0m
+[0m[[0m[33mwarn[0m] [0m[0m                        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala:99:24: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0m  import BinaryTreeSet._[0m
+[0m[[0m[33mwarn[0m] [0m[0m                       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m

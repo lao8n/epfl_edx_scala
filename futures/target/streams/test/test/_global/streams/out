@@ -2,31 +2,31 @@
 [0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
 [0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 1 initial tasks for 1 tests.[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(async.AsyncSuite, sbt.ForkMain$AnnotatedFingerscan@1dd735b7, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(async.AsyncSuite, sbt.ForkMain$AnnotatedFingerscan@1f1dc0e, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
 [0m[[0m[0minfo[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36msequenceComputations should start the second computation after the first has completed (2pts)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36msequenceComputations should start the second computation after the first has completed (2pts)[0m finished, took 0.674 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36msequenceComputations should start the second computation after the first has completed (2pts)[0m finished, took 0.755 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mtransformSuccess should transform successful computations[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mtransformSuccess should transform successful computations[0m finished, took 0.016 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mtransformSuccess should transform successful computations[0m finished, took 0.021 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mtransformSuccess should propagate the failure of a failed computation[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mtransformSuccess should propagate the failure of a failed computation[0m finished, took 0.001 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mtransformSuccess should propagate the failure of a failed computation[0m finished, took 0.0 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mfuturize should handle successful computation results (3pts)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mfuturize should handle successful computation results (3pts)[0m finished, took 0.005 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mfuturize should handle successful computation results (3pts)[0m finished, took 0.01 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mrecoverFailure should recover from failed computations[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mrecoverFailure should recover from failed computations[0m finished, took 0.004 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36minsist should not retry successful computations (3pts)[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36minsist should not retry successful computations (3pts)[0m finished, took 0.007 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mfuturize should handle failed computation results (3pts)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mfuturize should handle failed computation results (3pts)[0m finished, took 0.006 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mfuturize should handle failed computation results (3pts)[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mrecoverFailure should propagate successful computations[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mrecoverFailure should propagate successful computations[0m finished, took 0.001 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36msequenceComputations should not start the second computation if the first has failed (2pts)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36msequenceComputations should not start the second computation if the first has failed (2pts)[0m finished, took 0.002 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36msequenceComputations should not start the second computation if the first has failed (2pts)[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36minsist should retry failed computations (3pts)[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36minsist should retry failed computations (3pts)[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mconcurrentComputations should start both computations independently of each other’s completion (2pts)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mconcurrentComputations should start both computations independently of each other’s completion (2pts)[0m finished, took 0.401 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 11 total, 1.224s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest async.[33mAsyncSuite[0m.[36mconcurrentComputations should start both computations independently of each other’s completion (2pts)[0m finished, took 0.403 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 11 total, 1.328s[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 11 events.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
 [0m[[0m[0minfo[0m] [0m[0mPassed: Total 11, Failed 0, Errors 0, Passed 11[0m

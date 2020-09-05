@@ -1,0 +1,57 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\reactive-actorbintree_2.13-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeNode$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeNode$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeNode$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeNode$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeNode$CopyFinished$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeNode$CopyFinished$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeNode$CopyTo$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeNode$CopyTo$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeNode$CopyTo.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeNode$CopyTo.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeNode$Left$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeNode$Left$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeNode$Position.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeNode$Position.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeNode$Right$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeNode$Right$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeNode.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeNode.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeSet$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeSet$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeSet$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeSet$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeSet$Contains$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeSet$Contains$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeSet$Contains.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeSet$Contains.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeSet$ContainsResult$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeSet$ContainsResult$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeSet$ContainsResult.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeSet$ContainsResult.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeSet$GC$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeSet$GC$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeSet$Insert$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeSet$Insert$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeSet$Insert.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeSet$Insert.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeSet$Operation.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeSet$Operation.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeSet$OperationFinished$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeSet$OperationFinished$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeSet$OperationFinished.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeSet$OperationFinished.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeSet$OperationReply.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeSet$OperationReply.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeSet$Remove$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeSet$Remove$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeSet$Remove.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeSet$Remove.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	actorbintree\BinaryTreeSet.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\target\scala-2.13\classes\actorbintree\BinaryTreeSet.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

@@ -1,0 +1,61 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\actor_wire_payment_2.13-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\Toggle$$anonfun$happy$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\Toggle$$anonfun$happy$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\SimpleActorTest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\SimpleActorTest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\WireTransfer$Transfer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\WireTransfer$Transfer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\WireTransfer$Transfer$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\WireTransfer$Transfer$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\SimpleActorTest$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\SimpleActorTest$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\WireTransfer$Done$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\WireTransfer$Done$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\TransferMain.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\TransferMain.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\WireTransfer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\WireTransfer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\WireTransfer$$anonfun$receive$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\WireTransfer$$anonfun$receive$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\BankAccount$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\BankAccount$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\BankAccount.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\BankAccount.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\BankAccount$Deposit.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\BankAccount$Deposit.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\BankAccount$$anonfun$receive$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\BankAccount$$anonfun$receive$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\BankAccount$Withdraw.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\BankAccount$Withdraw.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\WireTransfer$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\WireTransfer$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\Toggle.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\Toggle.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\WireTransfer$$anonfun$awaitTo$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\WireTransfer$$anonfun$awaitTo$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\WireTransfer$$anonfun$awaitFrom$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\WireTransfer$$anonfun$awaitFrom$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\SimpleActorTest$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\SimpleActorTest$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\TransferMain$$anonfun$transfer$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\TransferMain$$anonfun$transfer$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\BankAccount$Deposit$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\BankAccount$Deposit$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\Toggle$$anonfun$sad$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\Toggle$$anonfun$sad$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\TransferMain$$anonfun$receive$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\TransferMain$$anonfun$receive$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\BankAccount$Withdraw$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\BankAccount$Withdraw$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\WireTransfer$Failed$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\WireTransfer$Failed$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\BankAccount$Done$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\BankAccount$Done$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\BankAccount$Failed$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\BankAccount$Failed$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	reactive\SimpleActorTest$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\target\scala-2.13\classes\reactive\SimpleActorTest$.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

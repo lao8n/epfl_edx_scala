@@ -6,3 +6,195 @@
 Aug 17, 2020 1:23:36 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 WARNING: Unmatched cancel notification for request id 1
 2020.08.17 01:35:01 INFO  shutting down Metals
+2020.08.20 23:37:37 INFO  started: Metals version 0.9.2 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.08.20 23:37:39 INFO  time: initialize in 1.43s
+2020.08.20 23:37:40 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.08.20 23:37:59 INFO  no build target: using presentation compiler with only scala-library
+2020.08.20 23:38:03 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\BankAccount.scala
+2020.08.20 23:38:44 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\Counter.scala
+2020.08.20 23:39:18 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\CounterMain.scala
+2020.08.20 23:39:35 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\SimpleActorTest.scala
+2020.08.20 23:39:37 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\TransferMain.scala
+2020.08.20 23:39:54 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\WireTransfer.scala
+2020.08.20 23:39:57 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Aug 20, 2020 11:48:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 69
+Aug 20, 2020 11:48:30 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Aug 20, 2020 11:48:30 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: implicit class <error> extends  (of class scala.reflect.internal.Trees$ClassDef)
+scala.MatchError: implicit class <error> extends  (of class scala.reflect.internal.Trees$ClassDef)
+	at scala.tools.nsc.typechecker.Unapplies.constrParamss(Unapplies.scala:64)
+	at scala.tools.nsc.typechecker.Unapplies.factoryMeth(Unapplies.scala:141)
+	at scala.tools.nsc.typechecker.Unapplies.factoryMeth$(Unapplies.scala:138)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.factoryMeth(MetalsGlobal.scala:58)
+	at scala.tools.nsc.typechecker.MethodSynthesis$MethodSynth.enterImplicitWrapper(MethodSynthesis.scala:229)
+	at scala.tools.nsc.typechecker.MethodSynthesis$MethodSynth.enterImplicitWrapper$(MethodSynthesis.scala:228)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterImplicitWrapper(Namers.scala:58)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$InteractiveNamer.enterExistingSym(Global.scala:94)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$InteractiveNamer.enterExistingSym$(Global.scala:80)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$$anon$2.enterExistingSym(Global.scala:51)
+	at scala.tools.nsc.typechecker.Namers$Namer.standardEnterSym(Namers.scala:298)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins.pluginsEnterSym(AnalyzerPlugins.scala:479)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins.pluginsEnterSym$(AnalyzerPlugins.scala:478)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.pluginsEnterSym(MetalsGlobal.scala:58)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterSym(Namers.scala:272)
+	at scala.tools.nsc.typechecker.Typers$Typer.enterSym(Typers.scala:1933)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$enterSyms$1(Typers.scala:1928)
+	at scala.tools.nsc.typechecker.Typers$Typer.enterSyms(Typers.scala:1928)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTemplate(Typers.scala:1990)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedClassDef(Typers.scala:1830)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5644)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5724)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:5788)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3335)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3335)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPackageDef$1(Typers.scala:5354)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5647)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5724)
+	at scala.tools.nsc.typechecker.Analyzer$typerFactory$TyperPhase.apply(Analyzer.scala:115)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:454)
+	at scala.tools.nsc.interactive.Global$TyperRun.$anonfun$applyPhase$1(Global.scala:1340)
+	at scala.tools.nsc.interactive.Global$TyperRun.applyPhase(Global.scala:1340)
+	at scala.tools.nsc.interactive.Global$TyperRun.typeCheck(Global.scala:1333)
+	at scala.tools.nsc.interactive.Global.typeCheck(Global.scala:665)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:814)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1225)
+	at scala.meta.internal.pc.CompletionProvider.safeCompletionsAt(CompletionProvider.scala:397)
+	at scala.meta.internal.pc.CompletionProvider.completions(CompletionProvider.scala:57)
+
+Aug 20, 2020 11:48:51 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Aug 20, 2020 11:48:51 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: implicit class <error> extends  (of class scala.reflect.internal.Trees$ClassDef)
+scala.MatchError: implicit class <error> extends  (of class scala.reflect.internal.Trees$ClassDef)
+	at scala.tools.nsc.typechecker.Unapplies.constrParamss(Unapplies.scala:64)
+	at scala.tools.nsc.typechecker.Unapplies.factoryMeth(Unapplies.scala:141)
+	at scala.tools.nsc.typechecker.Unapplies.factoryMeth$(Unapplies.scala:138)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.factoryMeth(MetalsGlobal.scala:58)
+	at scala.tools.nsc.typechecker.MethodSynthesis$MethodSynth.enterImplicitWrapper(MethodSynthesis.scala:229)
+	at scala.tools.nsc.typechecker.MethodSynthesis$MethodSynth.enterImplicitWrapper$(MethodSynthesis.scala:228)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterImplicitWrapper(Namers.scala:58)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$InteractiveNamer.enterExistingSym(Global.scala:94)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$InteractiveNamer.enterExistingSym$(Global.scala:80)
+	at scala.tools.nsc.interactive.InteractiveAnalyzer$$anon$2.enterExistingSym(Global.scala:51)
+	at scala.tools.nsc.typechecker.Namers$Namer.standardEnterSym(Namers.scala:298)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins.pluginsEnterSym(AnalyzerPlugins.scala:479)
+	at scala.tools.nsc.typechecker.AnalyzerPlugins.pluginsEnterSym$(AnalyzerPlugins.scala:478)
+	at scala.meta.internal.pc.MetalsGlobal$MetalsInteractiveAnalyzer.pluginsEnterSym(MetalsGlobal.scala:58)
+	at scala.tools.nsc.typechecker.Namers$Namer.enterSym(Namers.scala:272)
+	at scala.tools.nsc.typechecker.Typers$Typer.enterSym(Typers.scala:1933)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$enterSyms$1(Typers.scala:1928)
+	at scala.tools.nsc.typechecker.Typers$Typer.enterSyms(Typers.scala:1928)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTemplate(Typers.scala:1990)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedClassDef(Typers.scala:1830)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5644)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5724)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStat$1(Typers.scala:5788)
+	at scala.tools.nsc.typechecker.Typers$Typer.$anonfun$typedStats$10(Typers.scala:3335)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3335)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPackageDef$1(Typers.scala:5354)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5647)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5724)
+	at scala.tools.nsc.typechecker.Analyzer$typerFactory$TyperPhase.apply(Analyzer.scala:115)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:454)
+	at scala.tools.nsc.interactive.Global$TyperRun.$anonfun$applyPhase$1(Global.scala:1340)
+	at scala.tools.nsc.interactive.Global$TyperRun.applyPhase(Global.scala:1340)
+	at scala.tools.nsc.interactive.Global$TyperRun.typeCheck(Global.scala:1333)
+	at scala.tools.nsc.interactive.Global.typeCheck(Global.scala:665)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:814)
+	at scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1225)
+	at scala.meta.internal.pc.CompletionProvider.safeCompletionsAt(CompletionProvider.scala:397)
+	at scala.meta.internal.pc.CompletionProvider.completions(CompletionProvider.scala:57)
+
+2020.08.20 23:48:58 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.08.20 23:51:03 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\WireTransfer.scala
+2020.08.20 23:51:06 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\TransferMain.scala
+2020.08.20 23:51:11 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\TransferMain.scala
+2020.08.20 23:51:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\SimpleActorTest.scala
+2020.08.20 23:51:16 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\CounterMain.scala
+2020.08.20 23:51:23 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\CounterMain.scala
+2020.08.20 23:51:23 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.08.20 23:51:24 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\Counter.scala
+2020.08.20 23:51:28 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\Counter.scala
+2020.08.20 23:51:28 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\BankAccount.scala
+2020.08.20 23:51:32 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\BankAccount.scala
+2020.08.20 23:52:50 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.08.20 23:52:52 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\SimpleActorTest.scala
+2020.08.20 23:53:20 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\WireTransfer.scala
+2020.08.20 23:53:44 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\TransferMain.scala
+2020.08.20 23:53:45 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\CounterMain.scala
+2020.08.20 23:55:54 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\futures\src\main\scala\async\Async.scala
+2020.08.25 01:06:34 INFO  started: Metals version 0.9.3 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.08.25 01:06:35 INFO  time: initialize in 1.71s
+2020.08.25 01:06:40 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.08.25 01:06:40 INFO  no build target: using presentation compiler with only scala-library
+2020.08.25 01:06:44 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\WireTransfer.scala
+2020.08.25 01:10:52 INFO  shutting down Metals
+2020.09.04 00:58:44 INFO  started: Metals version 0.9.3 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.09.04 00:58:45 INFO  time: initialize in 1.48s
+2020.09.04 00:58:46 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.04 00:58:46 INFO  no build target: using presentation compiler with only scala-library
+2020.09.04 00:58:50 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\WireTransfer.scala
+2020.09.04 00:58:50 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\BankAccount.scala
+Sep 04, 2020 12:58:50 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2020.09.04 00:58:58 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\Counter.scala
+2020.09.04 00:58:59 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\CounterMain.scala
+2020.09.04 00:59:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\SimpleActorTest.scala
+2020.09.04 00:59:14 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\TransferMain.scala
+2020.09.04 01:06:00 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\Counter.scala
+2020.09.04 01:06:00 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\CounterMain.scala
+2020.09.04 01:06:04 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\TransferMain.scala
+2020.09.04 01:06:29 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\SimpleActorTest.scala
+2020.09.04 01:06:49 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\Counter.scala
+2020.09.04 01:06:49 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\CounterMain.scala
+2020.09.04 01:07:00 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\Counter.scala
+2020.09.04 01:07:28 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\TransferMain.scala
+2020.09.04 01:08:21 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\CounterMain.scala
+2020.09.04 01:08:22 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\Counter.scala
+2020.09.04 01:08:22 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\BankAccount.scala
+2020.09.04 01:08:27 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\Counter.scala
+2020.09.04 01:08:28 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\CounterMain.scala
+2020.09.04 01:08:29 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\Counter.scala
+2020.09.04 01:08:34 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\CounterMain.scala
+2020.09.04 01:08:40 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\TransferMain.scala
+2020.09.04 01:10:45 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\TransferMain.scala
+2020.09.04 01:11:14 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\Counter.scala
+2020.09.04 01:15:09 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.04 01:15:11 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.04 01:44:10 INFO  shutting down Metals
+2020.09.04 01:44:22 INFO  started: Metals version 0.9.3 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.09.04 01:44:24 INFO  time: initialize in 1.46s
+2020.09.04 01:44:24 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.04 01:44:24 INFO  no build target: using presentation compiler with only scala-library
+2020.09.04 01:44:55 INFO  started: Metals version 0.9.3 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.09.04 01:44:57 INFO  time: initialize in 1.61s
+2020.09.04 01:45:02 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.04 01:45:02 INFO  no build target: using presentation compiler with only scala-library
+2020.09.04 01:55:58 INFO  shutting down Metals
+2020.09.04 01:56:17 INFO  started: Metals version 0.9.3 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.09.04 01:56:18 INFO  time: initialize in 0.47s
+2020.09.04 01:56:18 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.04 01:56:18 INFO  no build target: using presentation compiler with only scala-library
+2020.09.04 01:57:07 INFO  shutting down Metals
+2020.09.04 02:08:55 INFO  started: Metals version 0.9.3 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.09.04 02:08:56 INFO  time: initialize in 0.47s
+2020.09.04 02:08:56 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.04 02:08:56 INFO  no build target: using presentation compiler with only scala-library
+2020.09.04 02:09:46 INFO  shutting down Metals
+2020.09.04 02:12:31 INFO  started: Metals version 0.9.3 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.09.04 02:12:32 INFO  time: initialize in 0.48s
+2020.09.04 02:12:32 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.04 02:12:32 INFO  no build target: using presentation compiler with only scala-library
+2020.09.04 02:22:03 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\WireTransfer.scala
+2020.09.04 02:22:11 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\futures\src\main\scala\async\Async.scala
+2020.09.04 02:22:17 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\async\src\main\scala\async\Async.scala
+2020.09.04 02:22:21 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\async\src\main\scala\async\Async.scala
+2020.09.04 02:24:24 INFO  shutting down Metals
+2020.09.04 20:30:11 INFO  started: Metals version 0.9.3 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.09.04 20:30:12 INFO  time: initialize in 0.5s
+2020.09.04 20:30:12 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.04 20:30:12 INFO  no build target: using presentation compiler with only scala-library
+2020.09.04 20:30:15 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\WireTransfer.scala
+2020.09.04 20:57:28 INFO  shutting down Metals
