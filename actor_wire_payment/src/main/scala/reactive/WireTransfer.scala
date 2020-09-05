@@ -4,6 +4,7 @@ import akka.actor.Actor
 import akka.actor.ActorRef
 import akka.event.LoggingReceive
 
+// Companion object to define expected wire transfer messages
 object WireTransfer {
   case class Transfer(from: ActorRef, to: ActorRef, amount: BigInt)
   case object Done

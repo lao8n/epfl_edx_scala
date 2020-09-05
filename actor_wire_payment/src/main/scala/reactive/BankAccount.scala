@@ -3,6 +3,7 @@ package reactive
 import akka.actor.Actor
 import akka.event.LoggingReceive
 
+// Companion object to define expected bank account messages
 object BankAccount {
   case class Deposit(amount: BigInt) {
     require(amount > 0)
