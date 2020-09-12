@@ -5,6 +5,7 @@ package actorbintree
 
 import akka.actor._
 import scala.collection.immutable.Queue
+import akka.event.LoggingReceive
 
 object BinaryTreeSet {
 
@@ -51,6 +52,14 @@ object BinaryTreeSet {
 
 
 class BinaryTreeSet extends Actor {
+  /**
+    * Design choices
+    * 1. how to handle the initially removed root, do we keep it, or do we replace it?
+    *    we cannot mutate it as it is val right? how do we tell if root is removed? i guess
+    *    we have to message it?
+    * 2. unclear why we import BinaryTreeSet._ in BinaryTreeNode and vice-versa
+    * 3. maybe there should be an intermediary actor that does the creation e.g. with transfer example
+    */
   import BinaryTreeSet._
   import BinaryTreeNode._
 
@@ -62,12 +71,35 @@ class BinaryTreeSet extends Actor {
   var pendingQueue = Queue.empty[Operation]
 
   // optional
-  def receive = normal
-
-  // optional
   /** Accepts `Operation` and `GC` messages. */
-  val normal: Receive = { case _ => ??? }
+  def receive = emptyTree // default mode
+  
+  val emptyTree: Receive = LoggingReceive { 
+    case Insert(requester, id, insertElem) => {
+      root = context.actorOf(BinaryTreeNode.props(insertElem, initiallyRemoved=false))
+      requester ! OperationFinished(id)
+      context.become(treeWithItems())
+    }
+    case Contains(requester, id, containsElem) => {
+      root ! Contains(requester, id, containsElem)
+    }
+    case Remove(requester, id, elem) => {
+      // tree is empty so elem will not be found but told to still return OperationFinished message
+      requester ! OperationFinished(id)
+    }
+    case GC => // do nothing, empty tree means nothing to GC
+  }
 
+  def treeWithItems(): Receive = LoggingReceive { 
+    case Insert(requester, id, insertElem) => {
+      root ! Insert(requester, id, insertElem)
+    }
+    case Contains(requester, id, containsElem) => {
+      root ! Contains(requester, id, containsElem)
+    }
+    case Remove(requester, id, elem) => ???
+    case GC => ???
+  }
   // optional
   /** Handles messages while garbage collection is performed.
     * `newRoot` is the root of the new binary tree where we want to copy
@@ -102,11 +134,61 @@ class BinaryTreeNode(val elem: Int, initiallyRemoved: Boolean) extends Actor {
   var removed = initiallyRemoved
 
   // optional
-  def receive = normal
-
-  // optional
   /** Handles `Operation` messages and `CopyTo` requests. */
-  val normal: Receive = { case _ => ??? }
+
+  def receive = LoggingReceive { 
+    case OperationFinished(id) => ???
+    case Insert(requester, id, insertElem) => insert(requester, id, insertElem)
+    case Contains(requester, id, containsElem) => contains(requester, id, containsElem)
+  }
+
+  def insert(requester: ActorRef, id: Int, insertElem: Int): Unit = {
+    if(insertElem == elem){
+      requester ! OperationFinished(id)
+    }
+    else if (insertElem < elem){
+      subtrees.get(Left) match {
+        case Some(leftActorRef) => leftActorRef ! Insert(requester, id, insertElem)
+        case None => {
+          val leftActorRef = context.actorOf(props(insertElem, false))
+          // https://alvinalexander.com/scala/how-to-add-update-remove-elements-immutable-maps-scala/
+          // we have declared immutable map as var, i.e. we replaced the entire map with new map
+          subtrees += (Left -> leftActorRef)
+          requester ! OperationFinished(id)
+        }
+      }
+    }
+    else {
+      subtrees.get(Right) match {
+        case Some(rightActorRef) => rightActorRef ! Insert(requester, id, insertElem)
+        case None => {
+          val rightActorRef = context.actorOf(props(insertElem, false))
+            // https://alvinalexander.com/scala/how-to-add-update-remove-elements-immutable-maps-scala/
+          // we have declared immutable map as var, i.e. we replaced the entire map with new map
+          subtrees += (Right -> rightActorRef)
+          requester ! OperationFinished(id)
+        }
+      }
+    }
+  }
+
+  def contains(requester: ActorRef, id: Int, containsElem: Int): Unit = {
+    if(containsElem == elem){
+      requester ! ContainsResult(id, true)
+    }
+    else if (containsElem < elem){
+      subtrees.get(Left) match {
+        case Some(leftActorRef) => leftActorRef ! Contains(requester, id, containsElem)
+        case None => requester ! ContainsResult(id, false) 
+      }
+    }
+    else {
+      subtrees.get(Right) match {
+        case Some(rightActorRef) => rightActorRef ! Contains(requester, id, containsElem)
+        case None => requester ! ContainsResult(id, false)
+      }
+    }
+  }
 
   // optional
   /** `expected` is the set of ActorRefs whose replies we are waiting for,

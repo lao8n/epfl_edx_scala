@@ -1,0 +1,7 @@
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\test\scala\actorbintree\BinaryTreeSuite.scala:6:20: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport akka.actor.{ActorRef, ActorSystem, Props}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                   ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\test\scala\actorbintree\BinaryTreeSuite.scala:11:19: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport scala.util.Random[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
