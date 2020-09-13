@@ -59,6 +59,23 @@ class BinaryTreeSet extends Actor {
     *    we have to message it?
     * 2. unclear why we import BinaryTreeSet._ in BinaryTreeNode and vice-versa
     * 3. maybe there should be an intermediary actor that does the creation e.g. with transfer example
+    * 4. How does CopyTo work? Is the copy distributed i.e. each node is copied separately? Should a parent node
+    *    need to be aware of all children nodes, or just worry about its direct descendents? Don't know 
+    *    if there is a clean way to send all the child nodes back to the parent node that is asking. 
+    *    Advantage is that can send copy requests to all nodes in parallel, disadvatnage is that root
+    *    becomes the bottleneck for all computation
+    * 5. Should we traverse each node and as we do it copy the values? Or should we get all the values
+    *    and then insert those items?
+    * 6. Big problem is how share information upstream? 
+    * 7. Should we be copying local subtrees, or just inserting into the root?
+    * 8. Why have a separate set of children when already have map? maybe because we want
+    *    to remove from it as we get replies back?
+    * 9. I find myself using for loops but maybe i should be using for expressions?
+    * 10. Why is insertConfirmed an argument to copying, why not just have it a var that is 
+    *     accessible in the different states? Does it imply we should move to copying state
+    *     after we have tried inserting? At least it suggests we should user pre-built inserts
+    *     rather than something new
+    * 11. Should we change state through arguments and become or through local var?
     */
   import BinaryTreeSet._
   import BinaryTreeNode._
@@ -137,12 +154,56 @@ class BinaryTreeNode(val elem: Int, initiallyRemoved: Boolean) extends Actor {
 
   // optional
   /** Handles `Operation` messages and `CopyTo` requests. */
-
   def receive = LoggingReceive { 
-    case OperationFinished(id) => ???
+    case OperationFinished(id) => // do nothing as shouldn't receive this in none copying state
     case Insert(requester, id, insertElem) => insert(requester, id, insertElem)
     case Contains(requester, id, containsElem) => contains(requester, id, containsElem)
     case Remove(requester, id, removeElem) => remove(requester, id, removeElem)
+    // from the perspective of the old node
+    case CopyTo(treeNode) => {
+      // rather than traversing the tree and copying each element as we traverse, 
+      // instead get all elements to be copied and then insert them
+      var nodesToCopy: Set[ActorRef] = Set()
+      subtrees.get(Left) match {
+        case Some(leftActorRef) => nodesToCopy += leftActorRef
+        case None => // do nothing
+      }
+      subtrees.get(Right) match {
+        case Some(rightActorRef) => nodesToCopy += rightActorRef
+        case None => // do nothing
+      }
+      // we set insert as 0 and any copying nodes as 1 and 2
+      // we also assume that context.become happens before insert can possibly return a 
+      // response
+      if(removed == false){
+        insert(self, 0, elem)
+        context.become(copying(nodesToCopy, false))
+      }
+      else {
+        // effectively we've already inserted, because nothing to insert
+        context.become(copying(nodesToCopy, true))
+      }
+    }
+  }
+
+  // optional
+  /** `expected` is the set of ActorRefs whose replies we are waiting for,
+    * `insertConfirmed` tracks whether the copy of this node to the new tree has been confirmed.
+    */
+  def copying(expected: Set[ActorRef], insertConfirmed: Boolean): Receive = LoggingReceive {
+    // only operation this can be as an insert, so don't need to check id
+    case OperationFinished(_) => {
+      if (expected.length == 0){
+
+      }
+      else {
+        context.become(copying(expected, true))
+      }
+    }
+    case CopyFinished => {
+      expected -= sender()
+      context.become(copying(expected, insertConfirmed))
+    }
   }
 
   def insert(requester: ActorRef, id: Int, insertElem: Int): Unit = {
@@ -224,12 +285,4 @@ class BinaryTreeNode(val elem: Int, initiallyRemoved: Boolean) extends Actor {
       }
     }
   }
-
-  // optional
-  /** `expected` is the set of ActorRefs whose replies we are waiting for,
-    * `insertConfirmed` tracks whether the copy of this node to the new tree has been confirmed.
-    */
-  def copying(expected: Set[ActorRef], insertConfirmed: Boolean): Receive = ???
-
-
 }

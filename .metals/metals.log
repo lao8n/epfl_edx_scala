@@ -888,3 +888,94 @@ java.lang.NullPointerException
 2020.09.12 19:48:03 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
 2020.09.12 19:50:04 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
 2020.09.12 19:50:33 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 13:06:49 INFO  started: Metals version 0.9.3 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.09.13 13:06:50 INFO  time: initialize in 0.45s
+2020.09.13 13:06:55 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 13:06:55 INFO  no build target: using presentation compiler with only scala-library
+2020.09.13 13:06:58 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\TransferMain.scala
+2020.09.13 13:06:58 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 13:27:13 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 13:28:45 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 13:28:47 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 13:28:47 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 13:28:51 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 13:28:54 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 13:29:03 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 13:29:03 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 13:29:03 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 13:29:03 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 13:29:05 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 13:29:07 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 13:29:09 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 13:29:09 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 13:29:10 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 13:29:45 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 13:29:49 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+Sep 13, 2020 1:29:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 499
+2020.09.13 13:32:17 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 13:33:02 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 13:33:48 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\test\scala\actorbintree\BinaryTreeSuite.scala
+2020.09.13 13:33:55 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\test\scala\actorbintree\BinaryTreeSuite.scala
+2020.09.13 13:42:05 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 13:46:39 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 13:46:42 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 13:46:42 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 13:46:47 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 13:48:05 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 13:48:15 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 13:48:20 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 13:50:14 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 13:50:29 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 13:56:21 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 14:15:34 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 14:16:01 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 14:17:48 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 14:18:10 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+something's wrong: no file:///C:/Users/lao8n/OneDrive/Documents/epfl%20edx%20scala/actor_binary_tree/src/main/scala/actorbintree/BinaryTreeSet.scala in Set[<error>]RangePosition(file:///C:/Users/lao8n/OneDrive/Documents/epfl%20edx%20scala/actor_binary_tree/src/main/scala/actorbintree/BinaryTreeSet.scala, 5178, 5178, 5191)
+2020.09.13 14:22:14 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 14:29:18 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 14:32:43 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 14:32:56 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 14:37:51 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 14:37:57 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 14:38:13 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 14:39:36 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 14:44:55 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 15:58:56 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 15:58:56 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 15:58:59 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 16:05:33 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 16:05:56 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 16:10:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 16:11:51 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 16:17:09 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 16:29:02 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Sep 13, 2020 4:29:02 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+2020.09.13 16:30:31 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 16:30:31 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Sep 13, 2020 4:30:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3570
+2020.09.13 16:40:00 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\BankAccount.scala
+2020.09.13 16:43:11 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 16:43:11 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 16:43:13 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 16:43:14 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 16:53:49 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 16:57:23 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 17:01:29 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 17:01:56 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 17:02:02 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 17:03:29 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 17:03:59 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+Sep 13, 2020 5:04:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4460
+2020.09.13 17:05:04 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 17:05:04 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 17:06:19 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 17:08:58 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.13 17:08:58 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.13 17:09:36 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+Sep 13, 2020 5:17:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4868
