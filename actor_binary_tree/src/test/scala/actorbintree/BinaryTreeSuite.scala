@@ -54,29 +54,29 @@ class BinaryTreeSuite extends TestKit(ActorSystem("BinaryTreeSuite")) with Impli
     expectMsg(ContainsResult(3, true))
   }
 
-  // @Test def `instruction example (5pts)`(): Unit = {
-  //   val requester = TestProbe()
-  //   val requesterRef = requester.ref
-  //   val ops = List(
-  //     Insert(requesterRef, id=100, 1),
-  //     Contains(requesterRef, id=50, 2),
-  //     Remove(requesterRef, id=10, 1),
-  //     Insert(requesterRef, id=20, 2),
-  //     Contains(requesterRef, id=80, 1),
-  //     Contains(requesterRef, id=70, 2)
-  //   )
+  @Test def `instruction example (5pts)`(): Unit = {
+    val requester = TestProbe()
+    val requesterRef = requester.ref
+    val ops = List(
+      Insert(requesterRef, id=100, 1),
+      Contains(requesterRef, id=50, 2),
+      Remove(requesterRef, id=10, 1),
+      Insert(requesterRef, id=20, 2),
+      Contains(requesterRef, id=80, 1),
+      Contains(requesterRef, id=70, 2)
+    )
 
-  //   val expectedReplies = List(
-  //     OperationFinished(id=10),
-  //     OperationFinished(id=20),
-  //     ContainsResult(id=50, false),
-  //     ContainsResult(id=70, true),
-  //     ContainsResult(id=80, false),
-  //     OperationFinished(id=100)
-  //   )
+    val expectedReplies = List(
+      OperationFinished(id=10),
+      OperationFinished(id=20),
+      ContainsResult(id=50, false),
+      ContainsResult(id=70, true),
+      ContainsResult(id=80, false),
+      OperationFinished(id=100)
+    )
 
-  //   verify(requester, ops, expectedReplies)
-  // }
+    verify(requester, ops, expectedReplies)
+  }
 
 
   // @Test def `behave identically to built-in set (includes GC) (40pts)`(): Unit = {
