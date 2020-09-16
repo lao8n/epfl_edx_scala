@@ -14,36 +14,20 @@ import scala.collection.immutable.Queue
   *        isRootNode to isRootNode 
   * 2.  Q: Handle left and right subtrees separately?
   *     A: Refactored code to use leftOrRightSubtree function 
+  * 3.  Q: Maybe there should be an intermediary actor that does the creation as with transfer example?
+  *     A: Kept it simple with node doing it
+  * 4.  Q: How should instructions be shared? Everything from parent to children? Or from tree set directly 
+  *        to all nodes?
+  *     A: Go through each generation
+  * 5.  Q: Should parents kill children or children kill themselves?
+  *     A: Kill themselves
+  * 6.  Q: Should you become or unbecome out of new context?
+  *     A: Become because I'm not sure if unbecome removes all the stacks
+  * 7.  Q: How do you share information upstream?
+  *     A: context.parent
+  * 8.  Q: How do you copy? Node to node or insert from node above?
+  *     A: Node above, because not sure how to get former to work
   */
-
-  /**
-    * Design choices
-    * 1. how to handle the initially removed root, do we keep it, or do we replace it?
-    *    we cannot mutate it as it is val right? how do we tell if root is removed? i guess
-    *    we have to message it?
-    * 2. unclear why we import BinaryTreeSet._ in BinaryTreeNode and vice-versa
-    * 3. maybe there should be an intermediary actor that does the creation e.g. with transfer example
-    * 4. How does CopyTo work? Is the copy distributed i.e. each node is copied separately? Should a parent node
-    *    need to be aware of all children nodes, or just worry about its direct descendents? Don't know 
-    *    if there is a clean way to send all the child nodes back to the parent node that is asking. 
-    *    Advantage is that can send copy requests to all nodes in parallel, disadvatnage is that root
-    *    becomes the bottleneck for all computation
-    * 5. Should we traverse each node and as we do it copy the values? Or should we get all the values
-    *    and then insert those items?
-    * 6. Big problem is how share information upstream? 
-    * 7. Should we be copying local subtrees, or just inserting into the root?
-    * 8. Why have a separate set of children when already have map? maybe because we want
-    *    to remove from it as we get replies back?
-    * 9. I find myself using for loops but maybe i should be using for expressions?
-    * 10. Why is insertConfirmed an argument to copying, why not just have it a var that is 
-    *     accessible in the different states? Does it imply we should move to copying state
-    *     after we have tried inserting? At least it suggests we should user pre-built inserts
-    *     rather than something new
-    * 11. Should we change state through arguments and become or through local var?
-    * 12. How do we know the parent in the CopyTo case? Don't we have to use requester again? Apparently there is a context.parent
-    */
-
-
 object BinaryTreeSet {
 
   trait Operation {
@@ -114,7 +98,7 @@ class BinaryTreeSet extends Actor {
       pendingQueue.foreach{ op => newRoot ! op }
       pendingQueue = Queue.empty[Operation]
       root = newRoot
-      context.unbecome()
+      context become normal
     }
     case op: Operation => pendingQueue = pendingQueue enqueue op // Insert/Contains/Remove
     case GC => // told to ignore GC requests that arrive whilst GC is taking place
@@ -148,7 +132,7 @@ class BinaryTreeNode(val elem: Int, isRootNode: Boolean) extends Actor {
   def receive = normal
 
   /** Handles `Operation` messages and `CopyTo` requests. */
-  val normal: Receive = insert orElse contains orElse remove orElse copyTo
+  val normal: Receive = insert orElse contains orElse remove orElse copy
 
   def leftOrRightSubtree(e: Int) = if (e < elem) Left else Right
 
@@ -170,6 +154,20 @@ class BinaryTreeNode(val elem: Int, isRootNode: Boolean) extends Actor {
       }
   }
 
+  def contains: Receive = {
+    case Contains(requester, id, e) =>
+      if(e == elem && !isRootNode){
+        requester ! ContainsResult(id, !removed)
+      }
+      else {
+        val leftOrRight = leftOrRightSubtree(e)
+        subtrees.get(leftOrRight) match {
+          case Some(_) => subtrees(leftOrRight) forward Contains(requester, id, e)
+          case None => requester ! ContainsResult(id, false)
+        }
+    }
+  }
+
   def remove: Receive = {
     case Remove(requester, id, e) =>
       if(e == elem && !isRootNode){
@@ -185,29 +183,13 @@ class BinaryTreeNode(val elem: Int, isRootNode: Boolean) extends Actor {
       }
   }
 
-  def contains: Receive = {
-    case Contains(requester, id, e) =>
-      if(e == elem && !isRootNode){
-        requester ! ContainsResult(id, !removed)
-      }
-      else {
-        val leftOrRight = leftOrRightSubtree(e)
-        subtrees.get(leftOrRight) match {
-          case Some(_) => subtrees(leftOrRight) forward Contains(requester, id, e)
-          case None => requester ! ContainsResult(id, false)
-        }
-    }
-  }
-
-  def copyTo: Receive = {
+  def copy: Receive = {
     case CopyTo(newRoot) =>
-      if(!removed) newRoot ! Insert(self, -1, elem)
       val nodesToCopy = subtrees.values.toSet
-      nodesToCopy.foreach { node => 
-        node ! CopyTo(newRoot)
-      }
       // if node is removed then insertConfirmed=true as nothing to copy, o/w false
-      context.become(copying(nodesToCopy, removed)) 
+      context become copying(nodesToCopy, removed) // need to be before any messages can be received
+      if(!removed) newRoot ! Insert(self, -1, elem)
+      nodesToCopy.foreach { node => node ! CopyTo(newRoot)}
   }
 
   /** `expected` is the set of ActorRefs whose replies we are waiting for,
@@ -221,8 +203,8 @@ class BinaryTreeNode(val elem: Int, isRootNode: Boolean) extends Actor {
   def isCopyFinished(expected: Set[ActorRef], insertConfirmed: Boolean): Unit = {
     if(expected.isEmpty && insertConfirmed) {
       context.parent ! CopyFinished
-      context.stop(self)
+      context stop self
     }
-    else context.become(copying(expected, insertConfirmed))
+    else context become copying(expected, insertConfirmed)
   }
 }
