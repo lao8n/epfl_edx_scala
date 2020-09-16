@@ -5,7 +5,44 @@ package actorbintree
 
 import akka.actor._
 import scala.collection.immutable.Queue
-import akka.event.LoggingReceive
+//import akka.event.LoggingReceive
+
+/**
+  * Design choices
+  * 1.  Q: Have root be 'removed node' or replace node with first insertion? 
+  *     A: Chose latter as avoids extra context, but make explicit by changing
+  *        isRootNode to isRootNode 
+  * 2.  Q: Handle left and right subtrees separately?
+  *     A: Refactored code to use leftOrRightSubtree function 
+  */
+
+  /**
+    * Design choices
+    * 1. how to handle the initially removed root, do we keep it, or do we replace it?
+    *    we cannot mutate it as it is val right? how do we tell if root is removed? i guess
+    *    we have to message it?
+    * 2. unclear why we import BinaryTreeSet._ in BinaryTreeNode and vice-versa
+    * 3. maybe there should be an intermediary actor that does the creation e.g. with transfer example
+    * 4. How does CopyTo work? Is the copy distributed i.e. each node is copied separately? Should a parent node
+    *    need to be aware of all children nodes, or just worry about its direct descendents? Don't know 
+    *    if there is a clean way to send all the child nodes back to the parent node that is asking. 
+    *    Advantage is that can send copy requests to all nodes in parallel, disadvatnage is that root
+    *    becomes the bottleneck for all computation
+    * 5. Should we traverse each node and as we do it copy the values? Or should we get all the values
+    *    and then insert those items?
+    * 6. Big problem is how share information upstream? 
+    * 7. Should we be copying local subtrees, or just inserting into the root?
+    * 8. Why have a separate set of children when already have map? maybe because we want
+    *    to remove from it as we get replies back?
+    * 9. I find myself using for loops but maybe i should be using for expressions?
+    * 10. Why is insertConfirmed an argument to copying, why not just have it a var that is 
+    *     accessible in the different states? Does it imply we should move to copying state
+    *     after we have tried inserting? At least it suggests we should user pre-built inserts
+    *     rather than something new
+    * 11. Should we change state through arguments and become or through local var?
+    * 12. How do we know the parent in the CopyTo case? Don't we have to use requester again? Apparently there is a context.parent
+    */
+
 
 object BinaryTreeSet {
 
@@ -37,7 +74,7 @@ object BinaryTreeSet {
     */
   case class Remove(requester: ActorRef, id: Int, elem: Int) extends Operation
 
-  /** Request to perform garbage collection */
+  /** Request to perform garbage collection*/
   case object GC
 
   /** Holds the answer to the Contains request with identifier `id`.
@@ -52,80 +89,36 @@ object BinaryTreeSet {
 
 
 class BinaryTreeSet extends Actor {
-  /**
-    * Design choices
-    * 1. how to handle the initially removed root, do we keep it, or do we replace it?
-    *    we cannot mutate it as it is val right? how do we tell if root is removed? i guess
-    *    we have to message it?
-    * 2. unclear why we import BinaryTreeSet._ in BinaryTreeNode and vice-versa
-    * 3. maybe there should be an intermediary actor that does the creation e.g. with transfer example
-    * 4. How does CopyTo work? Is the copy distributed i.e. each node is copied separately? Should a parent node
-    *    need to be aware of all children nodes, or just worry about its direct descendents? Don't know 
-    *    if there is a clean way to send all the child nodes back to the parent node that is asking. 
-    *    Advantage is that can send copy requests to all nodes in parallel, disadvatnage is that root
-    *    becomes the bottleneck for all computation
-    * 5. Should we traverse each node and as we do it copy the values? Or should we get all the values
-    *    and then insert those items?
-    * 6. Big problem is how share information upstream? 
-    * 7. Should we be copying local subtrees, or just inserting into the root?
-    * 8. Why have a separate set of children when already have map? maybe because we want
-    *    to remove from it as we get replies back?
-    * 9. I find myself using for loops but maybe i should be using for expressions?
-    * 10. Why is insertConfirmed an argument to copying, why not just have it a var that is 
-    *     accessible in the different states? Does it imply we should move to copying state
-    *     after we have tried inserting? At least it suggests we should user pre-built inserts
-    *     rather than something new
-    * 11. Should we change state through arguments and become or through local var?
-    */
   import BinaryTreeSet._
   import BinaryTreeNode._
 
-  def createRoot: ActorRef = context.actorOf(BinaryTreeNode.props(0, initiallyRemoved = true))
-
+  def createRoot: ActorRef = context.actorOf(BinaryTreeNode.props(0, isRootNode = true))
   var root = createRoot
 
-  // optional (used to stash incoming operations during garbage collection)
+  // used to stash incoming operations during garbage collection
   var pendingQueue = Queue.empty[Operation]
+  def receive = normal
 
-  // optional
   /** Accepts `Operation` and `GC` messages. */
-  def receive = emptyTree // default mode
-  
-  val emptyTree: Receive = LoggingReceive { 
-    case Insert(requester, id, insertElem) => {
-      root = context.actorOf(BinaryTreeNode.props(insertElem, initiallyRemoved=false))
-      requester ! OperationFinished(id)
-      context.become(treeWithItems())
-    }
-    case Contains(requester, id, containsElem) => {
-      root ! Contains(requester, id, containsElem)
-    }
-    case Remove(requester, id, elem) => {
-      // tree is empty so elem will not be found but told to still return OperationFinished message
-      requester ! OperationFinished(id)
-    }
-    case GC => // do nothing, empty tree means nothing to GC
+  val normal: Receive = {
+    case GC =>
+      val newRoot = createRoot
+      context become garbageCollecting(newRoot)
+      root ! CopyTo(newRoot)
+
+    case op: Operation => root forward op // Insert/Contains/Remove
   }
 
-  def treeWithItems(): Receive = LoggingReceive { 
-    case Insert(requester, id, insertElem) => {
-      root ! Insert(requester, id, insertElem)
+  def garbageCollecting(newRoot: ActorRef): Receive = {
+    case CopyFinished => {
+      pendingQueue.foreach{ op => newRoot ! op }
+      pendingQueue = Queue.empty[Operation]
+      root = newRoot
+      context.unbecome()
     }
-    case Contains(requester, id, containsElem) => {
-      root ! Contains(requester, id, containsElem)
-    }
-    case Remove(requester, id, removeElem) => {
-      root ! Remove(requester, id, removeElem)
-    }
-    case GC => ???
+    case op: Operation => pendingQueue = pendingQueue enqueue op // Insert/Contains/Remove
+    case GC => // told to ignore GC requests that arrive whilst GC is taking place
   }
-  // optional
-  /** Handles messages while garbage collection is performed.
-    * `newRoot` is the root of the new binary tree where we want to copy
-    * all non-removed elements into.
-    */
-  def garbageCollecting(newRoot: ActorRef): Receive = ???
-
 }
 
 object BinaryTreeNode {
@@ -134,7 +127,7 @@ object BinaryTreeNode {
   case object Left extends Position
   case object Right extends Position
 
-  case class CopyTo(treeNode: ActorRef)
+  case class CopyTo(newRoot: ActorRef)
   /**
    * Acknowledges that a copy has been completed. This message should be sent
    * from a node to its parent, when this node and all its children nodes have
@@ -142,147 +135,94 @@ object BinaryTreeNode {
    */
   case object CopyFinished
 
-  def props(elem: Int, initiallyRemoved: Boolean) = Props(classOf[BinaryTreeNode],  elem, initiallyRemoved)
+  def props(elem: Int, isRootNode: Boolean) = Props(classOf[BinaryTreeNode],  elem, isRootNode)
 }
 
-class BinaryTreeNode(val elem: Int, initiallyRemoved: Boolean) extends Actor {
+class BinaryTreeNode(val elem: Int, isRootNode: Boolean) extends Actor {
   import BinaryTreeNode._
   import BinaryTreeSet._
 
   var subtrees = Map[Position, ActorRef]()
-  var removed = initiallyRemoved
+  var removed = isRootNode
 
-  // optional
+  def receive = normal
+
   /** Handles `Operation` messages and `CopyTo` requests. */
-  def receive = LoggingReceive { 
-    case OperationFinished(id) => // do nothing as shouldn't receive this in none copying state
-    case Insert(requester, id, insertElem) => insert(requester, id, insertElem)
-    case Contains(requester, id, containsElem) => contains(requester, id, containsElem)
-    case Remove(requester, id, removeElem) => remove(requester, id, removeElem)
-    // from the perspective of the old node
-    case CopyTo(treeNode) => {
-      // rather than traversing the tree and copying each element as we traverse, 
-      // instead get all elements to be copied and then insert them
-      var nodesToCopy: Set[ActorRef] = Set()
-      subtrees.get(Left) match {
-        case Some(leftActorRef) => nodesToCopy += leftActorRef
-        case None => // do nothing
-      }
-      subtrees.get(Right) match {
-        case Some(rightActorRef) => nodesToCopy += rightActorRef
-        case None => // do nothing
-      }
-      // we set insert as 0 and any copying nodes as 1 and 2
-      // we also assume that context.become happens before insert can possibly return a 
-      // response
-      if(removed == false){
-        insert(self, 0, elem)
-        context.become(copying(nodesToCopy, false))
+  val normal: Receive = insert orElse contains orElse remove orElse copyTo
+
+  def leftOrRightSubtree(e: Int) = if (e < elem) Left else Right
+
+  def insert: Receive = {
+    case Insert(requester: ActorRef, id: Int, e: Int) =>
+      if(e == elem && !isRootNode){
+        removed = false
+        requester ! OperationFinished(id)
       }
       else {
-        // effectively we've already inserted, because nothing to insert
-        context.become(copying(nodesToCopy, true))
+        val leftOrRight = leftOrRightSubtree(e)
+        subtrees.get(leftOrRight) match {
+          case Some(_) => subtrees(leftOrRight) forward Insert(requester, id, e)
+          case None => {
+            subtrees += leftOrRight -> context.actorOf(props(e, false))
+            requester ! OperationFinished(id)
+          }
+        }
       }
+  }
+
+  def remove: Receive = {
+    case Remove(requester, id, e) =>
+      if(e == elem && !isRootNode){
+        removed = true
+        requester ! OperationFinished(id)
+      }
+      else {
+        val leftOrRight = leftOrRightSubtree(e)
+        subtrees.get(leftOrRight) match {
+          case Some(_) => subtrees(leftOrRight) forward Remove(requester, id, e)
+          case None => requester ! OperationFinished(id)
+        }
+      }
+  }
+
+  def contains: Receive = {
+    case Contains(requester, id, e) =>
+      if(e == elem && !isRootNode){
+        requester ! ContainsResult(id, !removed)
+      }
+      else {
+        val leftOrRight = leftOrRightSubtree(e)
+        subtrees.get(leftOrRight) match {
+          case Some(_) => subtrees(leftOrRight) forward Contains(requester, id, e)
+          case None => requester ! ContainsResult(id, false)
+        }
     }
   }
 
-  // optional
+  def copyTo: Receive = {
+    case CopyTo(newRoot) =>
+      if(!removed) newRoot ! Insert(self, -1, elem)
+      val nodesToCopy = subtrees.values.toSet
+      nodesToCopy.foreach { node => 
+        node ! CopyTo(newRoot)
+      }
+      // if node is removed then insertConfirmed=true as nothing to copy, o/w false
+      context.become(copying(nodesToCopy, removed)) 
+  }
+
   /** `expected` is the set of ActorRefs whose replies we are waiting for,
-    * `insertConfirmed` tracks whether the copy of this node to the new tree has been confirmed.
-    */
-  def copying(expected: Set[ActorRef], insertConfirmed: Boolean): Receive = LoggingReceive {
-    // only operation this can be as an insert, so don't need to check id
-    case OperationFinished(_) => {
-      if (expected.length == 0){
-
-      }
-      else {
-        context.become(copying(expected, true))
-      }
-    }
-    case CopyFinished => {
-      expected -= sender()
-      context.become(copying(expected, insertConfirmed))
-    }
+  * `insertConfirmed` tracks whether the copy of this node to the new tree has been confirmed.
+  */
+  def copying(expected: Set[ActorRef], insertConfirmed: Boolean): Receive = {
+    case OperationFinished(-1) => isCopyFinished(expected, true)
+    case CopyFinished => isCopyFinished(expected - sender, insertConfirmed)
   }
 
-  def insert(requester: ActorRef, id: Int, insertElem: Int): Unit = {
-    // element exists but has been removed
-    if(insertElem == elem && removed == true){
-      removed = false
-      requester ! OperationFinished(id)
+  def isCopyFinished(expected: Set[ActorRef], insertConfirmed: Boolean): Unit = {
+    if(expected.isEmpty && insertConfirmed) {
+      context.parent ! CopyFinished
+      context.stop(self)
     }
-    // element exists
-    else if(insertElem == elem){
-      requester ! OperationFinished(id)
-    }
-    // we continue past nodes that are removed to find children below
-    else if (insertElem < elem){
-      subtrees.get(Left) match {
-        case Some(leftActorRef) => leftActorRef ! Insert(requester, id, insertElem)
-        case None => {
-          val leftActorRef = context.actorOf(props(insertElem, false))
-          // https://alvinalexander.com/scala/how-to-add-update-remove-elements-immutable-maps-scala/
-          // we have declared immutable map as var, i.e. we replaced the entire map with new map
-          subtrees += (Left -> leftActorRef)
-          requester ! OperationFinished(id)
-        }
-      }
-    }
-    else {
-      subtrees.get(Right) match {
-        case Some(rightActorRef) => rightActorRef ! Insert(requester, id, insertElem)
-        case None => {
-          val rightActorRef = context.actorOf(props(insertElem, false))
-            // https://alvinalexander.com/scala/how-to-add-update-remove-elements-immutable-maps-scala/
-          // we have declared immutable map as var, i.e. we replaced the entire map with new map
-          subtrees += (Right -> rightActorRef)
-          requester ! OperationFinished(id)
-        }
-      }
-    }
-  }
-
-  def contains(requester: ActorRef, id: Int, containsElem: Int): Unit = {
-    // element exists but has been removed
-    if(containsElem == elem && removed == true){
-      requester ! ContainsResult(id, false)
-    }
-    // element exists
-    else if (containsElem == elem && removed == false){
-      requester ! ContainsResult(id, true)
-    }
-    // even if node is removed we continue traversing beyond it.
-    else if (containsElem < elem){
-      subtrees.get(Left) match {
-        case Some(leftActorRef) => leftActorRef ! Contains(requester, id, containsElem)
-        case None => requester ! ContainsResult(id, false) 
-      }
-    }
-    else {
-      subtrees.get(Right) match {
-        case Some(rightActorRef) => rightActorRef ! Contains(requester, id, containsElem)
-        case None => requester ! ContainsResult(id, false)
-      }
-    }
-  }
-
-  def remove(requester: ActorRef, id: Int, removeElem: Int): Unit = {
-    if(removeElem == elem){
-      removed = true
-      requester ! OperationFinished(id)
-    }
-    else if (removeElem < elem){
-      subtrees.get(Left) match {
-        case Some(leftActorRef) => leftActorRef ! Remove(requester, id, removeElem)
-        case None => requester ! OperationFinished(id)
-      }
-    }
-    else {
-      subtrees.get(Right) match {
-        case Some(rightActorRef) => rightActorRef ! Remove(requester, id, removeElem)
-        case None => requester ! OperationFinished(id)
-      }
-    }
+    else context.become(copying(expected, insertConfirmed))
   }
 }
