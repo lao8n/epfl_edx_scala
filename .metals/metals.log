@@ -2390,3 +2390,6 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -2
 2020.09.16 21:18:09 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actorbintree\src\main\scala\actorbintree\BinaryTreeSet.scala
 2020.09.16 21:18:09 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actorbintree\src\test\scala\actorbintree\BinaryTreeSuite.scala
 2020.09.16 21:18:27 INFO  shutting down Metals
+2020.09.16 21:24:14 INFO  started: Metals version 0.9.3 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.09.16 21:24:14 INFO  time: initialize in 0.46s
+2020.09.16 21:24:15 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
