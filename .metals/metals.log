@@ -2417,3 +2417,26 @@ WARNING: Unmatched cancel notification for request id 1
 2020.09.16 22:59:28 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\BankAccount.scala
 2020.09.16 22:59:32 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\TransferMain.scala
 2020.09.16 23:00:15 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\src\main\scala\reactive\WireTransfer.scala
+2020.09.16 23:32:29 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.17 00:18:03 INFO  shutting down Metals
+2020.09.17 14:32:48 INFO  started: Metals version 0.9.3 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.09.17 14:32:49 INFO  time: initialize in 0.5s
+2020.09.17 14:32:49 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.17 14:32:49 INFO  no build target: using presentation compiler with only scala-library
+2020.09.17 14:32:52 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.17 14:33:37 INFO  shutting down Metals
+2020.09.17 14:57:53 INFO  started: Metals version 0.9.3 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.09.17 14:57:54 INFO  time: initialize in 0.47s
+2020.09.17 14:57:54 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.17 14:57:54 INFO  no build target: using presentation compiler with only scala-library
+2020.09.17 14:57:57 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.17 15:37:25 INFO  shutting down Metals
+2020.09.17 16:19:55 INFO  started: Metals version 0.9.3 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.09.17 16:19:56 INFO  time: initialize in 0.44s
+2020.09.17 16:19:56 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.09.17 16:19:56 INFO  no build target: using presentation compiler with only scala-library
+2020.09.17 16:19:59 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_binary_tree\src\main\scala\actorbintree\BinaryTreeSet.scala
+2020.09.17 16:19:59 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\reactive-link-checker\src\main\scala\reactive\Getter.scala
+2020.09.17 16:20:05 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\reactive-link-checker\src\main\scala\reactive\Controller.scala
+2020.09.17 16:23:03 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\reactive-link-checker\src\main\scala\reactive\Receptionist.scala
+2020.09.17 23:46:25 INFO  shutting down Metals
