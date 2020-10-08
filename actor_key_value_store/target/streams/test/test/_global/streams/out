@@ -1,0 +1,279 @@
+[0m[[0m[0mdebug[0m] [0m[0mjavaOptions: Vector()[0m
+[0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 1 initial tasks for 1 tests.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(kvstore.KVStoreSuite, sbt.ForkMain$AnnotatedFingerscan@ffc087, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep3-case1: Replicator should send snapshots when asked to replicate[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mStep3-case1: Replicator should send snapshots when asked to replicate[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (3 seconds) during expectMsg while waiting for Snapshot(k1,Some(v1),0), took 3.074 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg_internal(TestKit.scala:418)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg(TestKit.scala:395)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg$(TestKit.scala:395)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsg(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Tools.expectAtLeastOneSnapshot(Tools.scala:94)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Tools.expectAtLeastOneSnapshot$(Tools.scala:93)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.expectAtLeastOneSnapshot([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step3_ReplicatorSpec.Step3-case1: Replicator should send snapshots when asked to replicate(Step3_ReplicatorSpec.scala:17)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step3_ReplicatorSpec.Step3-case1: Replicator should send snapshots when asked to replicate$(Step3_ReplicatorSpec.scala:11)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Step3-case1: Replicator should send snapshots when asked to replicate([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep3-case1: Replicator should send snapshots when asked to replicate[0m finished, took 3.092 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep1-case1: Primary (in isolation) should properly register itself to the provided Arbiter[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep1-case1: Primary (in isolation) should properly register itself to the provided Arbiter[0m finished, took 0.027 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep1-case2: Primary (in isolation) should react properly to Insert, Remove, Get[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep1-case2: Primary (in isolation) should react properly to Insert, Remove, Get[0m finished, took 0.035 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep4-case2: Secondary should retry persistence in every 100 milliseconds[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mStep4-case2: Secondary should retry persistence in every 100 milliseconds[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (10 seconds) during expectMsgClass waiting for class kvstore.Replica$GetResult, took 10.05 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgClass_internal(TestKit.scala:528)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType(TestKit.scala:510)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType$(TestKit.scala:509)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsgType(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Tools$Session.get(Tools.scala:78)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step4_SecondaryPersistenceSpec.Step4-case2: Secondary should retry persistence in every 100 milliseconds(Step4_SecondaryPersistenceSpec.scala:53)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step4_SecondaryPersistenceSpec.Step4-case2: Secondary should retry persistence in every 100 milliseconds$(Step4_SecondaryPersistenceSpec.scala:41)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Step4-case2: Secondary should retry persistence in every 100 milliseconds([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep4-case2: Secondary should retry persistence in every 100 milliseconds[0m finished, took 10.053 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case2: Primary retries persistence every 100 milliseconds[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mStep5-case2: Primary retries persistence every 100 milliseconds[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (3 seconds) during expectMsg: , took 3.041 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgPF(TestKit.scala:436)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgPF$(TestKit.scala:433)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsgPF(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step5_PrimaryPersistenceSpec.Step5-case2: Primary retries persistence every 100 milliseconds(Step5_PrimaryPersistenceSpec.scala:41)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step5_PrimaryPersistenceSpec.Step5-case2: Primary retries persistence every 100 milliseconds$(Step5_PrimaryPersistenceSpec.scala:31)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Step5-case2: Primary retries persistence every 100 milliseconds([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case2: Primary retries persistence every 100 milliseconds[0m finished, took 3.044 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case5: Primary acknowledges only after persistence and global acknowledgement[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mStep5-case5: Primary acknowledges only after persistence and global acknowledgement[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (3 seconds) during expectMsgClass waiting for class kvstore.Replicator$Snapshot, took 3.049 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgClass_internal(TestKit.scala:528)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType(TestKit.scala:500)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType$(TestKit.scala:499)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsgType(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step5_PrimaryPersistenceSpec.Step5-case5: Primary acknowledges only after persistence and global acknowledgement(Step5_PrimaryPersistenceSpec.scala:96)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step5_PrimaryPersistenceSpec.Step5-case5: Primary acknowledges only after persistence and global acknowledgement$(Step5_PrimaryPersistenceSpec.scala:85)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Step5-case5: Primary acknowledges only after persistence and global acknowledgement([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case5: Primary acknowledges only after persistence and global acknowledgement[0m finished, took 3.053 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep4-case1: Secondary should not acknowledge snapshots until persisted[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mStep4-case1: Secondary should not acknowledge snapshots until persisted[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (10 seconds) during expectMsgClass waiting for class kvstore.Replica$GetResult, took 10.048 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgClass_internal(TestKit.scala:528)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType(TestKit.scala:510)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType$(TestKit.scala:509)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsgType(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Tools$Session.get(Tools.scala:78)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step4_SecondaryPersistenceSpec.Step4-case1: Secondary should not acknowledge snapshots until persisted(Step4_SecondaryPersistenceSpec.scala:25)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step4_SecondaryPersistenceSpec.Step4-case1: Secondary should not acknowledge snapshots until persisted$(Step4_SecondaryPersistenceSpec.scala:13)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Step4-case1: Secondary should not acknowledge snapshots until persisted([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep4-case1: Secondary should not acknowledge snapshots until persisted[0m finished, took 10.05 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep6-case3: Primary must stop replication to removed replicas and waive their outstanding acknowledgements[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mStep6-case3: Primary must stop replication to removed replicas and waive their outstanding acknowledgements[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (3 seconds) during expectMsg while waiting for Snapshot(k1,Some(v1),0), took 3.037 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg_internal(TestKit.scala:418)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg(TestKit.scala:395)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg$(TestKit.scala:395)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsg(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step6_NewSecondarySpec.Step6-case3: Primary must stop replication to removed replicas and waive their outstanding acknowledgements(Step6_NewSecondarySpec.scala:67)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step6_NewSecondarySpec.Step6-case3: Primary must stop replication to removed replicas and waive their outstanding acknowledgements$(Step6_NewSecondarySpec.scala:56)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Step6-case3: Primary must stop replication to removed replicas and waive their outstanding acknowledgements([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep6-case3: Primary must stop replication to removed replicas and waive their outstanding acknowledgements[0m finished, took 3.038 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mIntegration-case3: Primary and secondaries must work in concert when both persistence and communication to secondaries are unreliable (35 pts)[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mIntegration-case3: Primary and secondaries must work in concert when both persistence and communication to secondaries are unreliable (35 pts)[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (10 seconds) during expectMsgClass waiting for class kvstore.Replica$GetResult, took 10.044 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgClass_internal(TestKit.scala:528)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType(TestKit.scala:510)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType$(TestKit.scala:509)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsgType(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Tools$Session.get(Tools.scala:78)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.IntegrationSpec.$anonfun$integrate$1(IntegrationSpec.scala:49)[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.poll$2(TestKit.scala:327)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.awaitAssert(TestKit.scala:344)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.awaitAssert$(TestKit.scala:316)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.awaitAssert(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.IntegrationSpec.integrate(IntegrationSpec.scala:48)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.IntegrationSpec.integrate$(IntegrationSpec.scala:27)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.integrate([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.IntegrationSpec.Integration-case3: Primary and secondaries must work in concert when both persistence and communication to secondaries are unreliable (35 pts)(IntegrationSpec.scala:24)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.IntegrationSpec.Integration-case3: Primary and secondaries must work in concert when both persistence and communication to secondaries are unreliable (35 pts)$(IntegrationSpec.scala:23)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Integration-case3: Primary and secondaries must work in concert when both persistence and communication to secondaries are unreliable (35 pts)([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mIntegration-case3: Primary and secondaries must work in concert when both persistence and communication to secondaries are unreliable (35 pts)[0m finished, took 10.046 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case1: Secondary (in isolation) should properly register itself to the provided Arbiter[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case1: Secondary (in isolation) should properly register itself to the provided Arbiter[0m finished, took 0.013 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case4: Secondary should drop snapshots with future sequence numbers[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mStep2-case4: Secondary should drop snapshots with future sequence numbers[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (10 seconds) during expectMsgClass waiting for class kvstore.Replica$GetResult, took 10.034 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgClass_internal(TestKit.scala:528)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType(TestKit.scala:510)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType$(TestKit.scala:509)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsgType(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Tools$Session.get(Tools.scala:78)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step2_SecondarySpec.Step2-case4: Secondary should drop snapshots with future sequence numbers(Step2_SecondarySpec.scala:90)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step2_SecondarySpec.Step2-case4: Secondary should drop snapshots with future sequence numbers$(Step2_SecondarySpec.scala:79)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Step2-case4: Secondary should drop snapshots with future sequence numbers([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case4: Secondary should drop snapshots with future sequence numbers[0m finished, took 10.038 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case3: Secondary should drop and immediately ack snapshots with older sequence numbers[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mStep2-case3: Secondary should drop and immediately ack snapshots with older sequence numbers[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (10 seconds) during expectMsgClass waiting for class kvstore.Replica$GetResult, took 10.041 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgClass_internal(TestKit.scala:528)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType(TestKit.scala:510)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType$(TestKit.scala:509)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsgType(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Tools$Session.get(Tools.scala:78)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step2_SecondarySpec.Step2-case3: Secondary should drop and immediately ack snapshots with older sequence numbers(Step2_SecondarySpec.scala:60)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step2_SecondarySpec.Step2-case3: Secondary should drop and immediately ack snapshots with older sequence numbers$(Step2_SecondarySpec.scala:49)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Step2-case3: Secondary should drop and immediately ack snapshots with older sequence numbers([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case3: Secondary should drop and immediately ack snapshots with older sequence numbers[0m finished, took 10.043 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case3: Primary generates failure after 1 second if persistence fails[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mStep5-case3: Primary generates failure after 1 second if persistence fails[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (3 seconds) during expectMsgClass waiting for class kvstore.Persistence$Persist, took 3.038 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgClass_internal(TestKit.scala:528)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType(TestKit.scala:500)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType$(TestKit.scala:499)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsgType(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step5_PrimaryPersistenceSpec.Step5-case3: Primary generates failure after 1 second if persistence fails(Step5_PrimaryPersistenceSpec.scala:63)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step5_PrimaryPersistenceSpec.Step5-case3: Primary generates failure after 1 second if persistence fails$(Step5_PrimaryPersistenceSpec.scala:53)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Step5-case3: Primary generates failure after 1 second if persistence fails([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case3: Primary generates failure after 1 second if persistence fails[0m finished, took 3.038 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mIntegration-case1: Primary and secondaries must work in concert when persistence is unreliable (35pts)[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mIntegration-case1: Primary and secondaries must work in concert when persistence is unreliable (35pts)[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (10 seconds) during expectMsgClass waiting for class kvstore.Replica$GetResult, took 10.037 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgClass_internal(TestKit.scala:528)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType(TestKit.scala:510)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType$(TestKit.scala:509)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsgType(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Tools$Session.get(Tools.scala:78)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.IntegrationSpec.$anonfun$integrate$1(IntegrationSpec.scala:49)[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.poll$2(TestKit.scala:327)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.awaitAssert(TestKit.scala:344)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.awaitAssert$(TestKit.scala:316)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.awaitAssert(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.IntegrationSpec.integrate(IntegrationSpec.scala:48)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.IntegrationSpec.integrate$(IntegrationSpec.scala:27)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.integrate([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.IntegrationSpec.Integration-case1: Primary and secondaries must work in concert when persistence is unreliable (35pts)(IntegrationSpec.scala:16)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.IntegrationSpec.Integration-case1: Primary and secondaries must work in concert when persistence is unreliable (35pts)$(IntegrationSpec.scala:15)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Integration-case1: Primary and secondaries must work in concert when persistence is unreliable (35pts)([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mIntegration-case1: Primary and secondaries must work in concert when persistence is unreliable (35pts)[0m finished, took 10.041 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mIntegration-case2: Primary and secondaries must work in concert when communication to secondaries is unreliable (35pts)[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mIntegration-case2: Primary and secondaries must work in concert when communication to secondaries is unreliable (35pts)[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (10 seconds) during expectMsgClass waiting for class kvstore.Replica$GetResult, took 10.027 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgClass_internal(TestKit.scala:528)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType(TestKit.scala:510)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType$(TestKit.scala:509)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsgType(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Tools$Session.get(Tools.scala:78)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.IntegrationSpec.$anonfun$integrate$1(IntegrationSpec.scala:49)[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.poll$2(TestKit.scala:327)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.awaitAssert(TestKit.scala:344)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.awaitAssert$(TestKit.scala:316)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.awaitAssert(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.IntegrationSpec.integrate(IntegrationSpec.scala:48)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.IntegrationSpec.integrate$(IntegrationSpec.scala:27)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.integrate([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.IntegrationSpec.Integration-case2: Primary and secondaries must work in concert when communication to secondaries is unreliable (35pts)(IntegrationSpec.scala:20)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.IntegrationSpec.Integration-case2: Primary and secondaries must work in concert when communication to secondaries is unreliable (35pts)$(IntegrationSpec.scala:19)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Integration-case2: Primary and secondaries must work in concert when communication to secondaries is unreliable (35pts)([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mIntegration-case2: Primary and secondaries must work in concert when communication to secondaries is unreliable (35pts)[0m finished, took 10.028 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep6-case1: Primary must start replication to new replicas[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mStep6-case1: Primary must start replication to new replicas[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (3 seconds) during expectMsg while waiting for Snapshot(k1,Some(v1),0), took 3.037 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg_internal(TestKit.scala:418)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg(TestKit.scala:395)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg$(TestKit.scala:395)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsg(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Tools.expectAtLeastOneSnapshot(Tools.scala:94)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Tools.expectAtLeastOneSnapshot$(Tools.scala:93)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.expectAtLeastOneSnapshot([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step6_NewSecondarySpec.Step6-case1: Primary must start replication to new replicas(Step6_NewSecondarySpec.scala:22)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step6_NewSecondarySpec.Step6-case1: Primary must start replication to new replicas$(Step6_NewSecondarySpec.scala:10)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Step6-case1: Primary must start replication to new replicas([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep6-case1: Primary must start replication to new replicas[0m finished, took 3.037 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep3-case2: Replicator should retry until acknowledged by secondary[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mStep3-case2: Replicator should retry until acknowledged by secondary[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (3 seconds) during expectMsg while waiting for Snapshot(k1,Some(v1),0), took 3.023 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg_internal(TestKit.scala:418)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg(TestKit.scala:395)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg$(TestKit.scala:395)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsg(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step3_ReplicatorSpec.Step3-case2: Replicator should retry until acknowledged by secondary(Step3_ReplicatorSpec.scala:39)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step3_ReplicatorSpec.Step3-case2: Replicator should retry until acknowledged by secondary$(Step3_ReplicatorSpec.scala:33)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Step3-case2: Replicator should retry until acknowledged by secondary([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep3-case2: Replicator should retry until acknowledged by secondary[0m finished, took 3.023 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep6-case2: Primary must stop replication to removed replicas and stop Replicator[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mStep6-case2: Primary must stop replication to removed replicas and stop Replicator[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (3 seconds) during expectMsg while waiting for Snapshot(k1,Some(v1),0), took 3.046 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg_internal(TestKit.scala:418)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg(TestKit.scala:395)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg$(TestKit.scala:395)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsg(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step6_NewSecondarySpec.Step6-case2: Primary must stop replication to removed replicas and stop Replicator(Step6_NewSecondarySpec.scala:45)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step6_NewSecondarySpec.Step6-case2: Primary must stop replication to removed replicas and stop Replicator$(Step6_NewSecondarySpec.scala:33)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Step6-case2: Primary must stop replication to removed replicas and stop Replicator([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep6-case2: Primary must stop replication to removed replicas and stop Replicator[0m finished, took 3.046 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case2: Secondary (in isolation) must handle Snapshots[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mStep2-case2: Secondary (in isolation) must handle Snapshots[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (10 seconds) during expectMsgClass waiting for class kvstore.Replica$GetResult, took 10.035 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgClass_internal(TestKit.scala:528)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType(TestKit.scala:510)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType$(TestKit.scala:509)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsgType(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Tools$Session.get(Tools.scala:78)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step2_SecondarySpec.Step2-case2: Secondary (in isolation) must handle Snapshots(Step2_SecondarySpec.scala:34)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step2_SecondarySpec.Step2-case2: Secondary (in isolation) must handle Snapshots$(Step2_SecondarySpec.scala:23)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Step2-case2: Secondary (in isolation) must handle Snapshots([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case2: Secondary (in isolation) must handle Snapshots[0m finished, took 10.036 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case4: Primary generates failure after 1 second if global acknowledgement fails[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mStep5-case4: Primary generates failure after 1 second if global acknowledgement fails[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (200 milliseconds) during expectMsgClass waiting for class kvstore.Replicator$Snapshot, took 0.238 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgClass_internal(TestKit.scala:528)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType(TestKit.scala:510)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgType$(TestKit.scala:509)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsgType(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step5_PrimaryPersistenceSpec.$anonfun$Step5-case4: Primary generates failure after 1 second if global acknowledgement fails$1(Step5_PrimaryPersistenceSpec.scala:80)[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.within(TestKit.scala:375)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.within$(TestKit.scala:363)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.within(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step5_PrimaryPersistenceSpec.Step5-case4: Primary generates failure after 1 second if global acknowledgement fails(Step5_PrimaryPersistenceSpec.scala:78)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step5_PrimaryPersistenceSpec.Step5-case4: Primary generates failure after 1 second if global acknowledgement fails$(Step5_PrimaryPersistenceSpec.scala:68)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Step5-case4: Primary generates failure after 1 second if global acknowledgement fails([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case4: Primary generates failure after 1 second if global acknowledgement fails[0m finished, took 0.244 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case1: Primary does not acknowledge updates which have not been persisted[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mStep5-case1: Primary does not acknowledge updates which have not been persisted[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (3 seconds) during expectMsg: , took 3.039 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgPF(TestKit.scala:436)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsgPF$(TestKit.scala:433)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsgPF(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step5_PrimaryPersistenceSpec.Step5-case1: Primary does not acknowledge updates which have not been persisted(Step5_PrimaryPersistenceSpec.scala:22)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step5_PrimaryPersistenceSpec.Step5-case1: Primary does not acknowledge updates which have not been persisted$(Step5_PrimaryPersistenceSpec.scala:12)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Step5-case1: Primary does not acknowledge updates which have not been persisted([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case1: Primary does not acknowledge updates which have not been persisted[0m finished, took 3.04 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m18 failed[0m[34m, [0m[34m0 ignored[0m[34m, 21 total, 109.633s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 21 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
+[0m[[0m[31merror[0m] [0m[0mFailed: Total 21, Failed 18, Errors 0, Passed 3[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	kvstore.KVStoreSuite[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
