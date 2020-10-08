@@ -2606,3 +2606,16 @@ something's wrong: no file:///C:/Users/lao8n/OneDrive/Documents/epfl%20edx%20sca
 2020.10.08 16:43:43 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
 2020.10.08 16:43:51 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
 2020.10.08 16:45:59 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+2020.10.08 16:49:30 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\test\scala\kvstore\Step3_ReplicatorSpec.scala
+2020.10.08 16:49:36 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\test\scala\kvstore\KVStoreSuite.scala
+2020.10.08 16:50:54 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.08 17:11:17 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.08 17:12:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.08 17:15:31 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.08 17:21:52 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.08 17:28:53 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.08 17:29:11 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\reactive-link-checker\src\main\scala\reactive\Controller.scala
+2020.10.08 17:29:33 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\reactive-link-checker\src\main\scala\reactive\Getter.scala
+2020.10.08 17:29:39 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\reactive-link-checker\src\main\scala\reactive\Main.scala
+2020.10.08 17:30:26 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\reactive-link-checker\src\main\scala\reactive\Receptionist.scala
+2020.10.08 23:15:05 INFO  shutting down Metals

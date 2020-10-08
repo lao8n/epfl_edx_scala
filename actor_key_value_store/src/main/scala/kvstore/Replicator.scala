@@ -34,7 +34,7 @@ object Replicator {
    * sent by replicator to appropriate secondary replica to indicate a new state 
    * of the given key. 
    * updates for a given secondary replica must be processed in contiguous ascending
-    * sequence number order (starting at 0)
+   * sequence number order (starting at 0)
    * if a snapshot arrives at a replica with a sequence number > than currently 
    * expected number it is ignored (no change in state and no reaction)
    * if a snapshot arrives arrives at a replica with a sequence number < than 
@@ -45,7 +45,7 @@ object Replicator {
    * need to consider case that snap shot message is lost on the way
    */
   case class Snapshot(key: String, valueOption: Option[String], seq: Long)
-  
+
   /**
    * secondary partner replica -> partner Replicator
    * sent as soon as updated is persisted logically by the secondary replica, this might 
@@ -103,9 +103,21 @@ class Replicator(val replica: ActorRef) extends Actor {
   }
 
   
+
+  
   /* TODO Behavior for the Replicator. */
   def receive: Receive = {
-    case _ =>
+    case Replicate(k, v, id) => {
+      seq = nextSeq()
+      replica ! Snapshot(k, v, seq)
+      acks += (seq -> (sender, Replicate(k, v, id)))
+    }
+    case SnapshotAck(k, seq) => {
+      acks get k match {
+        case (requester, Replicate(k, v, id)) => requester ! Replicated(k, id)
+      }
+      acks -= k
+    }
   }
 
 }
