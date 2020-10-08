@@ -21,7 +21,7 @@
 [0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\target\scala-2.13\classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.13:1.3.1:compile for Scala 2.13.1[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.13:1.3.1:compile for Scala 2.13.1[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 7a1ed7 for Scala compiler version 2.13.1[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 1104278 for Scala compiler version 2.13.1[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-feature[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-deprecation[0m
@@ -33,17 +33,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\resources.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\rt.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\jsse.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\jce.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\charsets.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\jfr.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\classes;C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\null\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.1\scala-library-2.13.1.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\target\scala-2.13\classes;C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\null\Coursier\cache\v1\https\repo1.maven.org\maven2\com\typesafe\akka\akka-actor_2.13\2.6.0\akka-actor_2.13-2.6.0.jar;C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\null\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-java8-compat_2.13\0.9.0\scala-java8-compat_2.13-0.9.0.jar;C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\null\Coursier\cache\v1\https\repo1.maven.org\maven2\com\typesafe\config\1.4.0\config-1.4.0.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 4.943306 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 4.4976399 s[0m
 [0m[[0m[0mdebug[0m] [0m[0mDone compiling.[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from kvstore.Replica...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: kvstore.Replica[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(kvstore.Replica)[0m
-[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(kvstore.Replica,ModifiedNames(changes = UsedName(aroundPostRestart,[Default]))) invalidates 1 classes due to The kvstore.Replica has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(aroundPostRestart,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(kvstore.Replica)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m	> [0m
-[0m[[0m[0mdebug[0m] [0m[0m        [0m
 [0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: [0m

@@ -16,6 +16,7 @@ object Replicator {
    * @param id
    */
   case class Replicate(key: String, valueOption: Option[String], id: Long)
+
   /**
    * replicator -> replica
    * is sent as a reply to the corresponding Replicate message once replication of 
@@ -44,6 +45,7 @@ object Replicator {
    * need to consider case that snap shot message is lost on the way
    */
   case class Snapshot(key: String, valueOption: Option[String], seq: Long)
+  
   /**
    * secondary partner replica -> partner Replicator
    * sent as soon as updated is persisted logically by the secondary replica, this might 

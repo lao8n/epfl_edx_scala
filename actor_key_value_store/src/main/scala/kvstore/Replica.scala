@@ -10,7 +10,16 @@ import akka.util.Timeout
   * Design choices
   * 1.  Q: How wait 1 second without blocking? How keep track of all the requests etc and timers?
   *     A: ?
-  * 2.  Q: 
+  * 2.  Q: Should the read-only replicas ignored Insert & Remove requests or respond with OperationFailed?
+  *     A: ?
+  * 3.  Q: The protocol is designed that basically the same message of insert/replicate is differentiated
+  *        not by different senders but rather by different message protocols? Does this make sense?
+  *     A: I guess the dis of current is you could have rogue node sending replicate messages, adv of 
+  *        current is you don't have to maintain a list of replicators (although we do this anyway...)
+  * 4.  Q: How do we handle seq number? should it be an immutable become associated argument?
+  *        Or just a var - but if a var then do we reset if a secondary replica becomes a primary replica?
+  *        And vice-versa?
+  *     A: 
   */
 
 object Replica {
@@ -89,8 +98,11 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
   var secondaries = Map.empty[ActorRef, ActorRef]
   // the current set of replicators
   var replicators = Set.empty[ActorRef]
+  // seq number
+  var replicaSeq = 0
   // send arbiter request to join
-  arbiter ! Join
+  arbiter ! Join 
+  
 
   def receive = {
     case JoinedPrimary   => context.become(leader)
@@ -142,6 +154,29 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
    * is attempted in case of failure.
    * */
   val replica: Receive = {
+    case Get(k, id) => {
+      sender ! GetResult(k, kv.get(k), id)
+    }
+    case Snapshot(k, v, seq) => {
+      if(seq > replicaSeq){
+        // ignore
+      }
+      else if (seq < replicaSeq) {
+        sender ! SnapshotAck(k, seq)
+      }
+      else {
+        v match {
+          // insert
+          case Some(v) => {
+            kv += (k -> v)
+          }
+          case None => kv -= k
+        }
+        replicaSeq += 1
+        sender ! SnapshotAck(k, seq)
+      }
+    }
+    case Replicated(k, id) => // TODO
     case _ =>
   }
 

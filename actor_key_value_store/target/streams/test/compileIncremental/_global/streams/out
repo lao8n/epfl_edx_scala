@@ -11,44 +11,4 @@
 [0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of kvstore.Step4_SecondaryPersistenceSpec. This dependency is not being considered for invalidation.[0m
 [0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of kvstore.Step2_SecondarySpec. This dependency is not being considered for invalidation.[0m
 [0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of kvstore.Tools.Session. This dependency is not being considered for invalidation.[0m
-[0m[[0m[0mdebug[0m] [0m[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\test\scala\kvstore\Step1_PrimarySpec.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set(NamesChange(kvstore.Replica$,ModifiedNames(changes = UsedName(aroundPostRestart,[Default]))))[0m
-[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(kvstore.Step1_PrimarySpec)[0m
-[0m[[0m[0mdebug[0m] [0m[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(kvstore.Step1_PrimarySpec)[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\test\scala\kvstore\Step1_PrimarySpec.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: kvstore.Step1_PrimarySpec[0m
-[0m[[0m[0mdebug[0m] [0m[0mIncluding kvstore.KVStoreSuite by kvstore.Step1_PrimarySpec[0m
-[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\target\scala-2.13\test-classes ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.13:1.3.1:compile for Scala 2.13.1[0m
-[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.13:1.3.1:compile for Scala 2.13.1[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 88b53b for Scala compiler version 2.13.1[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	-feature[0m
-[0m[[0m[0mdebug[0m] [0m[0m	-deprecation[0m
-[0m[[0m[0mdebug[0m] [0m[0m	-encoding[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UTF-8[0m
-[0m[[0m[0mdebug[0m] [0m[0m	-unchecked[0m
-[0m[[0m[0mdebug[0m] [0m[0m	-Xlint[0m
-[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
-[0m[[0m[0mdebug[0m] [0m[0m	C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\resources.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\rt.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\jsse.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\jce.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\charsets.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\jfr.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\classes;C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\null\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.1\scala-library-2.13.1.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
-[0m[[0m[0mdebug[0m] [0m[0m	C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\target\scala-2.13\test-classes;C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\target\scala-2.13\classes;C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\null\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-sbt\test-interface\1.0\test-interface-1.0.jar;C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\null\Coursier\cache\v1\https\repo1.maven.org\maven2\com\typesafe\akka\akka-testkit_2.13\2.6.0\akka-testkit_2.13-2.6.0.jar;C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\null\Coursier\cache\v1\https\repo1.maven.org\maven2\junit\junit\4.11\junit-4.11.jar;C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\null\Coursier\cache\v1\https\repo1.maven.org\maven2\com\typesafe\akka\akka-actor_2.13\2.6.0\akka-actor_2.13-2.6.0.jar;C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\null\Coursier\cache\v1\https\repo1.maven.org\maven2\com\typesafe\config\1.4.0\config-1.4.0.jar;C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\null\Coursier\cache\v1\https\repo1.maven.org\maven2\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\null\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-java8-compat_2.13\0.9.0\scala-java8-compat_2.13-0.9.0.jar;C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\null\Coursier\cache\v1\https\repo1.maven.org\maven2\com\novocode\junit-interface\0.11\junit-interface-0.11.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.3367935 s[0m
-[0m[[0m[0mdebug[0m] [0m[0mDone compiling.[0m
-[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: [0m
-[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mNo classes were invalidated.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNo changes[0m

@@ -4,4 +4,10 @@
 [0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\test\scala\kvstore\Step1_PrimarySpec.scala:7:27: Unused import[0m
 [0m[[0m[33mwarn[0m] [0m[0mimport scala.util.control.NonFatal[0m
 [0m[[0m[33mwarn[0m] [0m[0m                          ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\test\scala\kvstore\Step2_SecondarySpec.scala:10:19: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport scala.util.Random[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\test\scala\kvstore\Step2_SecondarySpec.scala:11:27: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport scala.util.control.NonFatal[0m
+[0m[[0m[33mwarn[0m] [0m[0m                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mfour warnings found[0m
