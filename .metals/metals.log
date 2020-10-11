@@ -2619,3 +2619,138 @@ something's wrong: no file:///C:/Users/lao8n/OneDrive/Documents/epfl%20edx%20sca
 2020.10.08 17:29:39 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\reactive-link-checker\src\main\scala\reactive\Main.scala
 2020.10.08 17:30:26 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\reactive-link-checker\src\main\scala\reactive\Receptionist.scala
 2020.10.08 23:15:05 INFO  shutting down Metals
+2020.10.08 23:42:12 INFO  started: Metals version 0.9.4 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.10.08 23:42:13 INFO  time: initialize in 0.55s
+2020.10.08 23:42:13 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.08 23:42:16 INFO  no build target: using presentation compiler with only scala-library
+2020.10.08 23:42:16 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\reactive-link-checker\src\main\scala\reactive\Receptionist.scala
+2020.10.08 23:42:16 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.08 23:53:33 INFO  shutting down Metals
+2020.10.09 12:58:23 INFO  started: Metals version 0.9.4 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.10.09 12:58:23 INFO  time: initialize in 0.45s
+2020.10.09 12:58:24 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.09 12:58:26 INFO  no build target: using presentation compiler with only scala-library
+2020.10.09 12:58:26 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.09 12:58:26 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\reactive-link-checker\src\main\scala\reactive\Receptionist.scala
+something's wrong: no file:///C:/Users/lao8n/OneDrive/Documents/epfl%20edx%20scala/reactive-link-checker/src/main/scala/reactive/Receptionist.scala in Set[String]RangePosition(file:///C:/Users/lao8n/OneDrive/Documents/epfl%20edx%20scala/reactive-link-checker/src/main/scala/reactive/Receptionist.scala, 571, 571, 582)
+2020.10.09 12:58:40 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+2020.10.09 13:02:16 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+2020.10.09 13:04:42 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+2020.10.09 13:15:24 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.09 13:19:48 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Oct 09, 2020 1:20:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 686
+2020.10.09 13:22:27 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.09 13:22:49 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.09 19:18:55 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+2020.10.09 19:18:55 INFO  shutting down Metals
+2020.10.10 15:38:09 INFO  started: Metals version 0.9.4 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.10.10 15:38:09 INFO  time: initialize in 0.44s
+2020.10.10 15:38:10 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 15:38:12 INFO  no build target: using presentation compiler with only scala-library
+2020.10.10 15:38:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+2020.10.10 15:38:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 15:52:30 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 15:57:10 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 15:57:10 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+2020.10.10 15:57:10 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 15:58:23 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 15:58:32 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 15:58:32 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+something's wrong: no file:///C:/Users/lao8n/OneDrive/Documents/epfl%20edx%20scala/actor_key_value_store/src/main/scala/kvstore/Replicator.scala in (<error>, <error>)RangePosition(file:///C:/Users/lao8n/OneDrive/Documents/epfl%20edx%20scala/actor_key_value_store/src/main/scala/kvstore/Replicator.scala, 4264, 4264, 4284)
+2020.10.10 16:02:07 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:03:28 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:03:42 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:03:52 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+Oct 10, 2020 4:04:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 643
+2020.10.10 16:17:58 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 16:17:58 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+2020.10.10 16:17:58 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 16:36:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:36:49 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:37:40 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:43:56 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 16:43:56 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+2020.10.10 16:43:56 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 16:44:05 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:45:30 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:45:41 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:46:19 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:46:29 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:48:02 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:48:04 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:48:06 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:48:37 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:49:37 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:50:39 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 16:50:39 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+2020.10.10 16:50:51 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:51:11 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:52:20 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 16:56:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:00:42 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 17:00:42 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 17:00:44 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 17:00:48 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 17:00:51 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:01:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:01:50 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:04:43 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:04:53 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:05:48 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\reactive-link-checker\src\main\scala\reactive\Main.scala
+2020.10.10 17:05:51 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\reactive-link-checker\src\main\scala\reactive\Controller.scala
+2020.10.10 17:06:14 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:07:46 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:07:51 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:10:34 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+2020.10.10 17:11:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:12:03 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:15:46 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:17:27 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:18:36 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:19:14 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+2020.10.10 17:28:59 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:36:13 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:36:31 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:37:05 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:39:07 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:39:18 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:40:58 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:42:20 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:43:16 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\test\scala\kvstore\Step3_ReplicatorSpec.scala
+2020.10.10 17:44:05 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 17:44:05 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+2020.10.10 17:46:52 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:46:56 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:48:47 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:49:39 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 17:49:48 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+2020.10.10 17:49:48 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 17:49:57 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+2020.10.10 17:50:31 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:51:56 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala
+2020.10.10 17:53:42 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:54:18 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 17:54:20 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 17:54:30 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 17:55:28 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 17:55:59 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 18:03:59 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 18:04:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 18:04:19 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 18:05:33 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 18:05:44 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 18:05:51 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 18:05:59 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.10 18:06:11 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 18:09:14 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 18:09:18 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 18:10:22 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
+2020.10.10 21:03:02 INFO  shutting down Metals
+2020.10.11 14:31:45 INFO  started: Metals version 0.9.4 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.10.11 14:31:46 INFO  time: initialize in 0.42s
+2020.10.11 14:31:46 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.11 14:31:49 INFO  no build target: using presentation compiler with only scala-library
+2020.10.11 14:31:49 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\test\scala\kvstore\Step3_ReplicatorSpec.scala
+2020.10.11 14:31:49 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala

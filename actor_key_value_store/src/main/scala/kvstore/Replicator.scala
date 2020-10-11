@@ -3,6 +3,7 @@ package kvstore
 import akka.actor.Props
 import akka.actor.Actor
 import akka.actor.ActorRef
+import akka.util.Timeout
 import scala.concurrent.duration._
 
 object Replicator {
@@ -94,6 +95,7 @@ class Replicator(val replica: ActorRef) extends Actor {
   var acks = Map.empty[Long, (ActorRef, Replicate)]
   // a sequence of not-yet-sent snapshots (you can disregard this if not implementing batching)
   var pending = Vector.empty[Snapshot]
+  var unacks = Map.empty[Long, Snapshot]
   
   var _seqCounter = 0L
   def nextSeq() = {
@@ -102,22 +104,43 @@ class Replicator(val replica: ActorRef) extends Actor {
     ret
   }
 
-  
+  // batch requests at least every 200ms, we set at 150ms
+  val batchTimeout : Timeout = Timeout(150.milliseconds)
+  context.system.scheduler.scheduleWithFixedDelay(Duration.Zero, 150.milliseconds, self, batchTimeout)
+  // send unacknowledged requests at least every 100ms, we set at 50ms
+  val unackTimeout : Timeout = Timeout(50.milliseconds)
+  context.system.scheduler.scheduleWithFixedDelay(Duration.Zero, 50.milliseconds, self, unackTimeout)
 
-  
   /* TODO Behavior for the Replicator. */
   def receive: Receive = {
     case Replicate(k, v, id) => {
-      seq = nextSeq()
-      replica ! Snapshot(k, v, seq)
-      acks += (seq -> (sender, Replicate(k, v, id)))
+      val seq = nextSeq()
+      // we batch snapshot requests instead of messaging immediately
+      // replica ! Snapshot(k, v, seq)
+      acks = acks + (seq -> ((sender, Replicate(k, v, id))))
+      pending =  pending :+ Snapshot(k, v, seq)
     }
     case SnapshotAck(k, seq) => {
-      acks get k match {
-        case (requester, Replicate(k, v, id)) => requester ! Replicated(k, id)
+      unacks = unacks - seq
+      acks get seq match {
+        case Some((requester, Replicate(_, _, id))) => requester ! Replicated(k, id)
+        case None => // do nothing - it should be there
       }
-      acks -= k
+    }
+    // backticks to pattern match on value not type
+    case `batchTimeout` => {
+      pending foreach { 
+        case Snapshot(k, v, seq) => {
+          replica ! Snapshot(k, v, seq)
+          unacks = unacks + (seq -> Snapshot(k, v, seq))
+        } 
+      }
+      pending = Vector.empty[Snapshot]
+    }
+    case `unackTimeout` => {
+      unacks foreach {
+        case (_, snapshot) => replica ! snapshot
+      }
     }
   }
-
 }

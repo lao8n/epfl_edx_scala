@@ -9,7 +9,8 @@ import akka.util.Timeout
 /**
   * Design choices
   * 1.  Q: How wait 1 second without blocking? How keep track of all the requests etc and timers?
-  *     A: ?
+  *     A: Is it something to do with manually waiting time or can be it be done more robustly using
+  *        the Akka APIs?
   * 2.  Q: Should the read-only replicas ignored Insert & Remove requests or respond with OperationFailed?
   *     A: ?
   * 3.  Q: The protocol is designed that basically the same message of insert/replicate is differentiated
@@ -19,7 +20,49 @@ import akka.util.Timeout
   * 4.  Q: How do we handle seq number? should it be an immutable become associated argument?
   *        Or just a var - but if a var then do we reset if a secondary replica becomes a primary replica?
   *        And vice-versa?
-  *     A: 
+  *     A: ?
+  * 5.  Q: What is the point of adding the additional replicator? 
+  *     A: Is it to add an interface to the replica which can handle failure etc? The videos talk more
+  *        about explicit failures rather than just not getting anything back like in our case, so I think
+  *        I should just do it manually
+  * 6.  Q: How to cycle through acks every 100 ms? The architecture to do it system.scheduler.schedule
+  *        is on a per-message basis so how to trigger a potential list of messages?
+  *     A: There is an example with 
+  *        context.system.scheduler.scheduleOnce(10.seconds, self, Timeout)
+  *        def receive = { case Timeout => children foreach(_ ! Getter.Abort)} i.e. Timeout is a message!!!
+  *   * 7.  Q: Should acks be a list of unacknowledged messages or all messages over the lifecycle?
+  *     A: ?
+  * 8.  Q: When use ask vs when use tell?
+  *     A: Ask is blocking so not great? https://doc.akka.io/docs/akka/2.5/futures.html
+  * 9.  Q: Should i use ack-retry? https://www.mjlivesey.co.uk/2016/02/19/akka-delivery-guarantees.html
+  *     A: Surely not because it seems to be blocking going to a new waiting context with a time out 
+  * 10. Q: Should the at-least-once machinery be push or pull led? https://www.lightbend.com/blog/how-akka-works-at-least-once-message-delivery
+  *     A: Maybe pull?. Notes such that it is push because 'the replicator must make sure to periodically
+  *        retransmit all unacknowledged changes'
+  * 11. Q: Unclear if we need acks to be maintained with all operations or we can use it as a list of 
+  *        unacknowledge messages? 
+  *     A: Have an additional unacks map which we use for resending and if it turns out don't need acks
+  *        then will delete it. Actual no need - this seems to be handled by the ask machinery
+  * 12. Q: How pattern match on multiple timeouts?
+  *     A: Current solution is to create two vals with different timeout values - but same types? Can it 
+  *        differentiate?
+  * 13. Q: How remove items from vector? 
+  *     A: There doesn't seem to be a remove method so I guess just loop through and then re-assign
+  *        var to an empty Snapshot
+  * 14. Q: Maybe do not need an explicit unacks but instead just need to figure out what longs are not in
+  *        acks?
+  *     A: But what about the latest number? Not clear about this.
+  * 15. Q: Why is there is a separate seq from id? surely these can be the same ascending order?
+  *     A: I thikn the idea is that id is about replica to replicator , and seq is replicator to secondary 
+  *        replica and they shouldn't be mixed
+  * 16. Q: How to handle pending and unacks? 
+  *     A: Actually unacks doesn't need long or actorref and we can just use pending as the queue
+  *        for unacknowledge requests as well. Actually we can go even further combining the batch 
+  *        and unacknowledged timeouts together. Actually we cannot combine them as we need a key
+  *        to handle unacknowledged requests. We make the implementation more sophisticated by only 
+  *        adding to unacknowledged once it has been batched and sent.
+  * 17. Q: What do with acks?
+  *     A: We are now using it is a list of - not even acknowledgements but a list of Replicate requests
   */
 
 object Replica {
