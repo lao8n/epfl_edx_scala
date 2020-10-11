@@ -29,15 +29,12 @@ object Persistence {
   * Persistence: A subsystem that is provided in this exercise and which 
   * offers to persist updates to stable storage, but might fail spuriously.
   * 
-  * Will either be the 
-  * primary sending Insert or Remove requests and the confirmation is an 
-  * OperationAck
-  * or the
-  * secondary replicator (not the replica) sending a Snapshot and expecting
+  * The requester will either be the primary sending Insert or Remove requests and the confirmation is an 
+  * OperationAck or the secondary replicator (not the replica) sending a Snapshot and expecting
   * a SnapshotAck back
   * 
   * replica needs to create and appropriately supervise the persistence actor
-  * for the purpose of thisexercise you can use any strategy (whether resuming, 
+  * for the purpose of this exercise you can use any strategy (whether resuming, 
   * restarting, stopping and recreating the persistence actor)
   * the replica does not receive an ActorRef but a props implying the replica 
   * has to initially create it as well 

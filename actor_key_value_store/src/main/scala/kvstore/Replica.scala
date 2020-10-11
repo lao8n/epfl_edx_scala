@@ -63,6 +63,20 @@ import akka.util.Timeout
   *        adding to unacknowledged once it has been batched and sent.
   * 17. Q: What do with acks?
   *     A: We are now using it is a list of - not even acknowledgements but a list of Replicate requests
+  * 18. Q: Should persistence be treated the same way in the replicator as the secondary replica? E.g. 
+  *        with a pending and an unacks to deal with resends etc? 
+  *     A: Or is meant to be sent just once? Handling the failures?
+  * 19. Q: It says in the notes that the logic for collecting acknowledgements of persistence and 
+  *        replication casn be made such that it is usable both in primary and secondary replicas?
+  *     A: Unclear how to do this because primary uses id and secondary uses seq. Also how reuse case
+  *        classes? have methods to call? Ah can just write a normal def function which we call
+  * 20. Q: How is secondary replica meant to know the replicator it is meant to send info too? 
+  *        unlike replicator it is not an argument? 
+  *     A: 
+  * 21. Q: How use def props(replica: ActorRef): Props = Props(new Replicator(replica))? Should it be 
+  *        here? Can we add not receive logic in the different receive sections?
+  * 22. Q: Should we batch persistence requests as we do with Snapshots?
+  *     A: No to simplify the implementation
   */
 
 object Replica {
@@ -145,7 +159,16 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
   var replicaSeq = 0
   // send arbiter request to join
   arbiter ! Join 
-  
+  // create persistence
+  override val supervisorStrategy = OneForOneStrategy() {
+    case _: Exception => SupervisorStrategy.Restart
+  }
+  val replicaPersistence = context.actorOf(persistenceProps, "replicaPersistence")
+  // we do not batch Persist messages but send them immediately
+  var unacksPersistence = Map.empty[Long, Persist]
+  // send unacknowledged requests at least every 100ms, we set at 50ms
+  val unacksPersistenceTimeout : Timeout = Timeout(50.milliseconds)
+  context.system.scheduler.scheduleWithFixedDelay(Duration.Zero, 50.milliseconds, self, unacksPersistenceTimeout)
 
   def receive = {
     case JoinedPrimary   => context.become(leader)
@@ -216,10 +239,29 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
           case None => kv -= k
         }
         replicaSeq += 1
-        sender ! SnapshotAck(k, seq)
+        // do not immediately acknowledge SnapshotAck to replicator but instead
+        // ask for persistence first
+        // sender ! SnapshotAck(k, seq)
+        replicaPersistence ! Persist(k, v, seq)
+        unacksPersistence = unacksPersistence + (seq -> (Persist(k, v, seq)))
+        replicators = replicators + sender
       }
     }
     case Replicated(k, id) => // TODO
+    case Persisted(k, seq) => {
+      // note we only expect there to be one replicator per secondary replica
+      // it is in a Set so that we can add it everytime we get a message without
+      // error
+      unacksPersistence = unacksPersistence - seq
+      replicators foreach {
+        case (replicator) => replicator ! SnapshotAck(k, seq)
+      }
+    }
+    case `unacksPersistenceTimeout` => {
+      unacksPersistence foreach {
+        case (_, persistMessage) => replicaPersistence ! persistMessage 
+      }
+    }
     case _ =>
   }
 

@@ -1,4 +1,13 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala:119:25: value - is not a member of scala.collection.immutable.Vector[kvstore.Replicator.Snapshot][0m
-[0m[[0m[31merror[0m] [0m[0m      pending = pending - seq[0m
-[0m[[0m[31merror[0m] [0m[0m                        ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:3:40: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport akka.actor.{ OneForOneStrategy, PoisonPill, Props, SupervisorStrategy, Terminated, ActorRef, Actor }[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:3:79: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport akka.actor.{ OneForOneStrategy, PoisonPill, Props, SupervisorStrategy, Terminated, ActorRef, Actor }[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                                              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:5:23: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport akka.pattern.{ ask, pipe }[0m
+[0m[[0m[33mwarn[0m] [0m[0m                      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:5:28: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport akka.pattern.{ ask, pipe }[0m
+[0m[[0m[33mwarn[0m] [0m[0m                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mfour warnings found[0m
