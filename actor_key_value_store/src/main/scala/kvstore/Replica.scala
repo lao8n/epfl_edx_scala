@@ -87,7 +87,13 @@ import akka.util.Timeout
   *     A: I guess cannot just maintain a map of id and Replicate messages, but also long for number
   *        of secondaries we're expecting an answer from. But maybe just counting messages doesn't work 
   *        either and instead you want to make sure you maintain a list of replicas you've received responses
-  *        from?
+  *        from? Actually we do not resend replicate message so do not need to have Replicate stored in the
+  *        unackReplicate map, just need to store the list of . How to handle key -> set(values) is unclear
+  *        I found reference to MultiDict and MultiMap but no good example of how to use as the latter is 
+  *        deprecated. Actually we need it to be a set of replicators because we get 
+  *        the Replicated message from the replicator not the secondary replica
+  * 27. Q: How do we avoid this nested set of gets and Some/None stuff with scala 
+  *     A: ?
   */
 
 object Replica {
@@ -187,8 +193,8 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
   val unacksPersistenceTimeout : Timeout = Timeout(100.milliseconds)
   context.system.scheduler.scheduleWithFixedDelay(Duration.Zero, 100.milliseconds, self, unacksPersistenceTimeout)
   // we do not resend replicate messages as expect these never to fail
-  // we need this map only to check unacknowledge replicated messages
-  var unacksReplicate = Map.empty[Long, Replicate]
+  // we need this map only to check unacknowledged replicate messages to replicators
+  var unacksReplicate = Map.empty[Long, Set[ActorRef]]
 
   def receive = {
     case JoinedPrimary   => context.become(leader)
@@ -223,7 +229,6 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
       }
       removedReplicas foreach {
         case replica : ActorRef => {
-
           secondaries = secondaries - replica
         }
       }
@@ -236,14 +241,22 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
       // do not immediately acknowledge OperationAck to requester but instead
       // ask for persistence and replication first
       replicaPersistence ! Persist(k, Some(v), id)
-      secondaries.values.foreach {
-        case replicator => replicator ! Replicate(k, Some(v), id)
-      } 
+      secondaries foreach {
+        case(replica, replicator) => {
+          replicator ! Replicate(k, Some(v), id)
+          unacksReplicate get id match {
+            case Some(setReplicators) => {
+              val newSetReplicators = setReplicators + replicator
+              unacksReplicate = unacksReplicate + (id -> newSetReplicators)
+            }
+            case None => {
+              unacksReplicate = unacksReplicate + (id -> Set(replicator))
+            }
+          }
+        }
+      }
       clients = clients + (id -> sender)
       unacksPersistence = unacksPersistence + (id -> Persist(k, Some(v), id))
-      if(!secondaries.isEmpty){
-        unacksReplicate = unacksReplicate + (id -> Replicate(k, Some(v), id))
-      }
       val failedPersistenceAndReplicationTimeout = PersistenceAndReplicationCheck(id)
       context.system.scheduler.scheduleOnce(1.seconds, self, failedPersistenceAndReplicationTimeout)
     } 
@@ -253,14 +266,22 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
       // ask for persistence first      
       // sender ! OperationAck(id)
       replicaPersistence ! Persist(k, None, id)
-      secondaries.values.foreach {
-        case replicator => replicator ! Replicate(k, None, id)
-      } 
+      secondaries foreach {
+        case(replica, replicator) => {
+          replicator ! Replicate(k, None, id)
+          unacksReplicate get id match {
+            case Some(setReplicators) => {
+              val newSetReplicators = setReplicators + replicator
+              unacksReplicate = unacksReplicate + (id -> newSetReplicators)
+            }
+            case None => {
+              unacksReplicate = unacksReplicate + (id -> Set(replicator))
+            }
+          }
+        }
+      }
       clients = clients + (id -> sender)
       unacksPersistence = unacksPersistence + (id -> Persist(k, None, id))
-      if(!secondaries.isEmpty){
-        unacksReplicate = unacksReplicate + (id -> Replicate(k, None, id))
-      } 
       val failedPersistenceAndReplicationTimeout = PersistenceAndReplicationCheck(id)
       context.system.scheduler.scheduleOnce(1.seconds, self, failedPersistenceAndReplicationTimeout)
     }
@@ -280,17 +301,29 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
       }
     }
     case Replicated(k, id) => {
-      unacksReplicate = unacksReplicate - id
-      unacksPersistence get id match {
-        // still waiting on persistence acknowledgement therefore do nothing
-        case Some(_) => 
-        // have both persist and replicate ack so send OperationAck
-        case None => {
-          clients get id match {
-            case Some(client) => client ! OperationAck(id)
-            case None =>
+      unacksReplicate get id match {
+        case Some(setReplicators) => {
+          val newSetReplicators = setReplicators - sender
+          if(newSetReplicators.size == 0){
+            unacksReplicate = unacksReplicate - id // make it None
+            // only check Persistence if waiting on no more replicators
+            unacksPersistence get id match {
+              // still waiting on persistence acknowledgement therefore do nothing
+              case Some(_) => 
+              // have both persist and replicate ack so send OperationAck
+              case None => {
+                clients get id match {
+                  case Some(client) => client ! OperationAck(id)
+                  case None =>
+                }
+              } 
+            }
           }
-        } 
+          else {
+            unacksReplicate = unacksReplicate + (id -> newSetReplicators)
+          }
+        }
+        case None => 
       }
     }
     case PersistenceAndReplicationCheck(id) => {
