@@ -20,8 +20,8 @@ trait Step1_PrimarySpec { this: KVStoreSuite =>
 
   @Test def `Step1-case2: Primary (in isolation) should react properly to Insert, Remove, Get`(): Unit = {
     val arbiter = TestProbe()
-        val primary = system.actorOf(Replica.props(arbiter.ref, Persistence.props(flaky = false)), "step1-case2-primary")
-        val client = session(primary)
+    val primary = system.actorOf(Replica.props(arbiter.ref, Persistence.props(flaky = false)), "step1-case2-primary")
+    val client = session(primary)
 
     arbiter.expectMsg(Join)
     arbiter.send(primary, JoinedPrimary)

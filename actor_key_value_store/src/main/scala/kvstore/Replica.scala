@@ -79,6 +79,15 @@ import akka.util.Timeout
   *     A: No to simplify the implementation
   * 23. Q: Does Replicate messages need to be batched and repeatedly sent?
   *     A: ? 
+  * 24. Q: How do we know whether 1 s has passed and we need to send an OperationFailed message?
+  *     A: We might be able to track with times recorded in a map, can we send a message with a 1s timeout?
+  * 25. Q: Should persistence and replication checks be the same integrated check or two separate checks?
+  *     A: ? 
+  * 26. Q: How do handle the same operation id with replication across multiple secondaries?
+  *     A: I guess cannot just maintain a map of id and Replicate messages, but also long for number
+  *        of secondaries we're expecting an answer from. But maybe just counting messages doesn't work 
+  *        either and instead you want to make sure you maintain a list of replicas you've received responses
+  *        from?
   */
 
 object Replica {
@@ -96,6 +105,7 @@ object Replica {
     * @param id
     */
   case class Insert(key: String, value: String, id: Long) extends Operation
+
   /**
     * Remove(key, id) - This message instructs the primary to remove the key (and its corresponding 
     * value) from the storage and then remove it from the secondaries.
@@ -104,6 +114,7 @@ object Replica {
     * @param id
     */
   case class Remove(key: String, id: Long) extends Operation
+
   /**
     * Instructs the replica to look up current (= ?) key in the storage and reply with the stored
     * value
@@ -120,6 +131,7 @@ object Replica {
     * @param id
     */
   case class OperationAck(id: Long) extends OperationReply
+
   /**
     * A failed update (insert or remove) results in an OperationFailed(id) reply. Failure is
     * inability to perform the operation within 1 second.
@@ -127,6 +139,7 @@ object Replica {
     * @param id
     */
   case class OperationFailed(id: Long) extends OperationReply
+
   /**
     * Get operation results in a GetResult message to be sent back to the sender of the lookup 
     * request. The id is from the Get message and the valueOption field should contain None if
@@ -138,6 +151,8 @@ object Replica {
     * @param id
     */
   case class GetResult(key: String, valueOption: Option[String], id: Long) extends OperationReply
+
+  case class PersistenceAndReplicationCheck(id: Long)
 
   def props(arbiter: ActorRef, persistenceProps: Props): Props = Props(new Replica(arbiter, persistenceProps))
 }
@@ -155,8 +170,6 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
   var kv = Map.empty[String, String]
   // a map from secondary replicas to replicators
   var secondaries = Map.empty[ActorRef, ActorRef]
-  // the current set of replicators
-  var replicators = Set.empty[ActorRef]
   // a map from id to client requester
   var clients = Map.empty[Long, ActorRef]  
   // seq number
@@ -170,9 +183,12 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
   val replicaPersistence = context.actorOf(persistenceProps, "replicaPersistence")
   // we do not batch Persist messages but send them immediately
   var unacksPersistence = Map.empty[Long, Persist]
-  // send unacknowledged requests at least every 100ms, we set at 50ms
-  val unacksPersistenceTimeout : Timeout = Timeout(50.milliseconds)
-  context.system.scheduler.scheduleWithFixedDelay(Duration.Zero, 50.milliseconds, self, unacksPersistenceTimeout)
+  // send unacknowledged requests at least every 100ms, we set at 100ms
+  val unacksPersistenceTimeout : Timeout = Timeout(100.milliseconds)
+  context.system.scheduler.scheduleWithFixedDelay(Duration.Zero, 100.milliseconds, self, unacksPersistenceTimeout)
+  // we do not resend replicate messages as expect these never to fail
+  // we need this map only to check unacknowledge replicated messages
+  var unacksReplicate = Map.empty[Long, Replicate]
 
   def receive = {
     case JoinedPrimary   => context.become(leader)
@@ -193,15 +209,43 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
    * indirectly by the Replicas message 
    * */
   val leader: Receive = {
+    case Replicas(replicas) => {
+      // replicas is Set.empty[ActorRef] i.e. it sends all replicas including primary
+      // something with secondaries?
+      val currentReplicas = secondaries.keySet
+      val removedReplicas = currentReplicas diff (replicas - self)
+      val addedReplicas = (replicas - self) diff currentReplicas
+      addedReplicas foreach {
+        case replica : ActorRef => {
+          val replicator = context.system.actorOf(Replicator.props(replica))
+          secondaries = secondaries + (replica -> replicator)
+        }
+      }
+      removedReplicas foreach {
+        case replica : ActorRef => {
+
+          secondaries = secondaries - replica
+        }
+      }
+    }
+    case Get(k, id) => {
+      sender ! GetResult(k, kv.get(k), id)
+    }
     case Insert(k, v, id) => {
       kv += (k -> v)
       // do not immediately acknowledge OperationAck to requester but instead
-      // ask for persistence first
-      // sender ! OperationAck(id)
-      // sender ! OperationFailed(id)
+      // ask for persistence and replication first
       replicaPersistence ! Persist(k, Some(v), id)
+      secondaries.values.foreach {
+        case replicator => replicator ! Replicate(k, Some(v), id)
+      } 
       clients = clients + (id -> sender)
       unacksPersistence = unacksPersistence + (id -> Persist(k, Some(v), id))
+      if(!secondaries.isEmpty){
+        unacksReplicate = unacksReplicate + (id -> Replicate(k, Some(v), id))
+      }
+      val failedPersistenceAndReplicationTimeout = PersistenceAndReplicationCheck(id)
+      context.system.scheduler.scheduleOnce(1.seconds, self, failedPersistenceAndReplicationTimeout)
     } 
     case Remove(k, id) => {
       kv -= k
@@ -209,24 +253,69 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
       // ask for persistence first      
       // sender ! OperationAck(id)
       replicaPersistence ! Persist(k, None, id)
+      secondaries.values.foreach {
+        case replicator => replicator ! Replicate(k, None, id)
+      } 
       clients = clients + (id -> sender)
       unacksPersistence = unacksPersistence + (id -> Persist(k, None, id))
+      if(!secondaries.isEmpty){
+        unacksReplicate = unacksReplicate + (id -> Replicate(k, None, id))
+      } 
+      val failedPersistenceAndReplicationTimeout = PersistenceAndReplicationCheck(id)
+      context.system.scheduler.scheduleOnce(1.seconds, self, failedPersistenceAndReplicationTimeout)
     }
     case Persisted(k, id) => {
       unacksPersistence = unacksPersistence - id
-      clients get id match {
-        case Some(client) => client ! OperationAck(id)
-        case None =>
+      // check if already replicated
+      unacksReplicate get id match {
+        // still waiting on replicate acknowledgement therefore do nothing
+        case Some(_) => 
+        // have both persist and replicate ack so send OperationAck
+        case None => {
+          clients get id match {
+            case Some(client) => client ! OperationAck(id)
+            case None =>
+          }
+        } 
       }
     }
-    case Replicated(k, id) => // TODO
+    case Replicated(k, id) => {
+      unacksReplicate = unacksReplicate - id
+      unacksPersistence get id match {
+        // still waiting on persistence acknowledgement therefore do nothing
+        case Some(_) => 
+        // have both persist and replicate ack so send OperationAck
+        case None => {
+          clients get id match {
+            case Some(client) => client ! OperationAck(id)
+            case None =>
+          }
+        } 
+      }
+    }
+    case PersistenceAndReplicationCheck(id) => {
+      val persistCheck = unacksPersistence get id
+      val replicateCheck = unacksReplicate get id
+      (persistCheck, replicateCheck) match {
+        case (None, None) => // do nothing it worked
+        // it is possible one worked and the other didn't, but even if 
+        // not in unacks we still remove id (it will fail gracefully returning
+        // the same map) avoiding us needing to handle the cartesian product of 
+        // possible outcomes
+        case (_, _) => {
+          clients get id match {
+            case Some(client) => client ! OperationFailed(id)
+            case None =>
+          }
+          unacksPersistence = unacksPersistence - id
+          unacksReplicate = unacksReplicate - id
+        }
+      }
+    }
     case `unacksPersistenceTimeout` => {
       unacksPersistence foreach {
         case (_, persistMessage) => replicaPersistence ! persistMessage 
       }
-    }
-    case Get(k, id) => {
-      sender ! GetResult(k, kv.get(k), id)
     }
   }
 
@@ -285,6 +374,5 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
       }
     }
   }
-
 }
 

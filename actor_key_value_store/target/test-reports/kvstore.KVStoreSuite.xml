@@ -1,28 +1,80 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuite hostname="DESKTOP-N3ROL9Q" name="kvstore.KVStoreSuite" tests="10" errors="0" failures="0" skipped="0" time="14.197" timestamp="2020-10-12T01:47:34">
+<testsuite hostname="DESKTOP-N3ROL9Q" name="kvstore.KVStoreSuite" tests="15" errors="0" failures="1" skipped="0" time="17.267" timestamp="2020-10-12T12:19:39">
                      <properties>
       <property name="jline.esc.timeout" value="0"/><property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/><property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_261\jre\bin"/><property name="java.vm.version" value="25.261-b12"/><property name="java.vm.vendor" value="Oracle Corporation"/><property name="java.vendor.url" value="http://java.oracle.com/"/><property name="path.separator" value=";"/><property name="jna.loaded" value="true"/><property name="java.vm.name" value="Java HotSpot(TM) Client VM"/><property name="file.encoding.pkg" value="sun.io"/><property name="user.country" value="US"/><property name="user.script" value=""/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="sun.os.patch.level" value=""/><property name="jna.nosys" value="true"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="user.dir" value="C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store"/><property name="java.runtime.version" value="1.8.0_261-b12"/><property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/><property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\endorsed"/><property name="os.arch" value="x86"/><property name="java.io.tmpdir" value="C:\Users\lao8n\AppData\Local\Temp\"/><property name="line.separator" value="
-"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="log4j.ignoreTCL" value="true"/><property name="user.variant" value=""/><property name="os.name" value="Windows 10"/><property name="sun.jnu.encoding" value="Cp1252"/><property name="jnidispatch.path" value="C:\Users\lao8n\AppData\Local\Temp\jna-102738512\jna110851857861371417.dll"/><property name="java.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_261\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Java\jdk1.8.0_261\\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Go\bin;C:\Program Files\Git\cmd;C:\Users\lao8n\OneDrive\Documents\apache-maven-3.6.3\bin;C:\Program Files (x86)\Java\jdk1.8.0_261\\bin;C:\Program Files (x86)\sbt\bin;C:\Program Files\Java\jdk-14.0.2\bin;C:\Users\lao8n\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\sbt\bin;C:\Program Files (x86)\Java\jdk1.8.0_261\bin;;."/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.class.version" value="52.0"/><property name="sun.management.compiler" value="HotSpot Client Compiler"/><property name="os.version" value="10.0"/><property name="swoval.tmpdir" value="C:\Users\lao8n\.sbt\1.0"/><property name="user.home" value="C:\Users\lao8n"/><property name="user.timezone" value="Europe/London"/><property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/><property name="file.encoding" value="UTF-8"/><property name="java.specification.version" value="1.8"/><property name="java.class.path" value="C:\Program Files (x86)\sbt\\bin\sbt-launch.jar"/><property name="user.name" value="lao8n"/><property name="jline.shutdownhook" value="false"/><property name="java.vm.specification.version" value="1.8"/><property name="sun.java.command" value="xsbt.boot.Boot clean test"/><property name="java.home" value="C:\Program Files (x86)\Java\jdk1.8.0_261\jre"/><property name="sun.arch.data.model" value="32"/><property name="user.language" value="en"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="awt.toolkit" value="sun.awt.windows.WToolkit"/><property name="java.vm.info" value="mixed mode"/><property name="java.version" value="1.8.0_261"/><property name="java.ext.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/><property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\resources.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\rt.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\jsse.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\jce.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\charsets.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\jfr.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\classes"/><property name="java.vendor" value="Oracle Corporation"/><property name="sun.stderr.encoding" value="cp850"/><property name="file.separator" value="\"/><property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/><property name="sun.io.unicode.encoding" value="UnicodeLittle"/><property name="sun.cpu.endian" value="little"/><property name="sun.stdout.encoding" value="cp850"/><property name="sun.desktop" value="windows"/><property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="log4j.ignoreTCL" value="true"/><property name="user.variant" value=""/><property name="os.name" value="Windows 10"/><property name="sun.jnu.encoding" value="Cp1252"/><property name="jnidispatch.path" value="C:\Users\lao8n\AppData\Local\Temp\jna-102738512\jna8813147114901912669.dll"/><property name="java.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_261\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Java\jdk1.8.0_261\\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Go\bin;C:\Program Files\Git\cmd;C:\Users\lao8n\OneDrive\Documents\apache-maven-3.6.3\bin;C:\Program Files (x86)\Java\jdk1.8.0_261\\bin;C:\Program Files (x86)\sbt\bin;C:\Program Files\Java\jdk-14.0.2\bin;C:\Users\lao8n\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\sbt\bin;C:\Program Files (x86)\Java\jdk1.8.0_261\bin;;."/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.class.version" value="52.0"/><property name="sun.management.compiler" value="HotSpot Client Compiler"/><property name="os.version" value="10.0"/><property name="swoval.tmpdir" value="C:\Users\lao8n\.sbt\1.0"/><property name="user.home" value="C:\Users\lao8n"/><property name="user.timezone" value="Europe/London"/><property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/><property name="file.encoding" value="UTF-8"/><property name="java.specification.version" value="1.8"/><property name="java.class.path" value="C:\Program Files (x86)\sbt\\bin\sbt-launch.jar"/><property name="user.name" value="lao8n"/><property name="jline.shutdownhook" value="false"/><property name="java.vm.specification.version" value="1.8"/><property name="sun.java.command" value="xsbt.boot.Boot clean test"/><property name="java.home" value="C:\Program Files (x86)\Java\jdk1.8.0_261\jre"/><property name="sun.arch.data.model" value="32"/><property name="user.language" value="en"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="awt.toolkit" value="sun.awt.windows.WToolkit"/><property name="java.vm.info" value="mixed mode"/><property name="java.version" value="1.8.0_261"/><property name="java.ext.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/><property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\resources.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\rt.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\jsse.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\jce.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\charsets.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\lib\jfr.jar;C:\Program Files (x86)\Java\jdk1.8.0_261\jre\classes"/><property name="java.vendor" value="Oracle Corporation"/><property name="sun.stderr.encoding" value="cp850"/><property name="file.separator" value="\"/><property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/><property name="sun.io.unicode.encoding" value="UnicodeLittle"/><property name="sun.cpu.endian" value="little"/><property name="sun.stdout.encoding" value="cp850"/><property name="sun.desktop" value="windows"/><property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
     </properties>
-                     <testcase classname="kvstore.KVStoreSuite" name="Step3-case1: Replicator should send snapshots when asked to replicate" time="12.392">
+                     <testcase classname="kvstore.KVStoreSuite" name="Step3-case1: Replicator should send snapshots when asked to replicate" time="12.132">
                                                  
-                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step1-case1: Primary (in isolation) should properly register itself to the provided Arbiter" time="0.02">
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step1-case1: Primary (in isolation) should properly register itself to the provided Arbiter" time="0.032">
                                                  
-                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step1-case2: Primary (in isolation) should react properly to Insert, Remove, Get" time="0.028">
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step1-case2: Primary (in isolation) should react properly to Insert, Remove, Get" time="0.036">
                                                  
-                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step4-case2: Secondary should retry persistence in every 100 milliseconds" time="0.696">
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step4-case2: Secondary should retry persistence in every 100 milliseconds" time="0.763">
                                                  
-                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step4-case1: Secondary should not acknowledge snapshots until persisted" time="0.55">
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step5-case2: Primary retries persistence every 100 milliseconds" time="0.359">
                                                  
-                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step2-case1: Secondary (in isolation) should properly register itself to the provided Arbiter" time="0.016">
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step5-case5: Primary acknowledges only after persistence and global acknowledgement" time="0.624">
+                                                 <failure message="java.lang.AssertionError: assertion failed: received unexpected message RealMessage(OperationAck(0),Actor[akka://KVStoreSuite/user/step5-case5-primary#1953888335]) after 99 millis" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: received unexpected message RealMessage(OperationAck(0),Actor[akka://KVStoreSuite/user/step5-case5-primary#1953888335]) after 99 millis
+	at akka.testkit.TestKitBase.expectNoMsg_internal(TestKit.scala:726)
+	at akka.testkit.TestKitBase.expectNoMessage(TestKit.scala:690)
+	at akka.testkit.TestKitBase.expectNoMessage$(TestKit.scala:689)
+	at akka.testkit.TestKit.expectNoMessage(TestKit.scala:928)
+	at kvstore.Tools$Session.nothingHappens(Tools.scala:81)
+	at kvstore.Step5_PrimaryPersistenceSpec.Step5$minuscase5$colon$u0020Primary$u0020acknowledges$u0020only$u0020after$u0020persistence$u0020and$u0020global$u0020acknowledgement(Step5_PrimaryPersistenceSpec.scala:100)
+	at kvstore.Step5_PrimaryPersistenceSpec.Step5$minuscase5$colon$u0020Primary$u0020acknowledges$u0020only$u0020after$u0020persistence$u0020and$u0020global$u0020acknowledgement$(Step5_PrimaryPersistenceSpec.scala:85)
+	at kvstore.KVStoreSuite.Step5$minuscase5$colon$u0020Primary$u0020acknowledges$u0020only$u0020after$u0020persistence$u0020and$u0020global$u0020acknowledgement(KVStoreSuite.scala:5)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</failure>
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step4-case1: Secondary should not acknowledge snapshots until persisted" time="0.564">
                                                  
-                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step2-case4: Secondary should drop snapshots with future sequence numbers" time="0.336">
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step2-case1: Secondary (in isolation) should properly register itself to the provided Arbiter" time="0.019">
                                                  
-                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step2-case3: Secondary should drop and immediately ack snapshots with older sequence numbers" time="0.042">
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step2-case4: Secondary should drop snapshots with future sequence numbers" time="0.337">
                                                  
-                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step3-case2: Replicator should retry until acknowledged by secondary" time="0.082">
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step2-case3: Secondary should drop and immediately ack snapshots with older sequence numbers" time="0.034">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step5-case3: Primary generates failure after 1 second if persistence fails" time="1.052">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step3-case2: Replicator should retry until acknowledged by secondary" time="0.09">
                                                  
                                                </testcase><testcase classname="kvstore.KVStoreSuite" name="Step2-case2: Secondary (in isolation) must handle Snapshots" time="0.035">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step5-case4: Primary generates failure after 1 second if global acknowledgement fails" time="1.054">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step5-case1: Primary does not acknowledge updates which have not been persisted" time="0.136">
                                                  
                                                </testcase>
                      <system-out><![CDATA[]]></system-out>
