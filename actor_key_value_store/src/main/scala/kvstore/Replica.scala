@@ -157,6 +157,8 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
   var secondaries = Map.empty[ActorRef, ActorRef]
   // the current set of replicators
   var replicators = Set.empty[ActorRef]
+  // a map from id to client requester
+  var clients = Map.empty[Long, ActorRef]  
   // seq number
   var replicaSeq = 0
   // send arbiter request to join
@@ -171,8 +173,6 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
   // send unacknowledged requests at least every 100ms, we set at 50ms
   val unacksPersistenceTimeout : Timeout = Timeout(50.milliseconds)
   context.system.scheduler.scheduleWithFixedDelay(Duration.Zero, 50.milliseconds, self, unacksPersistenceTimeout)
-
-  var clientRequester: ActorRef = self
 
   def receive = {
     case JoinedPrimary   => context.become(leader)
@@ -200,7 +200,7 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
       // sender ! OperationAck(id)
       // sender ! OperationFailed(id)
       replicaPersistence ! Persist(k, Some(v), id)
-      clientRequester = sender
+      clients = clients + (id -> sender)
       unacksPersistence = unacksPersistence + (id -> Persist(k, Some(v), id))
     } 
     case Remove(k, id) => {
@@ -209,12 +209,15 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
       // ask for persistence first      
       // sender ! OperationAck(id)
       replicaPersistence ! Persist(k, None, id)
-      clientRequester = sender
+      clients = clients + (id -> sender)
       unacksPersistence = unacksPersistence + (id -> Persist(k, None, id))
     }
     case Persisted(k, id) => {
       unacksPersistence = unacksPersistence - id
-      clientRequester ! OperationAck(id)
+      clients get id match {
+        case Some(client) => client ! OperationAck(id)
+        case None =>
+      }
     }
     case Replicated(k, id) => // TODO
     case `unacksPersistenceTimeout` => {
