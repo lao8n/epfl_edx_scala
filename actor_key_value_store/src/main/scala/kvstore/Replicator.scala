@@ -105,11 +105,11 @@ class Replicator(val replica: ActorRef) extends Actor {
   }
 
   // batch requests at least every 200ms, we set at 150ms
-  val batchTimeout : Timeout = Timeout(150.milliseconds)
-  context.system.scheduler.scheduleWithFixedDelay(Duration.Zero, 150.milliseconds, self, batchTimeout)
+  val batchSnapshotTimeout : Timeout = Timeout(150.milliseconds)
+  context.system.scheduler.scheduleWithFixedDelay(Duration.Zero, 150.milliseconds, self, batchSnapshotTimeout)
   // send unacknowledged requests at least every 100ms, we set at 50ms
-  val unackTimeout : Timeout = Timeout(50.milliseconds)
-  context.system.scheduler.scheduleWithFixedDelay(Duration.Zero, 50.milliseconds, self, unackTimeout)
+  val unackSnapshotTimeout : Timeout = Timeout(50.milliseconds)
+  context.system.scheduler.scheduleWithFixedDelay(Duration.Zero, 50.milliseconds, self, unackSnapshotTimeout)
 
   /* TODO Behavior for the Replicator. */
   def receive: Receive = {
@@ -128,7 +128,7 @@ class Replicator(val replica: ActorRef) extends Actor {
       }
     }
     // backticks to pattern match on value not type
-    case `batchTimeout` => {
+    case `batchSnapshotTimeout` => {
       pending foreach { 
         case Snapshot(k, v, seq) => {
           replica ! Snapshot(k, v, seq)
@@ -137,7 +137,7 @@ class Replicator(val replica: ActorRef) extends Actor {
       }
       pending = Vector.empty[Snapshot]
     }
-    case `unackTimeout` => {
+    case `unackSnapshotTimeout` => {
       unacks foreach {
         case (_, snapshot) => replica ! snapshot
       }

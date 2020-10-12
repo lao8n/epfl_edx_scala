@@ -77,6 +77,8 @@ import akka.util.Timeout
   *        here? Can we add not receive logic in the different receive sections?
   * 22. Q: Should we batch persistence requests as we do with Snapshots?
   *     A: No to simplify the implementation
+  * 23. Q: Does Replicate messages need to be batched and repeatedly sent?
+  *     A: ? 
   */
 
 object Replica {
@@ -170,6 +172,8 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
   val unacksPersistenceTimeout : Timeout = Timeout(50.milliseconds)
   context.system.scheduler.scheduleWithFixedDelay(Duration.Zero, 50.milliseconds, self, unacksPersistenceTimeout)
 
+  var clientRequester: ActorRef = self
+
   def receive = {
     case JoinedPrimary   => context.become(leader)
     case JoinedSecondary => context.become(replica)
@@ -191,17 +195,32 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
   val leader: Receive = {
     case Insert(k, v, id) => {
       kv += (k -> v)
-      // TODO add 1s test for success/failure
-      // val future = replica ? Insert(k, v, id)
-      // val result = Await.result(future, 1 second).
-
-      sender ! OperationAck(id)
+      // do not immediately acknowledge OperationAck to requester but instead
+      // ask for persistence first
+      // sender ! OperationAck(id)
       // sender ! OperationFailed(id)
+      replicaPersistence ! Persist(k, Some(v), id)
+      clientRequester = sender
+      unacksPersistence = unacksPersistence + (id -> Persist(k, Some(v), id))
     } 
     case Remove(k, id) => {
       kv -= k
-      // TODO add 1s test for success/failure 
-      sender ! OperationAck(id)
+      // do not immediately acknowledge OperationAck to requester but instead
+      // ask for persistence first      
+      // sender ! OperationAck(id)
+      replicaPersistence ! Persist(k, None, id)
+      clientRequester = sender
+      unacksPersistence = unacksPersistence + (id -> Persist(k, None, id))
+    }
+    case Persisted(k, id) => {
+      unacksPersistence = unacksPersistence - id
+      clientRequester ! OperationAck(id)
+    }
+    case Replicated(k, id) => // TODO
+    case `unacksPersistenceTimeout` => {
+      unacksPersistence foreach {
+        case (_, persistMessage) => replicaPersistence ! persistMessage 
+      }
     }
     case Get(k, id) => {
       sender ! GetResult(k, kv.get(k), id)
@@ -243,18 +262,18 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
         // ask for persistence first
         // sender ! SnapshotAck(k, seq)
         replicaPersistence ! Persist(k, v, seq)
-        unacksPersistence = unacksPersistence + (seq -> (Persist(k, v, seq)))
-        replicators = replicators + sender
+        unacksPersistence = unacksPersistence + (seq -> Persist(k, v, seq))
+        secondaries = secondaries + (self -> sender)
       }
     }
-    case Replicated(k, id) => // TODO
     case Persisted(k, seq) => {
       // note we only expect there to be one replicator per secondary replica
       // it is in a Set so that we can add it everytime we get a message without
       // error
       unacksPersistence = unacksPersistence - seq
-      replicators foreach {
-        case (replicator) => replicator ! SnapshotAck(k, seq)
+      secondaries get self match {
+        case Some(replicator) => replicator ! SnapshotAck(k, seq)
+        case None => // error
       }
     }
     case `unacksPersistenceTimeout` => {
@@ -262,7 +281,6 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
         case (_, persistMessage) => replicaPersistence ! persistMessage 
       }
     }
-    case _ =>
   }
 
 }
