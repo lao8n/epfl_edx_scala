@@ -9,8 +9,8 @@ trait Step6_NewSecondarySpec { this: KVStoreSuite =>
 
   @Test def `Step6-case1: Primary must start replication to new replicas`(): Unit = {
     val arbiter = TestProbe()
-        val primary = system.actorOf(Replica.props(arbiter.ref, Persistence.props(flaky = false)), "step6-case1-primary")
-        val user = session(primary)
+    val primary = system.actorOf(Replica.props(arbiter.ref, Persistence.props(flaky = false)), "step6-case1-primary")
+    val user = session(primary)
     val secondary = TestProbe()
 
     arbiter.expectMsg(Join)
@@ -33,8 +33,8 @@ trait Step6_NewSecondarySpec { this: KVStoreSuite =>
   @Test def `Step6-case2: Primary must stop replication to removed replicas and stop Replicator`(): Unit = {
     val probe = TestProbe()
     val arbiter = TestProbe()
-        val primary = system.actorOf(Replica.props(arbiter.ref, Persistence.props(flaky = false)), "step6-case2-primary")
-        val user = session(primary)
+    val primary = system.actorOf(Replica.props(arbiter.ref, Persistence.props(flaky = false)), "step6-case2-primary")
+    val user = session(primary)
     val secondary = TestProbe()
 
     arbiter.expectMsg(Join)
@@ -55,8 +55,8 @@ trait Step6_NewSecondarySpec { this: KVStoreSuite =>
 
   @Test def `Step6-case3: Primary must stop replication to removed replicas and waive their outstanding acknowledgements`(): Unit = {
     val arbiter = TestProbe()
-        val primary = system.actorOf(Replica.props(arbiter.ref, Persistence.props(flaky = false)), "step6-case3-primary")
-        val user = session(primary)
+    val primary = system.actorOf(Replica.props(arbiter.ref, Persistence.props(flaky = false)), "step6-case3-primary")
+    val user = session(primary)
     val secondary = TestProbe()
 
     arbiter.expectMsg(Join)

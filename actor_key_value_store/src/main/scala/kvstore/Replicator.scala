@@ -5,6 +5,7 @@ import akka.actor.Actor
 import akka.actor.ActorRef
 import akka.util.Timeout
 import scala.concurrent.duration._
+// import akka.event.LoggingReceive
 
 object Replicator {
   /**
@@ -104,10 +105,10 @@ class Replicator(val replica: ActorRef) extends Actor {
     ret
   }
 
-  // batch requests at least every 200ms, we set at 150ms
+  // batch requests at least every 200ms, we set at 10ms
   val batchSnapshotTimeout : Timeout = Timeout(150.milliseconds)
   context.system.scheduler.scheduleWithFixedDelay(Duration.Zero, 150.milliseconds, self, batchSnapshotTimeout)
-  // send unacknowledged requests at least every 100ms, we set at 50ms
+  // send unacknowledged requests at least every 100ms, we set at 100ms
   val unackSnapshotTimeout : Timeout = Timeout(50.milliseconds)
   context.system.scheduler.scheduleWithFixedDelay(Duration.Zero, 50.milliseconds, self, unackSnapshotTimeout)
 

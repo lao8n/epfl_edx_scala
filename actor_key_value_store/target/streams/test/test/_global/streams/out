@@ -2,41 +2,53 @@
 [0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
 [0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 1 initial tasks for 1 tests.[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(kvstore.KVStoreSuite, sbt.ForkMain$AnnotatedFingerscan@1f1dc0e, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(kvstore.KVStoreSuite, sbt.ForkMain$AnnotatedFingerscan@2487d1, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
 [0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep3-case1: Replicator should send snapshots when asked to replicate[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep3-case1: Replicator should send snapshots when asked to replicate[0m finished, took 12.224 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep3-case1: Replicator should send snapshots when asked to replicate[0m finished, took 12.42 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep1-case1: Primary (in isolation) should properly register itself to the provided Arbiter[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep1-case1: Primary (in isolation) should properly register itself to the provided Arbiter[0m finished, took 0.021 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep1-case1: Primary (in isolation) should properly register itself to the provided Arbiter[0m finished, took 0.019 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep1-case2: Primary (in isolation) should react properly to Insert, Remove, Get[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep1-case2: Primary (in isolation) should react properly to Insert, Remove, Get[0m finished, took 0.038 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep1-case2: Primary (in isolation) should react properly to Insert, Remove, Get[0m finished, took 0.036 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep4-case2: Secondary should retry persistence in every 100 milliseconds[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep4-case2: Secondary should retry persistence in every 100 milliseconds[0m finished, took 0.784 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep4-case2: Secondary should retry persistence in every 100 milliseconds[0m finished, took 0.771 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case2: Primary retries persistence every 100 milliseconds[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case2: Primary retries persistence every 100 milliseconds[0m finished, took 0.377 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case2: Primary retries persistence every 100 milliseconds[0m finished, took 0.242 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case5: Primary acknowledges only after persistence and global acknowledgement[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case5: Primary acknowledges only after persistence and global acknowledgement[0m finished, took 0.824 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case5: Primary acknowledges only after persistence and global acknowledgement[0m finished, took 0.817 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep4-case1: Secondary should not acknowledge snapshots until persisted[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep4-case1: Secondary should not acknowledge snapshots until persisted[0m finished, took 0.549 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep4-case1: Secondary should not acknowledge snapshots until persisted[0m finished, took 0.591 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep6-case3: Primary must stop replication to removed replicas and waive their outstanding acknowledgements[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep6-case3: Primary must stop replication to removed replicas and waive their outstanding acknowledgements[0m finished, took 0.234 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mIntegration-case3: Primary and secondaries must work in concert when both persistence and communication to secondaries are unreliable (35 pts)[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mIntegration-case3: Primary and secondaries must work in concert when both persistence and communication to secondaries are unreliable (35 pts)[0m finished, took 1.244 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case1: Secondary (in isolation) should properly register itself to the provided Arbiter[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case1: Secondary (in isolation) should properly register itself to the provided Arbiter[0m finished, took 0.012 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case4: Secondary should drop snapshots with future sequence numbers[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case4: Secondary should drop snapshots with future sequence numbers[0m finished, took 0.332 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case4: Secondary should drop snapshots with future sequence numbers[0m finished, took 0.336 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case3: Secondary should drop and immediately ack snapshots with older sequence numbers[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case3: Secondary should drop and immediately ack snapshots with older sequence numbers[0m finished, took 0.042 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case3: Secondary should drop and immediately ack snapshots with older sequence numbers[0m finished, took 0.036 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case3: Primary generates failure after 1 second if persistence fails[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case3: Primary generates failure after 1 second if persistence fails[0m finished, took 1.042 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case3: Primary generates failure after 1 second if persistence fails[0m finished, took 1.043 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mIntegration-case1: Primary and secondaries must work in concert when persistence is unreliable (35pts)[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mIntegration-case1: Primary and secondaries must work in concert when persistence is unreliable (35pts)[0m finished, took 1.233 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mIntegration-case2: Primary and secondaries must work in concert when communication to secondaries is unreliable (35pts)[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mIntegration-case2: Primary and secondaries must work in concert when communication to secondaries is unreliable (35pts)[0m finished, took 1.179 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep6-case1: Primary must start replication to new replicas[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep6-case1: Primary must start replication to new replicas[0m finished, took 9.158 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep3-case2: Replicator should retry until acknowledged by secondary[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep3-case2: Replicator should retry until acknowledged by secondary[0m finished, took 0.108 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep3-case2: Replicator should retry until acknowledged by secondary[0m finished, took 0.091 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep6-case2: Primary must stop replication to removed replicas and stop Replicator[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep6-case2: Primary must stop replication to removed replicas and stop Replicator[0m finished, took 0.053 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case2: Secondary (in isolation) must handle Snapshots[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case2: Secondary (in isolation) must handle Snapshots[0m finished, took 0.048 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case2: Secondary (in isolation) must handle Snapshots[0m finished, took 0.034 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case4: Primary generates failure after 1 second if global acknowledgement fails[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case4: Primary generates failure after 1 second if global acknowledgement fails[0m finished, took 1.089 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case4: Primary generates failure after 1 second if global acknowledgement fails[0m finished, took 1.058 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case1: Primary does not acknowledge updates which have not been persisted[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case1: Primary does not acknowledge updates which have not been persisted[0m finished, took 0.135 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 15 total, 18.907s[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 15 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep5-case1: Primary does not acknowledge updates which have not been persisted[0m finished, took 0.134 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 21 total, 32.435s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 21 events.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
-[0m[[0m[0minfo[0m] [0m[0mPassed: Total 15, Failed 0, Errors 0, Passed 15[0m
+[0m[[0m[0minfo[0m] [0m[0mPassed: Total 21, Failed 0, Errors 0, Passed 21[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	kvstore.KVStoreSuite[0m

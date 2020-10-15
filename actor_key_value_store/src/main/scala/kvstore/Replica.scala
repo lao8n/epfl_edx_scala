@@ -94,6 +94,13 @@ import akka.util.Timeout
   *        the Replicated message from the replicator not the secondary replica
   * 27. Q: How do we avoid this nested set of gets and Some/None stuff with scala 
   *     A: ?
+  * 28. Q: How determine client chosen list of ids? Is there a danger with replicating to a new replica that 
+  *        we get some overrides etc?
+  *     A: 
+  * 29. Q: How handle unacknowledge requests ? Do we go into the process and pretend SnapshotAcks were sent
+  *        or do we pretend Replicated were sent? Or do we go straight to OperationAck?
+  *     A: Problem we have is that unacksReplicate is a map from long to Set(ActorRef) so if I'm 
+  *        removing a replicator I don't easily know 
   */
 
 object Replica {
@@ -225,10 +232,36 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
         case replica : ActorRef => {
           val replicator = context.system.actorOf(Replicator.props(replica))
           secondaries = secondaries + (replica -> replicator)
+          var i = 0
+          kv foreach {
+            case(k, v) => replicator ! Replicate(k, Some(v), i)
+            i += 1
+          }
         }
       }
       removedReplicas foreach {
         case replica : ActorRef => {
+          secondaries get replica match {
+            case Some(replicator) => {
+              replicator ! PoisonPill
+              var tmpUnacksReplicate = unacksReplicate
+              unacksReplicate foreach {
+                case((id, unacksReplicators)) => {
+                  unacksReplicators foreach { unackReplicator => 
+                    if(unackReplicator == replicator){
+                      val newSetReplicators = unacksReplicators - replicator
+                      tmpUnacksReplicate = unacksReplicate + (id -> newSetReplicators)
+                      clients get id match {
+                        case Some(client) => client ! OperationAck(id)
+                        case None =>
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            case None => 
+          }
           secondaries = secondaries - replica
         }
       }
