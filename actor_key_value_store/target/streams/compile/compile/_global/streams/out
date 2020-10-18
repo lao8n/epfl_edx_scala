@@ -1,3 +1,18 @@
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:77:41: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `insert`'s return type[0m
+[0m[[0m[33mwarn[0m] [0m[0m  def insert(key: String, value: String){[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:80:26: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `remove`'s return type[0m
+[0m[[0m[33mwarn[0m] [0m[0m  def remove(key: String){[0m
+[0m[[0m[33mwarn[0m] [0m[0m                         ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:3:21: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport akka.actor.{ OneForOneStrategy, PoisonPill, Props, SupervisorStrategy, Terminated, ActorRef, Actor }[0m
+[0m[[0m[33mwarn[0m] [0m[0m                    ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:3:40: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport akka.actor.{ OneForOneStrategy, PoisonPill, Props, SupervisorStrategy, Terminated, ActorRef, Actor }[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:3:59: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport akka.actor.{ OneForOneStrategy, PoisonPill, Props, SupervisorStrategy, Terminated, ActorRef, Actor }[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                          ^[0m
 [0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:3:79: Unused import[0m
 [0m[[0m[33mwarn[0m] [0m[0mimport akka.actor.{ OneForOneStrategy, PoisonPill, Props, SupervisorStrategy, Terminated, ActorRef, Actor }[0m
 [0m[[0m[33mwarn[0m] [0m[0m                                                                              ^[0m
@@ -7,4 +22,16 @@
 [0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:5:28: Unused import[0m
 [0m[[0m[33mwarn[0m] [0m[0mimport akka.pattern.{ ask, pipe }[0m
 [0m[[0m[33mwarn[0m] [0m[0m                           ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:6:34: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport scala.concurrent.duration._[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                 ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:7:18: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport akka.util.Timeout[0m
+[0m[[0m[33mwarn[0m] [0m[0m                 ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:29:22: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0m  import Persistence._[0m
+[0m[[0m[33mwarn[0m] [0m[0m                     ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:30:18: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0m  import context.dispatcher[0m
+[0m[[0m[33mwarn[0m] [0m[0m                 ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m12 warnings found[0m

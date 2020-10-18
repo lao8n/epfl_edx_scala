@@ -1,0 +1,347 @@
+package kvstore
+
+import akka.actor.{ OneForOneStrategy, PoisonPill, Props, SupervisorStrategy, Terminated, ActorRef, Actor }
+import kvstore.Arbiter._
+import akka.pattern.{ ask, pipe }
+import scala.concurrent.duration._
+import akka.util.Timeout
+
+object Replica {
+  sealed trait Operation {
+    def key: String
+    def id: Long
+  }
+  /**
+    * Insert(key, value, id) - This message instructs the primary to insert the (key, value) 
+    * pair into the storage and replicate it to the secondaries: id is a client-chosen unique 
+    * identifier for this request.
+    *
+    * @param key
+    * @param value
+    * @param id
+    */
+  case class Insert(key: String, value: String, id: Long) extends Operation
+
+  /**
+    * Remove(key, id) - This message instructs the primary to remove the key (and its corresponding 
+    * value) from the storage and then remove it from the secondaries.
+    *
+    * @param key
+    * @param id
+    */
+  case class Remove(key: String, id: Long) extends Operation
+
+  /**
+    * Instructs the replica to look up current (= ?) key in the storage and reply with the stored
+    * value
+    *
+    * @param key
+    * @param id
+    */
+  case class Get(key: String, id: Long) extends Operation
+
+  sealed trait OperationReply
+  /**
+    * If an update (insert or remove) is successful it results in a OperationAck message to 
+    * the client (specifically the sender)
+    * @param id
+    */
+  case class OperationAck(id: Long) extends OperationReply
+
+  /**
+    * A failed update (insert or remove) results in an OperationFailed(id) reply. Failure is
+    * inability to perform the operation within 1 second.
+    *
+    * @param id
+    */
+  case class OperationFailed(id: Long) extends OperationReply
+
+  /**
+    * Get operation results in a GetResult message to be sent back to the sender of the lookup 
+    * request. The id is from the Get message and the valueOption field should contain None if
+    * the key is not present in the replica or Some(value) if a value is currently assigned to 
+    * the given key of the replica
+    *
+    * @param key
+    * @param valueOption
+    * @param id
+    */
+  case class GetResult(key: String, valueOption: Option[String], id: Long) extends OperationReply
+
+  case class PersistenceAndReplicationCheck(id: Long)
+
+  def props(arbiter: ActorRef, persistenceProps: Props): Props = Props(new Replica(arbiter, persistenceProps))
+}
+
+class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
+  import Replica._
+  import Replicator._
+  import Persistence._
+  import context.dispatcher
+
+  /*
+   * The contents of this actor is just a suggestion, you can implement it in any way you like.
+   */
+  
+  var kv = Map.empty[String, String]
+  // a map from secondary replicas to replicators
+  var secondaries = Map.empty[ActorRef, ActorRef]
+  // a map from id to client requester
+  var clients = Map.empty[Long, ActorRef]  
+  // seq number
+  var replicaSeq = 0
+  // send arbiter request to join
+  arbiter ! Join 
+  // create persistence
+  override val supervisorStrategy = OneForOneStrategy() {
+    case _: Exception => SupervisorStrategy.Restart
+  }
+  val replicaPersistence = context.actorOf(persistenceProps, "replicaPersistence")
+  // we do not batch Persist messages but send them immediately
+  var unacksPersistence = Map.empty[Long, Persist]
+  // send unacknowledged requests at least every 100ms, we set at 100ms
+  val unacksPersistenceTimeout : Timeout = Timeout(100.milliseconds)
+  context.system.scheduler.scheduleWithFixedDelay(Duration.Zero, 100.milliseconds, self, unacksPersistenceTimeout)
+  // we do not resend replicate messages as expect these never to fail
+  // we need this map only to check unacknowledged replicate messages to replicators
+  var unacksReplicate = Map.empty[Long, Set[ActorRef]]
+
+  def receive = {
+    case JoinedPrimary   => context.become(leader)
+    case JoinedSecondary => context.become(replica)
+  }
+
+  /* TODO Behavior for  the leader role. 
+   * Primary replica A distinguished node in the cluster that accepts updates to 
+   * keys and propagates the changes to secondary replicas.
+   * If primary node, is responsible for replicating all changes to a set of secondary nodes
+   * Only the primary replica accepts modification events (insertions and removals)
+   * Both the primary and secondary nodes will accept lookup (read) events.
+   * Updates are only possible on the primary receive
+   * The primary node does not fail during the uptime of the system
+   * If replicas leave the cluster which is signalled by sending a new Replicas
+   * message to the primary then outstanding acknowledgements of these replicas
+   * must be waived. This can lead to the generation of an OperationAck triggered
+   * indirectly by the Replicas message 
+   * */
+  val leader: Receive = {
+    case Replicas(replicas) => {
+      // replicas is Set.empty[ActorRef] i.e. it sends all replicas including primary
+      // something with secondaries?
+      val currentReplicas = secondaries.keySet
+      val removedReplicas = currentReplicas diff (replicas - self)
+      val addedReplicas = (replicas - self) diff currentReplicas
+      addedReplicas foreach {
+        case replica : ActorRef => {
+          val replicator = context.system.actorOf(Replicator.props(replica))
+          secondaries = secondaries + (replica -> replicator)
+          var i = 0
+          kv foreach {
+            case(k, v) => replicator ! Replicate(k, Some(v), i)
+            i += 1
+          }
+        }
+      }
+      removedReplicas foreach {
+        case replica : ActorRef => {
+          secondaries get replica match {
+            case Some(replicator) => {
+              replicator ! PoisonPill
+              var tmpUnacksReplicate = unacksReplicate
+              unacksReplicate foreach {
+                case((id, unacksReplicators)) => {
+                  unacksReplicators foreach { unackReplicator => 
+                    if(unackReplicator == replicator){
+                      val newSetReplicators = unacksReplicators - replicator
+                      tmpUnacksReplicate = unacksReplicate + (id -> newSetReplicators)
+                      clients get id match {
+                        case Some(client) => client ! OperationAck(id)
+                        case None =>
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            case None => 
+          }
+          secondaries = secondaries - replica
+        }
+      }
+    }
+    case Get(k, id) => {
+      sender ! GetResult(k, kv.get(k), id)
+    }
+    case Insert(k, v, id) => {
+      kv += (k -> v)
+      // do not immediately acknowledge OperationAck to requester but instead
+      // ask for persistence and replication first
+      replicaPersistence ! Persist(k, Some(v), id)
+      secondaries foreach {
+        case(replica, replicator) => {
+          replicator ! Replicate(k, Some(v), id)
+          unacksReplicate get id match {
+            case Some(setReplicators) => {
+              val newSetReplicators = setReplicators + replicator
+              unacksReplicate = unacksReplicate + (id -> newSetReplicators)
+            }
+            case None => {
+              unacksReplicate = unacksReplicate + (id -> Set(replicator))
+            }
+          }
+        }
+      }
+      clients = clients + (id -> sender)
+      unacksPersistence = unacksPersistence + (id -> Persist(k, Some(v), id))
+      val failedPersistenceAndReplicationTimeout = PersistenceAndReplicationCheck(id)
+      context.system.scheduler.scheduleOnce(1.seconds, self, failedPersistenceAndReplicationTimeout)
+    } 
+    case Remove(k, id) => {
+      kv -= k
+      // do not immediately acknowledge OperationAck to requester but instead
+      // ask for persistence first      
+      // sender ! OperationAck(id)
+      replicaPersistence ! Persist(k, None, id)
+      secondaries foreach {
+        case(replica, replicator) => {
+          replicator ! Replicate(k, None, id)
+          unacksReplicate get id match {
+            case Some(setReplicators) => {
+              val newSetReplicators = setReplicators + replicator
+              unacksReplicate = unacksReplicate + (id -> newSetReplicators)
+            }
+            case None => {
+              unacksReplicate = unacksReplicate + (id -> Set(replicator))
+            }
+          }
+        }
+      }
+      clients = clients + (id -> sender)
+      unacksPersistence = unacksPersistence + (id -> Persist(k, None, id))
+      val failedPersistenceAndReplicationTimeout = PersistenceAndReplicationCheck(id)
+      context.system.scheduler.scheduleOnce(1.seconds, self, failedPersistenceAndReplicationTimeout)
+    }
+    case Persisted(k, id) => {
+      unacksPersistence = unacksPersistence - id
+      // check if already replicated
+      unacksReplicate get id match {
+        // still waiting on replicate acknowledgement therefore do nothing
+        case Some(_) => 
+        // have both persist and replicate ack so send OperationAck
+        case None => {
+          clients get id match {
+            case Some(client) => client ! OperationAck(id)
+            case None =>
+          }
+        } 
+      }
+    }
+    case Replicated(k, id) => {
+      unacksReplicate get id match {
+        case Some(setReplicators) => {
+          val newSetReplicators = setReplicators - sender
+          if(newSetReplicators.size == 0){
+            unacksReplicate = unacksReplicate - id // make it None
+            // only check Persistence if waiting on no more replicators
+            unacksPersistence get id match {
+              // still waiting on persistence acknowledgement therefore do nothing
+              case Some(_) => 
+              // have both persist and replicate ack so send OperationAck
+              case None => {
+                clients get id match {
+                  case Some(client) => client ! OperationAck(id)
+                  case None =>
+                }
+              } 
+            }
+          }
+          else {
+            unacksReplicate = unacksReplicate + (id -> newSetReplicators)
+          }
+        }
+        case None => 
+      }
+    }
+    case PersistenceAndReplicationCheck(id) => {
+      val persistCheck = unacksPersistence get id
+      val replicateCheck = unacksReplicate get id
+      (persistCheck, replicateCheck) match {
+        case (None, None) => // do nothing it worked
+        // it is possible one worked and the other didn't, but even if 
+        // not in unacks we still remove id (it will fail gracefully returning
+        // the same map) avoiding us needing to handle the cartesian product of 
+        // possible outcomes
+        case (_, _) => {
+          clients get id match {
+            case Some(client) => client ! OperationFailed(id)
+            case None =>
+          }
+          unacksPersistence = unacksPersistence - id
+          unacksReplicate = unacksReplicate - id
+        }
+      }
+    }
+    case `unacksPersistenceTimeout` => {
+      unacksPersistence foreach {
+        case (_, persistMessage) => replicaPersistence ! persistMessage 
+      }
+    }
+  }
+
+  /* TODO Behavior for the replica role. 
+   * Secondary replicas Nodes that are in contact with the primary replica, 
+   * accepting updates from it and serving clients for read-only operations.
+   * Replica nodes might join and leave at arbitrary times.
+   * Both the primary and secondary nodes will accept lookup (read) events, although the 
+   * secondary nodes can be 'out-of-date' since it takes time for the replicas to keep up with 
+   * the changes on the primary replica.
+   * Each replica has the freedom to immediately hand out the updated value to subsequently 
+   * reading clients, even before the new value has been persisted locally and no rollback
+   * is attempted in case of failure.
+   * */
+  val replica: Receive = {
+    case Get(k, id) => {
+      sender ! GetResult(k, kv.get(k), id)
+    }
+    case Snapshot(k, v, seq) => {
+      if(seq > replicaSeq){
+        // ignore
+      }
+      else if (seq < replicaSeq) {
+        sender ! SnapshotAck(k, seq)
+      }
+      else {
+        v match {
+          // insert
+          case Some(v) => {
+            kv += (k -> v)
+          }
+          case None => kv -= k
+        }
+        replicaSeq += 1
+        // do not immediately acknowledge SnapshotAck to replicator but instead
+        // ask for persistence first
+        // sender ! SnapshotAck(k, seq)
+        replicaPersistence ! Persist(k, v, seq)
+        unacksPersistence = unacksPersistence + (seq -> Persist(k, v, seq))
+        secondaries = secondaries + (self -> sender)
+      }
+    }
+    case Persisted(k, seq) => {
+      // note we only expect there to be one replicator per secondary replica
+      // it is in a Set so that we can add it everytime we get a message without
+      // error
+      unacksPersistence = unacksPersistence - seq
+      secondaries get self match {
+        case Some(replicator) => replicator ! SnapshotAck(k, seq)
+        case None => // error
+      }
+    }
+    case `unacksPersistenceTimeout` => {
+      unacksPersistence foreach {
+        case (_, persistMessage) => replicaPersistence ! persistMessage 
+      }
+    }
+  }
+}
+
