@@ -70,10 +70,10 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
         sender ! SnapshotAck(k, seq)
       }
     }
-    case _ => // Insert & Remove requests
+    case _ => // ignore Insert & Remove requests
   }
 
-  // Helper methods
+  // helper methods
   def insert(key: String, value: String){
     kv += (key -> value)
   }

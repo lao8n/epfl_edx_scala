@@ -51,7 +51,13 @@ A: Either send a message to oneself after the timeout using something like
    also use a context.setReceiveTimeout(30 milliseconds) 
 Q: We don't want the ask to fail immediately but to retry a few times
    How do we manage those failures and retries within the ask pattern?
-A: Maybe it is a separate thing? https://www.lightbend.com/blog/how-akka-works-at-least-once-message-delivery
+A: Maybe it is a separate thing? https://www.lightbend.com/blog/how-akka-works-at-least-once-message-delivery. We decided not to use it
+   because it requires use of PersistenceActor which in turn requires 
+   receiveRecover system and corresponding leveldb which then doesn't 
+   work with the tests which would require SharedLeveldbStore.class
+   in actor creation 
+   https://doc.akka.io/docs/akka/2.3/java/persistence.html#Shared_LevelDB_journal
+   This is all clearly more advanced then we have learnt so far
 Q: How pattern match on multiple timeouts?
 A: Can't just use Timeout so instead pattern match on timeout values 
    with backticks to differentiate value matching not type matching.
