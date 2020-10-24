@@ -2,6 +2,8 @@ package kvstore
 
 import akka.actor.{Props, Actor}
 import scala.util.Random
+import akka.event.LoggingReceive
+import akka.pattern.{ ask, pipe }
 
 object Persistence {
   /**
@@ -48,9 +50,9 @@ object Persistence {
 class Persistence(flaky: Boolean) extends Actor {
   import Persistence._
 
-  def receive = {
+  def receive = LoggingReceive {
     case Persist(key, _, id) =>
-      if (!flaky || Random.nextBoolean()) sender ! Persisted(key, id)
+      if (!flaky || Random.nextBoolean()) sender() ! Persisted(key, id)
       else throw new PersistenceException
   }
 

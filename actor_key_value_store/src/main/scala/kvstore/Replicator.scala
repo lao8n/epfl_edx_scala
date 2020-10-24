@@ -5,6 +5,7 @@ import akka.actor.Props
 import akka.actor.ActorRef
 import scala.concurrent.duration._
 import akka.util.Timeout
+import akka.event.LoggingReceive
 
 object Replicator {
   case class Replicate(key: String, valueOption: Option[String], id: Long)
@@ -40,7 +41,7 @@ class Replicator(val replica: ActorRef) extends Actor {
   val unackSnapshotTimeout : Timeout = Timeout(50.milliseconds)
   context.system.scheduler.scheduleWithFixedDelay(Duration.Zero, 50.milliseconds, self, unackSnapshotTimeout)
 
-  def receive: Receive = {
+  def receive: Receive = LoggingReceive {
     case Replicate(k, v, id) => batchReplicate(sender, Replicate(k, v, id))
     case SnapshotAck(k, seq) => confirmDelivery(k, seq)
     case `batchSnapshotTimeout` => {

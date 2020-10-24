@@ -2,27 +2,24 @@
 [0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
 [0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 1 initial tasks for 1 tests.[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(kvstore.KVStoreSuite, sbt.ForkMain$AnnotatedFingerscan@ffc087, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(kvstore.KVStoreSuite, sbt.ForkMain$AnnotatedFingerscan@2487d1, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
-[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep3-case1: Replicator should send snapshots when asked to replicate[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep3-case1: Replicator should send snapshots when asked to replicate[0m finished, took 12.271 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep1-case1: Primary (in isolation) should properly register itself to the provided Arbiter[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep1-case1: Primary (in isolation) should properly register itself to the provided Arbiter[0m finished, took 0.018 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep1-case2: Primary (in isolation) should react properly to Insert, Remove, Get[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep1-case2: Primary (in isolation) should react properly to Insert, Remove, Get[0m finished, took 0.033 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case1: Secondary (in isolation) should properly register itself to the provided Arbiter[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case1: Secondary (in isolation) should properly register itself to the provided Arbiter[0m finished, took 0.013 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case4: Secondary should drop snapshots with future sequence numbers[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case4: Secondary should drop snapshots with future sequence numbers[0m finished, took 0.334 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case3: Secondary should drop and immediately ack snapshots with older sequence numbers[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case3: Secondary should drop and immediately ack snapshots with older sequence numbers[0m finished, took 0.035 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep3-case2: Replicator should retry until acknowledged by secondary[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep3-case2: Replicator should retry until acknowledged by secondary[0m finished, took 0.152 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case2: Secondary (in isolation) must handle Snapshots[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep2-case2: Secondary (in isolation) must handle Snapshots[0m finished, took 0.034 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 8 total, 14.09s[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 8 events.[0m
+[0m[[0m[0minfo[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep4-case1: Secondary should not acknowledge snapshots until persisted[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[31mStep4-case1: Secondary should not acknowledge snapshots until persisted[0m failed: java.lang.[31mAssertionError[0m: assertion failed: timeout (3 seconds) during expectMsg while waiting for SnapshotAck(k1,0), took 3.618 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg_internal(TestKit.scala:418)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg(TestKit.scala:395)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKitBase.expectMsg$(TestKit.scala:395)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.testkit.TestKit.expectMsg(TestKit.scala:928)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step4_SecondaryPersistenceSpec.Step4-case1: Secondary should not acknowledge snapshots until persisted(Step4_SecondaryPersistenceSpec.scala:37)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.Step4_SecondaryPersistenceSpec.Step4-case1: Secondary should not acknowledge snapshots until persisted$(Step4_SecondaryPersistenceSpec.scala:13)[0m
+[0m[[0m[31merror[0m] [0m[0m    at kvstore.KVStoreSuite.Step4-case1: Secondary should not acknowledge snapshots until persisted([35mKVStoreSuite.scala[0m:[33m5[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest kvstore.[33mKVStoreSuite[0m.[36mStep4-case1: Secondary should not acknowledge snapshots until persisted[0m finished, took 3.631 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 4.523s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
-[0m[[0m[0minfo[0m] [0m[0mPassed: Total 8, Failed 0, Errors 0, Passed 8[0m
-[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	kvstore.KVStoreSuite[0m
+[0m[[0m[31merror[0m] [0m[0mFailed: Total 1, Failed 1, Errors 0, Passed 0[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	kvstore.KVStoreSuite[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
