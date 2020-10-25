@@ -5,7 +5,7 @@ import kvstore.Arbiter._
 import akka.pattern.{ ask, pipe }
 import scala.concurrent.duration._
 import akka.util.Timeout
-import Persistence.Persist
+import Persistence.Persisted
 import akka.event.LoggingReceive
 import scala.concurrent.Future
 
@@ -23,7 +23,7 @@ object Replica {
   case class OperationFailed(id: Long) extends OperationReply
   case class GetResult(key: String, valueOption: Option[String], id: Long) extends OperationReply
 
-  case class RetryPersistence(persistMessage: Persist, remainingAttempts: Int, persistRetryTimeout: Timeout)
+  case class RetryPersistence(persistMessage: Future[Persisted], remainingAttempts: Int, persistRetryTimeout: Timeout)
 
   def props(arbiter: ActorRef, persistenceProps: Props): Props = Props(new Replica(arbiter, persistenceProps))
 }
@@ -76,22 +76,32 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
         }
         replicaSeq += 1
         // at least one attempt before 1 second, max 10 attempts
-        self ! RetryPersistence(Persist(k, v, seq), 5, Timeout(100.milliseconds))
+        self ! RetryPersistence(persistFuture, 5, Timeout(100.milliseconds))
         secondaries = secondaries + (self -> sender)
       }
     }
-    case RetryPersistence(persistMessage, remainingAttempts, persistRetryTimeout) => {
-      implicit val timeout = persistRetryTimeout
-      val persistFuture: Future[Persisted] = (replicaPersistence ? persistMessage).mapTo[Persisted]
 
-      persistFuture map {
-        case message: Persisted => self ! message
-      } recover {
-        case _: akka.pattern.AskTimeoutException => 
-          if(remainingAttempts - 1 > 0){
-            self ! RetryPersistence(persistMessage, remainingAttempts - 1, persistRetryTimeout)
-          }
-      } 
+    // case RetryPersistence(persistFuture, remainingAttempts, persistRetryTimeout) => {
+    //   persistFuture map {
+    //     case message: Persisted => self ! message
+    //   } recover {
+    //     case _: akka.pattern.AskTimeoutException => 
+    //       if(remainingAttempts - 1 > 0){
+    //         self ! RetryPersistence(persistFuture, remainingAttempts - 1, persistRetryTimeout)
+    //       }
+    //   } 
+          // case RetryPersistence(persistMessage, remainingAttempts, persistRetryTimeout) => {
+    //   implicit val timeout = persistRetryTimeout
+    //   val persistFuture: Future[Persisted] = (replicaPersistence ? persistMessage).mapTo[Persisted]
+
+    //   persistFuture map {
+    //     case message: Persisted => self ! message
+    //   } recover {
+    //     case _: akka.pattern.AskTimeoutException => 
+    //       if(remainingAttempts - 1 > 0){
+    //         self ! RetryPersistence(persistMessage, remainingAttempts - 1, persistRetryTimeout)
+    //       }
+    //   } 
       
       // pipe(persistFuture) to self 
       // recover {
@@ -122,7 +132,7 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
         //   case _: akka.pattern.AskTimeoutException => 
         //     self ! RetryPersistence(persistMessage, remainingAttempts - 1, timeout)
         // }
-    }
+    // }
     case Persisted(k, seq) => {
       secondaries get self match {
         case Some(replicator) => replicator ! SnapshotAck(k, seq)
@@ -152,4 +162,13 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
   def remove(key: String){
     kv -= key
   }
+
+  // def retryMessage(destination: ActorRef, message: Any, remainingAttempts: Int): Future[Any] = {
+  //   val future = (destination ? message) recover {
+  //     case _: akka.pattern.AskTimeoutException => 
+  //       if(remainingAttempts > 1){
+  //         retryMessage(destination, message, remainingAttempts - 1)
+  //       }
+  //   }
+  // }
 }

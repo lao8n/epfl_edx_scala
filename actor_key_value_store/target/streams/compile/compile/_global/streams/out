@@ -1,7 +1,7 @@
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:148:41: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `insert`'s return type[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:160:41: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `insert`'s return type[0m
 [0m[[0m[33mwarn[0m] [0m[0m  def insert(key: String, value: String){[0m
 [0m[[0m[33mwarn[0m] [0m[0m                                        ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:152:26: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `remove`'s return type[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replica.scala:164:26: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `remove`'s return type[0m
 [0m[[0m[33mwarn[0m] [0m[0m  def remove(key: String){[0m
 [0m[[0m[33mwarn[0m] [0m[0m                         ^[0m
 [0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala:61:62: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `batchReplicate`'s return type[0m

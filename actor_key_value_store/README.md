@@ -21,6 +21,11 @@ Q: It says in the notes that the logic for collecting acknowledgements
    secondary replicas? How doe that work given one uses seq and the other id?
 A: ~
 Q: How do we handle unacknowledge requests 
+A: ~
+Q: How do we retry persistence with a timeout?
+A: I tried using AskTimeoutException because I think this is a non-blocking way to not have to manually track in a map etc. Persist 
+requests and how many attempts we have made. However, the problem I'm 
+running into AskTimeOutException completes the future and then replying to that future which has expired - results in DeadlLetters
 
 ### Replicator questions
 Q: How should we handle seq number? Should it be immutable or mutable var?
