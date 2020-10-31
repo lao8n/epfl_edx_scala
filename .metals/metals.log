@@ -4383,3 +4383,4 @@ WARNING: Unmatched cancel notification for request id 4484
 2020.10.25 11:51:07 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\test\scala\kvstore\Step4_SecondaryPersistenceSpec.scala
 2020.10.25 11:51:15 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\test\scala\kvstore\Step5_PrimaryPersistenceSpec.scala
 2020.10.25 11:52:32 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.10.25 17:00:56 INFO  shutting down Metals

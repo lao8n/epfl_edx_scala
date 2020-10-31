@@ -25,7 +25,10 @@ A: ~
 Q: How do we retry persistence with a timeout?
 A: I tried using AskTimeoutException because I think this is a non-blocking way to not have to manually track in a map etc. Persist 
 requests and how many attempts we have made. However, the problem I'm 
-running into AskTimeOutException completes the future and then replying to that future which has expired - results in DeadlLetters
+running into AskTimeOutException completes the future and then replying to that future which has expired - results in Deadletters - basically 
+the problem is the Persistence trying to reply to an already expired future. Also cannot use ReceiveTimeout because that is a general 
+timeout - but even though we might be waiting for one ack other messages
+may be coming in all the time.
 
 ### Replicator questions
 Q: How should we handle seq number? Should it be immutable or mutable var?
@@ -79,6 +82,18 @@ A: Track them in a map. Unclear how we are meant to break together
 Q: Should persistence and replication checks be the same integrated check
    or two separate checks?
 A: Two different, because they have different times
+Q: You can combine (I think asynchronously/non-blocking but not 100% sure), multiple asks as follows:
+def receive = {
+   case Get(postId, user, password) =>
+     val status = (publisher ? GetStatus(postId)).mapTo[PostStatus]
+     val text = (postStore ? Get(postId)).mapTo[Post]
+     val auth = (authService ? Login(user, password)).mapTo[AuthStatus]
+     val response = for (s <- status; t <- text; a <- auth) yield {
+        if(a.succcessful) Result(s, t) else Failure("not authorized")
+     }
+     response pipeTo sender
+}
+A: You could have one future which asks for a response and then follow up with multiple tells asking for the same response back, but the question is how to manage the timeouts? If you just schedule a new response then how do you manage the response you are waiting for? You are forced to use a map again because you cannot track the state. If you use a future and AskTimeoutException then who do you ask? Is it just a timeoutexception? and do you need to define 10 asks up front unless you do an or where one of these asks is fulfilled? Unclear how this would work.
 
 ### API Questions
 Q: Should the read-only replicas ignore Insert & Remove requests or 
