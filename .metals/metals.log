@@ -4399,3 +4399,14 @@ WARNING: Unmatched cancel notification for request id 4484
 2020.11.01 18:39:49 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_key_value_store\src\main\scala\kvstore\Replicator.scala
 2020.11.01 18:39:59 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\typed_tests_hello_world\src\main\scala\reactive\HelloWorld.scala
 2020.11.01 23:56:29 INFO  shutting down Metals
+2020.11.02 22:19:03 INFO  started: Metals version 0.9.4 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.11.02 22:19:04 INFO  time: initialize in 0.52s
+2020.11.02 22:19:05 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.02 22:19:08 INFO  no build target: using presentation compiler with only scala-library
+2020.11.02 22:19:08 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\typed_akka_transactor\src\main\scala\protocols\SelectiveReceive.scala
+2020.11.02 22:19:08 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\typed_akka_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.02 22:21:01 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\typed_akka_transactor\src\test\scala\protocols\ProtocolsSuite.scala
+2020.11.02 22:21:03 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\typed_akka_transactor\src\test\scala\protocols\SelectiveReceiveSpec.scala
+2020.11.02 22:21:04 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\typed_akka_transactor\src\test\scala\protocols\ProtocolsSuite.scala
+2020.11.02 22:21:06 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\typed_akka_transactor\src\test\scala\protocols\SelectiveReceiveSpec.scala
+2020.11.02 22:21:10 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\typed_akka_transactor\src\test\scala\protocols\TransactorSpec.scala
