@@ -5,50 +5,12 @@
 [0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 1 initial tasks for 1 tests.[0m
 [0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(protocols.ProtocolsSuite, sbt.ForkMain$AnnotatedFingerscan@d7539c, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
-[0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must try in receive order[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must try in receive order[0m finished, took 0.359 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled[0m failed: java.lang.[31mAssertionError[0m: The initial message 'z' has not been handled, eventually. Make sure unstashed messages are interpreted by a behavior wrapped in an interceptor. expected:<List(a, z)> but was:<List(a)>, took 0.008 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.SelectiveReceiveSpec.A SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled(SelectiveReceiveSpec.scala:164)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.SelectiveReceiveSpec.A SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled$(SelectiveReceiveSpec.scala:148)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.ProtocolsSuite.A SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled([35mProtocolsSuite.scala[0m:[33m6[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled[0m finished, took 0.009 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 0)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 0)[0m finished, took 0.008 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must eventually execute the behavior[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA SelectiveReceive Decorator must eventually execute the behavior[0m failed: java.lang.[31mAssertionError[0m: Property failed.[0m
-[0m[[0m[31merror[0m] [0m[0mtesting for C when list=List(C, B, A) and delivered=List(A, B): , took 0.299 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.Util$$anon$1.onTestResult([35mProtocolsSuite.scala[0m:[33m14[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    at org.scalacheck.Test$.check(Test.scala:357)[0m
-[0m[[0m[31merror[0m] [0m[0m    at org.scalacheck.Test$.check(Test.scala:301)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.Util$.assertPropPassed([35mProtocolsSuite.scala[0m:[33m11[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.SelectiveReceiveSpec.A SelectiveReceive Decorator must eventually execute the behavior(SelectiveReceiveSpec.scala:42)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.SelectiveReceiveSpec.A SelectiveReceive Decorator must eventually execute the behavior$(SelectiveReceiveSpec.scala:37)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.ProtocolsSuite.A SelectiveReceive Decorator must eventually execute the behavior([35mProtocolsSuite.scala[0m:[33m6[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must eventually execute the behavior[0m finished, took 0.299 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must tolerate worst-case sorting[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA SelectiveReceive Decorator must tolerate worst-case sorting[0m failed: java.lang.[31mAssertionError[0m: expected:<List(1, 2, 3, 4)> but was:<List(1, 2)>, took 0.002 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.SelectiveReceiveSpec.A SelectiveReceive Decorator must tolerate worst-case sorting(SelectiveReceiveSpec.scala:70)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.SelectiveReceiveSpec.A SelectiveReceive Decorator must tolerate worst-case sorting$(SelectiveReceiveSpec.scala:61)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.ProtocolsSuite.A SelectiveReceive Decorator must tolerate worst-case sorting([35mProtocolsSuite.scala[0m:[33m6[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must tolerate worst-case sorting[0m finished, took 0.003 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 1)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 1)[0m finished, took 0.001 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must restart retrying at the head of the queue[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA SelectiveReceive Decorator must restart retrying at the head of the queue[0m failed: java.lang.[31mAssertionError[0m: expected:<List(0, 1, 2, 3)> but was:<List(0, 1, 3)>, took 0.004 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.SelectiveReceiveSpec.A SelectiveReceive Decorator must restart retrying at the head of the queue(SelectiveReceiveSpec.scala:145)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.SelectiveReceiveSpec.A SelectiveReceive Decorator must restart retrying at the head of the queue$(SelectiveReceiveSpec.scala:122)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.ProtocolsSuite.A SelectiveReceive Decorator must restart retrying at the head of the queue([35mProtocolsSuite.scala[0m:[33m6[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must restart retrying at the head of the queue[0m finished, took 0.005 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m4 failed[0m[34m, [0m[34m0 ignored[0m[34m, 7 total, 0.697s[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 7 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must eventually execute the behavior[0m finished, took 0.678 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.689s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for ScalaCheck not available.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
-[0m[[0m[31merror[0m] [0m[0mFailed: Total 7, Failed 4, Errors 0, Passed 3[0m
-[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
-[0m[[0m[31merror[0m] [0m[0m	protocols.ProtocolsSuite[0m
-[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[0minfo[0m] [0m[0mPassed: Total 1, Failed 0, Errors 0, Passed 1[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	protocols.ProtocolsSuite[0m

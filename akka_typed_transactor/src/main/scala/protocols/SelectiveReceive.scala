@@ -21,21 +21,9 @@ object SelectiveReceive {
     *        valid initial behavior.
     */
   def apply[T: ClassTag](bufferCapacity: Int, initialBehavior: Behavior[T]): Behavior[T] ={
-    // if(bufferCapacity == 0){
-    //   initialBehavior
-    // }
-    // else {
-    //   Behaviors.withStash[T](bufferCapacity){ buffer =>
-    //     Behaviors.setup[T]{ ctx =>
-    //       intercept(bufferCapacity, buffer, Behavior.validateAsInitial(initialBehavior))
-    //     }
-    //   }
-    // }
     Behaviors.withStash[T](bufferCapacity){ buffer =>
-        Behaviors.setup[T]{ ctx =>
-          intercept(bufferCapacity, buffer, Behavior.validateAsInitial(initialBehavior))
-        }
-      }
+      intercept(bufferCapacity, buffer, Behavior.validateAsInitial(initialBehavior))
+    }
   }
 
   /**
@@ -62,18 +50,12 @@ object SelectiveReceive {
       // “unstash-ing” all the stashed messages to the next behavior wrapped in an `SelectiveReceive`
       // interceptor.
       val nextBehavior = Behavior.interpretMessage(started, ctx, message)
-      if(Behavior.isUnhandled(nextBehavior)){
-        if(buffer.size == bufferSize){
-          throw new StashOverflowException("")
-        }
-        else {
-          buffer.stash(message)
-          nextBehavior
-        }
-      }
-      else {
-        val canonicalNextBehavior = Behavior.canonicalize(nextBehavior, started, ctx)
-        SelectiveReceive(bufferSize, buffer.unstashAll(canonicalNextBehavior))
+      if (Behavior.isUnhandled(nextBehavior)) {
+        buffer.stash(message)
+        Behaviors.same
+      } else {
+        val nextBehaviorCanonicalized = Behavior.canonicalize(nextBehavior, started, ctx)
+        buffer.unstashAll(SelectiveReceive(bufferSize, nextBehaviorCanonicalized))
       }
     }
 
