@@ -58,111 +58,111 @@ trait SelectiveReceiveSpec {
     })
   }
 
-  // @Test def `A SelectiveReceive Decorator must tolerate worst-case sorting`(): Unit = {
-  //   val values = (1 to 4).toList
-  //   val i = TestInbox[Int]()
-  //   val b = behavior(i, 3, values)
-  //   val testkit = BehaviorTestKit(b, "worst-case sorting")
-  //   values.reverse.foreach(value => {
-  //     testkit.ref ! value
-  //     testkit.runOne()
-  //   })
-  //   assertEquals(values, i.receiveAll())
-  // }
+  @Test def `A SelectiveReceive Decorator must tolerate worst-case sorting`(): Unit = {
+    val values = (1 to 4).toList
+    val i = TestInbox[Int]()
+    val b = behavior(i, 3, values)
+    val testkit = BehaviorTestKit(b, "worst-case sorting")
+    values.reverse.foreach(value => {
+      testkit.ref ! value
+      testkit.runOne()
+    })
+    assertEquals(values, i.receiveAll())
+  }
 
-  // @Test def `A SelectiveReceive Decorator must overflow (size 0)`(): Unit = {
-  //   val values = List(1, 2)
-  //   val i = TestInbox[Int]()
-  //   val b = behavior(i, 0, values)
-  //   val testkit = BehaviorTestKit(b, "overflow 0")
-  //   testkit.ref ! 2
-  //   try {
-  //     testkit.runOne()
-  //     fail("StashOverflowException should have been thrown")
-  //   } catch {
-  //     case _: StashOverflowException => () // OK
-  //   }
-  // }
+  @Test def `A SelectiveReceive Decorator must overflow (size 0)`(): Unit = {
+    val values = List(1, 2)
+    val i = TestInbox[Int]()
+    val b = behavior(i, 0, values)
+    val testkit = BehaviorTestKit(b, "overflow 0")
+    testkit.ref ! 2
+    try {
+      testkit.runOne()
+      fail("StashOverflowException should have been thrown")
+    } catch {
+      case _: StashOverflowException => () // OK
+    }
+  }
 
-  // @Test def `A SelectiveReceive Decorator must overflow (size 1)`(): Unit = {
-  //   val values = List(1, 2)
-  //   val i = TestInbox[Int]()
-  //   val b = behavior(i, 1, values)
-  //   val testkit = BehaviorTestKit(b, "overflow 1")
-  //   testkit.ref ! 2
-  //   testkit.runOne()
-  //   testkit.ref ! 2
-  //   try {
-  //     testkit.runOne()
-  //     fail("StashOverflowException should have been thrown")
-  //   } catch {
-  //     case _: StashOverflowException => () // OK
-  //   }
-  // }
+  @Test def `A SelectiveReceive Decorator must overflow (size 1)`(): Unit = {
+    val values = List(1, 2)
+    val i = TestInbox[Int]()
+    val b = behavior(i, 1, values)
+    val testkit = BehaviorTestKit(b, "overflow 1")
+    testkit.ref ! 2
+    testkit.runOne()
+    testkit.ref ! 2
+    try {
+      testkit.runOne()
+      fail("StashOverflowException should have been thrown")
+    } catch {
+      case _: StashOverflowException => () // OK
+    }
+  }
 
-  // @Test def `A SelectiveReceive Decorator must try in receive order`(): Unit = {
-  //   val i = TestInbox[Int]()
-  //   val b = SelectiveReceive(2, expectStart(i, 0,
-  //     receiveMessage[Int] { t =>
-  //       i.ref ! t
-  //       same
-  //     }
-  //   ))
-  //   val testkit = BehaviorTestKit(b, "receive order")
-  //   testkit.ref ! 1
-  //   testkit.runOne()
-  //   testkit.ref ! 2
-  //   testkit.runOne()
-  //   assertEquals(Seq(), i.receiveAll())
-  //   testkit.ref ! 0
-  //   testkit.runOne()
-  //   assertEquals(Seq(0, 1, 2), i.receiveAll())
-  // }
+  @Test def `A SelectiveReceive Decorator must try in receive order`(): Unit = {
+    val i = TestInbox[Int]()
+    val b = SelectiveReceive(2, expectStart(i, 0,
+      receiveMessage[Int] { t =>
+        i.ref ! t
+        same
+      }
+    ))
+    val testkit = BehaviorTestKit(b, "receive order")
+    testkit.ref ! 1
+    testkit.runOne()
+    testkit.ref ! 2
+    testkit.runOne()
+    assertEquals(Seq(), i.receiveAll())
+    testkit.ref ! 0
+    testkit.runOne()
+    assertEquals(Seq(0, 1, 2), i.receiveAll())
+  }
 
-  // @Test def `A SelectiveReceive Decorator must restart retrying at the head of the queue`(): Unit = {
-  //   // hint: only the first parameter list participates in equality checking
-  //   case class Msg(cls: Int)(val value: Int)
+  @Test def `A SelectiveReceive Decorator must restart retrying at the head of the queue`(): Unit = {
+    // hint: only the first parameter list participates in equality checking
+    case class Msg(cls: Int)(val value: Int)
 
-  //   val i = TestInbox[Msg]()
-  //   val b = SelectiveReceive(3,
-  //     expectStart(i, Msg(0)(0),
-  //       expectStart(i, Msg(1)(0),
-  //         receiveMessage[Msg] { t =>
-  //           i.ref ! t
-  //           same
-  //         }
-  //       )))
-  //   val testkit = BehaviorTestKit(b, "receive order")
-  //   testkit.ref ! Msg(2)(2)
-  //   testkit.runOne()
-  //   testkit.ref ! Msg(1)(1)
-  //   testkit.runOne()
-  //   testkit.ref ! Msg(2)(3)
-  //   testkit.runOne()
-  //   assertEquals(Seq(), i.receiveAll())
-  //   testkit.ref ! Msg(0)(0)
-  //   testkit.runOne()
-  //   assertEquals(Seq(0, 1, 2, 3), i.receiveAll().map(_.value))
-  // }
+    val i = TestInbox[Msg]()
+    val b = SelectiveReceive(3,
+      expectStart(i, Msg(0)(0),
+        expectStart(i, Msg(1)(0),
+          receiveMessage[Msg] { t =>
+            i.ref ! t
+            same
+          }
+        )))
+    val testkit = BehaviorTestKit(b, "receive order")
+    testkit.ref ! Msg(2)(2)
+    testkit.runOne()
+    testkit.ref ! Msg(1)(1)
+    testkit.runOne()
+    testkit.ref ! Msg(2)(3)
+    testkit.runOne()
+    assertEquals(Seq(), i.receiveAll())
+    testkit.ref ! Msg(0)(0)
+    testkit.runOne()
+    assertEquals(Seq(0, 1, 2, 3), i.receiveAll().map(_.value))
+  }
 
-  // @Test def `A SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled`(): Unit = {
-  //   val i = TestInbox[Char]()
-  //   val b = SelectiveReceive(1, expectStart(i, 'a', expectStart(i, 'a', expectStart(i, 'z', Behaviors.ignore))))
-  //   val testkit = BehaviorTestKit(b)
-  //   testkit.ref ! 'z'
-  //   testkit.runOne()
-  //   assertEquals(Seq(), i.receiveAll()) // “z” has been stashed
-  //   testkit.ref ! 'a'
-  //   testkit.runOne()
-  //   assertEquals(Seq('a'), i.receiveAll()) // “a” has been handled, and “z” has been stashed again
-  //   testkit.ref ! 'a'
-  //   testkit.runOne()
-  //   // “a” and the initial “z” have been handled
-  //   assertEquals(
-  //     "The initial message 'z' has not been handled, eventually. Make sure unstashed messages are interpreted by a behavior wrapped in an interceptor.",
-  //     Seq('a', 'z'),
-  //     i.receiveAll()
-  //   )
-  // }
+  @Test def `A SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled`(): Unit = {
+    val i = TestInbox[Char]()
+    val b = SelectiveReceive(1, expectStart(i, 'a', expectStart(i, 'a', expectStart(i, 'z', Behaviors.ignore))))
+    val testkit = BehaviorTestKit(b)
+    testkit.ref ! 'z'
+    testkit.runOne()
+    assertEquals(Seq(), i.receiveAll()) // “z” has been stashed
+    testkit.ref ! 'a'
+    testkit.runOne()
+    assertEquals(Seq('a'), i.receiveAll()) // “a” has been handled, and “z” has been stashed again
+    testkit.ref ! 'a'
+    testkit.runOne()
+    // “a” and the initial “z” have been handled
+    assertEquals(
+      "The initial message 'z' has not been handled, eventually. Make sure unstashed messages are interpreted by a behavior wrapped in an interceptor.",
+      Seq('a', 'z'),
+      i.receiveAll()
+    )
+  }
 
 }

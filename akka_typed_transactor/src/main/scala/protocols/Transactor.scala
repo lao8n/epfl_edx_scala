@@ -6,7 +6,8 @@ import akka.actor.typed.scaladsl._
 import scala.concurrent.duration._
 
 object Transactor {
-
+  // Extending Product with Serializable is only a hint to the type checker to improve 
+  // error messages since all case classes extends these traits.
   sealed trait PrivateCommand[T] extends Product with Serializable
   final case class Committed[T](session: ActorRef[Session[T]], value: T) extends PrivateCommand[T]
   final case class RolledBack[T](session: ActorRef[Session[T]]) extends PrivateCommand[T]
@@ -30,8 +31,16 @@ object Transactor {
     * @param sessionTimeout Delay before rolling back the pending modifications and
     *                       terminating the session
     */
-  def apply[T](value: T, sessionTimeout: FiniteDuration): Behavior[Command[T]] =
-      ???
+  def apply[T](value: T, sessionTimeout: FiniteDuration): Behavior[Command[T]] = {
+    val publicTransactor = Behaviors.setup[Command[T]] { ctx => 
+      Behaviors.receiveMessage[Command[T]] { 
+        message => 
+          val privateTransactor = ctx.spawn(idle(value, sessionTimeout), "privateTransactor")
+          privateTransactor ! message 
+      }
+    }
+    SelectiveReceive(30, publicTransactor)
+  }
 
   /**
     * @return A behavior that defines how to react to any [[PrivateCommand]] when the transactor
@@ -53,7 +62,23 @@ object Transactor {
     *   - After a session is started, the next behavior should be [[inSession]],
     *   - Messages other than [[Begin]] should not change the behavior.
     */
-  private def idle[T](value: T, sessionTimeout: FiniteDuration): Behavior[PrivateCommand[T]] =
+  private def idle[T](value: T, sessionTimeout: FiniteDuration): Behavior[PrivateCommand[T]] = 
+    Behavior.setup[PrivateCommand[T]] { ctx =>
+      val session = ctx.spawnAnonymous(
+        Behaviors.supervise()
+                 .onFailure[SessionTimeoutException](SupervisorStrategy.rollback)
+                 .onFailure[SessionTerminated](SupervisorStrategy.rollback)
+      )
+
+    }
+    // Behaviors.setup[PrivateCommand[T]] { ctx => 
+    //   val ref = ctx.spawnAnonymous(
+    //     Behaviors.supervise(Transactor(value, sessionTimeout))
+    //              .onFailure[SessionTimeoutException](SupervisorStrategy.rollback)
+    //   )
+    //   ctx.scheduleOnce(sessionTimeout, )
+    //   case Begin =>
+    // }
     ???
 
   /**

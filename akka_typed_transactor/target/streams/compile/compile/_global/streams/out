@@ -1,13 +1,17 @@
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:4:34: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport akka.actor.typed.scaladsl._[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                 ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:56:15: private method idle in object Transactor is never used[0m
-[0m[[0m[33mwarn[0m] [0m[0m  private def idle[T](value: T, sessionTimeout: FiniteDuration): Behavior[PrivateCommand[T]] =[0m
-[0m[[0m[33mwarn[0m] [0m[0m              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:69:15: private method inSession in object Transactor is never used[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:38:14: pattern type is incompatible with expected type;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : protocols.Transactor.Begin.type[0m
+[0m[[0m[31merror[0m] [0m[0m required: protocols.Transactor.Command[T][0m
+[0m[[0m[31merror[0m] [0m[0mNote: if you intended to match against the class, try `case Begin(_)`[0m
+[0m[[0m[31merror[0m] [0m[0m        case Begin => privateTransactor ! message [0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:38:43: not found: value message[0m
+[0m[[0m[31merror[0m] [0m[0m        case Begin => privateTransactor ! message [0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:85:15: private method inSession in object Transactor is never used[0m
 [0m[[0m[33mwarn[0m] [0m[0m  private def inSession[T](rollbackValue: T, sessionTimeout: FiniteDuration, sessionRef: ActorRef[Session[T]]): Behavior[PrivateCommand[T]] =[0m
 [0m[[0m[33mwarn[0m] [0m[0m              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:80:15: private method sessionHandler in object Transactor is never used[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:96:15: private method sessionHandler in object Transactor is never used[0m
 [0m[[0m[33mwarn[0m] [0m[0m  private def sessionHandler[T](currentValue: T, commit: ActorRef[Committed[T]], done: Set[Long]): Behavior[Session[T]] =[0m
 [0m[[0m[33mwarn[0m] [0m[0m              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mfour warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

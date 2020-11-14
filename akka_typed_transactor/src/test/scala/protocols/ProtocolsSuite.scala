@@ -3,7 +3,7 @@ package protocols
 import org.junit.Assert.fail
 import org.scalacheck.{Prop, Test}
 
-class ProtocolsSuite extends SelectiveReceiveSpec // with TransactorSpec
+class ProtocolsSuite extends SelectiveReceiveSpec with TransactorSpec
 
 object Util {
   // Convenient method that turns a scalacheck Prop into a JUnit assertion
