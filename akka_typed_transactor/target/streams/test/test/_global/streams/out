@@ -3,38 +3,11 @@
 [0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunner for org.scalacheck.ScalaCheckFramework produced 0 initial tasks for 0 tests.[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 1 initial tasks for 1 tests.[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(protocols.ProtocolsSuite, sbt.ForkMain$AnnotatedFingerscan@1d7e1df, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(protocols.ProtocolsSuite, sbt.ForkMain$AnnotatedFingerscan@1eb7a44, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
-[0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must properly ignore stale termination notices[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA Transactor must properly ignore stale termination notices[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.126 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.Transactor$.apply(Transactor.scala:34)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must properly ignore stale termination notices(TransactorSpec.scala:265)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must properly ignore stale termination notices$(TransactorSpec.scala:262)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.ProtocolsSuite.A Transactor must properly ignore stale termination notices([35mProtocolsSuite.scala[0m:[33m6[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must properly ignore stale termination notices[0m finished, took 0.146 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must commit[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA Transactor must commit[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.001 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.Transactor$.apply(Transactor.scala:34)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must commit(TransactorSpec.scala:74)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must commit$(TransactorSpec.scala:69)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.ProtocolsSuite.A Transactor must commit([35mProtocolsSuite.scala[0m:[33m6[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must commit[0m finished, took 0.002 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must have idempotent modifications[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA Transactor must have idempotent modifications[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.005 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.Transactor$.apply(Transactor.scala:34)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must have idempotent modifications(TransactorSpec.scala:243)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must have idempotent modifications$(TransactorSpec.scala:238)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.ProtocolsSuite.A Transactor must have idempotent modifications([35mProtocolsSuite.scala[0m:[33m6[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must have idempotent modifications[0m finished, took 0.006 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must compute[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA Transactor must compute[0m failed: java.lang.[31mAssertionError[0m: scala.NotImplementedError: an implementation is missing[0m
-[0m[[0m[31merror[0m] [0m[0m, took 0.235 sec[0m
+[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA Transactor must compute[0m failed: java.lang.[31mAssertionError[0m: java.lang.IllegalArgumentException: deferred [Deferred(Transactor.scala:37-38)] should not be passed to interpreter[0m
+[0m[[0m[31merror[0m] [0m[0m, took 0.502 sec[0m
 [0m[[0m[31merror[0m] [0m[0m    at protocols.Util$$anon$1.onTestResult([35mProtocolsSuite.scala[0m:[33m15[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    at org.scalacheck.Test$.check(Test.scala:357)[0m
 [0m[[0m[31merror[0m] [0m[0m    at org.scalacheck.Test$.check(Test.scala:301)[0m
@@ -43,53 +16,26 @@
 [0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must compute$(TransactorSpec.scala:20)[0m
 [0m[[0m[31merror[0m] [0m[0m    at protocols.ProtocolsSuite.A Transactor must compute([35mProtocolsSuite.scala[0m:[33m6[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must compute[0m finished, took 0.236 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must compute[0m finished, took 0.505 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must try in receive order[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must try in receive order[0m finished, took 0.286 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must try in receive order[0m finished, took 0.018 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled[0m finished, took 0.031 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled[0m finished, took 0.005 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 0)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 0)[0m finished, took 0.036 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must rollback[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA Transactor must rollback[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.0 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.Transactor$.apply(Transactor.scala:34)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must rollback(TransactorSpec.scala:129)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must rollback$(TransactorSpec.scala:125)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.ProtocolsSuite.A Transactor must rollback([35mProtocolsSuite.scala[0m:[33m6[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must rollback[0m finished, took 0.001 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 0)[0m finished, took 0.004 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must eventually execute the behavior[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must eventually execute the behavior[0m finished, took 0.232 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must eventually execute the behavior[0m finished, took 0.241 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must tolerate worst-case sorting[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must tolerate worst-case sorting[0m finished, took 0.005 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must timeout[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA Transactor must timeout[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.0 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.Transactor$.apply(Transactor.scala:34)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must timeout(TransactorSpec.scala:174)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must timeout$(TransactorSpec.scala:170)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.ProtocolsSuite.A Transactor must timeout([35mProtocolsSuite.scala[0m:[33m6[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must timeout[0m finished, took 0.002 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must tolerate worst-case sorting[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 1)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 1)[0m finished, took 0.001 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 1)[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must restart retrying at the head of the queue[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must restart retrying at the head of the queue[0m finished, took 0.009 sec[0m
-[0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must ignore new sessions while in a session[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA Transactor must ignore new sessions while in a session[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.0 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.Transactor$.apply(Transactor.scala:34)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must ignore new sessions while in a session(TransactorSpec.scala:215)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must ignore new sessions while in a session$(TransactorSpec.scala:213)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.ProtocolsSuite.A Transactor must ignore new sessions while in a session([35mProtocolsSuite.scala[0m:[33m6[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must ignore new sessions while in a session[0m finished, took 0.0 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m7 failed[0m[34m, [0m[34m0 ignored[0m[34m, 14 total, 1.007s[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 14 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must restart retrying at the head of the queue[0m finished, took 0.005 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 8 total, 0.792s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 8 events.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for ScalaCheck not available.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
-[0m[[0m[31merror[0m] [0m[0mFailed: Total 14, Failed 7, Errors 0, Passed 7[0m
+[0m[[0m[31merror[0m] [0m[0mFailed: Total 8, Failed 1, Errors 0, Passed 7[0m
 [0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
 [0m[[0m[31merror[0m] [0m[0m	protocols.ProtocolsSuite[0m
 [0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

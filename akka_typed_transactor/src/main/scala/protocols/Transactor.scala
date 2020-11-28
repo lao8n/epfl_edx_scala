@@ -37,6 +37,7 @@ object Transactor {
         message => 
           val privateTransactor = ctx.spawn(idle(value, sessionTimeout), "privateTransactor")
           privateTransactor ! message 
+          Behaviors.same
       }
     }
     SelectiveReceive(30, publicTransactor)
@@ -63,23 +64,23 @@ object Transactor {
     *   - Messages other than [[Begin]] should not change the behavior.
     */
   private def idle[T](value: T, sessionTimeout: FiniteDuration): Behavior[PrivateCommand[T]] = 
-    Behavior.setup[PrivateCommand[T]] { ctx =>
-      val session = ctx.spawnAnonymous(
-        Behaviors.supervise()
-                 .onFailure[SessionTimeoutException](SupervisorStrategy.rollback)
-                 .onFailure[SessionTerminated](SupervisorStrategy.rollback)
-      )
-
+    Behaviors.setup[PrivateCommand[T]] { ctx =>
+      Behaviors.receiveMessage[Begin[T]] {
+        message => {
+          val session = ctx.spawnAnonymous(
+            // do we need to define sessionTimeout and SessionTerminated ourselves? maybe we should 
+            // use a try-catch block
+            // how do we manage the set of already applied messages. i guess maybe in a session it is 
+            // empty and then we call itself to add modified messages 1 by 1
+            Behaviors.supervise(sessionHandler(value, ctx.self, Set.empty))
+                     .onFailure[SessionTerminated](SupervisorStrategy.rollback)
+          )
+          ctx.scheduleOnce(sessionTimeout, session, message)
+          inSession(value, sessionTimeout, session)
+        }
+      }
     }
-    // Behaviors.setup[PrivateCommand[T]] { ctx => 
-    //   val ref = ctx.spawnAnonymous(
-    //     Behaviors.supervise(Transactor(value, sessionTimeout))
-    //              .onFailure[SessionTimeoutException](SupervisorStrategy.rollback)
-    //   )
-    //   ctx.scheduleOnce(sessionTimeout, )
-    //   case Begin =>
-    // }
-    ???
+
 
   /**
     * @return A behavior that defines how to react to [[PrivateCommand]] messages when the transactor has
@@ -92,7 +93,11 @@ object Transactor {
     * @param sessionRef Reference to the child [[Session]] actor
     */
   private def inSession[T](rollbackValue: T, sessionTimeout: FiniteDuration, sessionRef: ActorRef[Session[T]]): Behavior[PrivateCommand[T]] =
-    ???
+    Behaviors.receiveMessage[PrivateCommand] {
+      case Committed =>
+      case RolledBack => 
+      case _ => 
+    }
 
   /**
     * @return A behavior handling [[Session]] messages. See in the instructions
@@ -103,6 +108,11 @@ object Transactor {
     * @param done Set of already applied [[Modify]] messages
     */
   private def sessionHandler[T](currentValue: T, commit: ActorRef[Committed[T]], done: Set[Long]): Behavior[Session[T]] =
-      ???
+    Behaviors.receiveMessage[Session[T]] {
+      case Extract =>
+      case Modify => 
+      case Commit => 
+      case Rollback =>
+    }
 
 }

@@ -1,17 +1,20 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:38:14: pattern type is incompatible with expected type;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : protocols.Transactor.Begin.type[0m
-[0m[[0m[31merror[0m] [0m[0m required: protocols.Transactor.Command[T][0m
-[0m[[0m[31merror[0m] [0m[0mNote: if you intended to match against the class, try `case Begin(_)`[0m
-[0m[[0m[31merror[0m] [0m[0m        case Begin => privateTransactor ! message [0m
-[0m[[0m[31merror[0m] [0m[0m             ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:38:43: not found: value message[0m
-[0m[[0m[31merror[0m] [0m[0m        case Begin => privateTransactor ! message [0m
-[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:85:15: private method inSession in object Transactor is never used[0m
-[0m[[0m[33mwarn[0m] [0m[0m  private def inSession[T](rollbackValue: T, sessionTimeout: FiniteDuration, sessionRef: ActorRef[Session[T]]): Behavior[PrivateCommand[T]] =[0m
-[0m[[0m[33mwarn[0m] [0m[0m              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:96:15: private method sessionHandler in object Transactor is never used[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:72:33: not found: type SessionTerminated[0m
+[0m[[0m[31merror[0m] [0m[0mError occurred in an application involving default arguments.[0m
+[0m[[0m[31merror[0m] [0m[0m                     .onFailure[SessionTerminated](SupervisorStrategy.rollback)[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:72:71: value rollback is not a member of object akka.actor.typed.SupervisorStrategy[0m
+[0m[[0m[31merror[0m] [0m[0mError occurred in an application involving default arguments.[0m
+[0m[[0m[31merror[0m] [0m[0m                     .onFailure[SessionTerminated](SupervisorStrategy.rollback)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:68:42: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : akka.actor.typed.scaladsl.Behaviors.Receive[protocols.Transactor.Begin[T]][0m
+[0m[[0m[31merror[0m] [0m[0m required: akka.actor.typed.Behavior[protocols.Transactor.PrivateCommand[T]][0m
+[0m[[0m[31merror[0m] [0m[0mNote: protocols.Transactor.Begin[T] <: protocols.Transactor.PrivateCommand[T], but class Behavior is invariant in type T.[0m
+[0m[[0m[31merror[0m] [0m[0mYou may wish to define T as +T instead. (SLS 4.5)[0m
+[0m[[0m[31merror[0m] [0m[0m      Behaviors.receiveMessage[Begin[T]] {[0m
+[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:109:15: private method sessionHandler in object Transactor is never used[0m
 [0m[[0m[33mwarn[0m] [0m[0m  private def sessionHandler[T](currentValue: T, commit: ActorRef[Committed[T]], done: Set[Long]): Behavior[Session[T]] =[0m
 [0m[[0m[33mwarn[0m] [0m[0m              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
