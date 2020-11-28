@@ -1,20 +1,38 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:72:33: not found: type SessionTerminated[0m
-[0m[[0m[31merror[0m] [0m[0mError occurred in an application involving default arguments.[0m
-[0m[[0m[31merror[0m] [0m[0m                     .onFailure[SessionTerminated](SupervisorStrategy.rollback)[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:35:30: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : akka.actor.typed.Behavior[protocols.Transactor.PrivateCommand[T]][0m
+[0m[[0m[31merror[0m] [0m[0m required: akka.actor.typed.Behavior[protocols.Transactor.Command[T]][0m
+[0m[[0m[31merror[0m] [0m[0mNote: protocols.Transactor.PrivateCommand[T] >: protocols.Transactor.Command[T], but class Behavior is invariant in type T.[0m
+[0m[[0m[31merror[0m] [0m[0mYou may wish to define T as -T instead. (SLS 4.5)[0m
+[0m[[0m[31merror[0m] [0m[0m    SelectiveReceive(30, idle(value, sessionTimeout))[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:63:44: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : akka.actor.typed.ActorRef[protocols.Transactor.Session[T]][0m
+[0m[[0m[31merror[0m] [0m[0m required: akka.actor.typed.ActorRef[protocols.Transactor.RolledBack[T]][0m
+[0m[[0m[31merror[0m] [0m[0m          ctx.scheduleOnce(sessionTimeout, session, RolledBack(session))[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:67:20: value ignore is not a member of object akka.actor.typed.Behavior[0m
+[0m[[0m[31merror[0m] [0m[0m          Behavior.ignore[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:83:32: trait PrivateCommand takes type parameters[0m
+[0m[[0m[31merror[0m] [0m[0m      Behaviors.receiveMessage[PrivateCommand] {[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:91:35: value unhandled is not a member of object akka.actor.typed.Behavior[0m
+[0m[[0m[31merror[0m] [0m[0m        case Begin(_) => Behavior.unhandled[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:113:33: not found: value value[0m
+[0m[[0m[31merror[0m] [0m[0m          val modifiedValue = f(value)[0m
 [0m[[0m[31merror[0m] [0m[0m                                ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:72:71: value rollback is not a member of object akka.actor.typed.SupervisorStrategy[0m
-[0m[[0m[31merror[0m] [0m[0mError occurred in an application involving default arguments.[0m
-[0m[[0m[31merror[0m] [0m[0m                     .onFailure[SessionTerminated](SupervisorStrategy.rollback)[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                      ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:68:42: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : akka.actor.typed.scaladsl.Behaviors.Receive[protocols.Transactor.Begin[T]][0m
-[0m[[0m[31merror[0m] [0m[0m required: akka.actor.typed.Behavior[protocols.Transactor.PrivateCommand[T]][0m
-[0m[[0m[31merror[0m] [0m[0mNote: protocols.Transactor.Begin[T] <: protocols.Transactor.PrivateCommand[T], but class Behavior is invariant in type T.[0m
-[0m[[0m[31merror[0m] [0m[0mYou may wish to define T as +T instead. (SLS 4.5)[0m
-[0m[[0m[31merror[0m] [0m[0m      Behaviors.receiveMessage[Begin[T]] {[0m
-[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:109:15: private method sessionHandler in object Transactor is never used[0m
-[0m[[0m[33mwarn[0m] [0m[0m  private def sessionHandler[T](currentValue: T, commit: ActorRef[Committed[T]], done: Set[Long]): Behavior[Session[T]] =[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:120:28: not found: value ctx[0m
+[0m[[0m[31merror[0m] [0m[0m        commit ! Committed(ctx.self, currentValue)[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:122:12: pattern type is incompatible with expected type;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : protocols.Transactor.Rollback.type[0m
+[0m[[0m[31merror[0m] [0m[0m required: protocols.Transactor.Session[T][0m
+[0m[[0m[31merror[0m] [0m[0mNote: if you intended to match against the class, try `case Rollback()`[0m
+[0m[[0m[31merror[0m] [0m[0m      case Rollback => Behaviors.stopped[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:57:15: private method idle in object Transactor is never used[0m
+[0m[[0m[33mwarn[0m] [0m[0m  private def idle[T](value: T, sessionTimeout: FiniteDuration): Behavior[PrivateCommand[T]] = [0m
 [0m[[0m[33mwarn[0m] [0m[0m              ^[0m
 [0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
-[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
+[0m[[0m[31merror[0m] [0m[0m8 errors found[0m

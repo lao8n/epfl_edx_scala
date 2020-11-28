@@ -31,17 +31,8 @@ object Transactor {
     * @param sessionTimeout Delay before rolling back the pending modifications and
     *                       terminating the session
     */
-  def apply[T](value: T, sessionTimeout: FiniteDuration): Behavior[Command[T]] = {
-    val publicTransactor = Behaviors.setup[Command[T]] { ctx => 
-      Behaviors.receiveMessage[Command[T]] { 
-        message => 
-          val privateTransactor = ctx.spawn(idle(value, sessionTimeout), "privateTransactor")
-          privateTransactor ! message 
-          Behaviors.same
-      }
-    }
-    SelectiveReceive(30, publicTransactor)
-  }
+  def apply[T](value: T, sessionTimeout: FiniteDuration): Behavior[Command[T]] = 
+    SelectiveReceive(30, idle(value, sessionTimeout))
 
   /**
     * @return A behavior that defines how to react to any [[PrivateCommand]] when the transactor
@@ -64,23 +55,18 @@ object Transactor {
     *   - Messages other than [[Begin]] should not change the behavior.
     */
   private def idle[T](value: T, sessionTimeout: FiniteDuration): Behavior[PrivateCommand[T]] = 
-    Behaviors.setup[PrivateCommand[T]] { ctx =>
-      Behaviors.receiveMessage[Begin[T]] {
-        message => {
-          val session = ctx.spawnAnonymous(
-            // do we need to define sessionTimeout and SessionTerminated ourselves? maybe we should 
-            // use a try-catch block
-            // how do we manage the set of already applied messages. i guess maybe in a session it is 
-            // empty and then we call itself to add modified messages 1 by 1
-            Behaviors.supervise(sessionHandler(value, ctx.self, Set.empty))
-                     .onFailure[SessionTerminated](SupervisorStrategy.rollback)
-          )
-          ctx.scheduleOnce(sessionTimeout, session, message)
+    Behaviors.setup { ctx =>
+      Behaviors.receiveMessage[PrivateCommand[T]] {
+        case Begin(replyTo) => 
+          val session = ctx.spawnAnonymous(sessionHandler(value, ctx.self, Set.empty))
+          replyTo ! session // so replyTo knows who to send Session[T] message to
+          ctx.scheduleOnce(sessionTimeout, session, RolledBack(session))
+          ctx.watchWith(session, RolledBack(session))
           inSession(value, sessionTimeout, session)
-        }
+        case _ => 
+          Behavior.ignore
       }
     }
-
 
   /**
     * @return A behavior that defines how to react to [[PrivateCommand]] messages when the transactor has
@@ -93,10 +79,17 @@ object Transactor {
     * @param sessionRef Reference to the child [[Session]] actor
     */
   private def inSession[T](rollbackValue: T, sessionTimeout: FiniteDuration, sessionRef: ActorRef[Session[T]]): Behavior[PrivateCommand[T]] =
-    Behaviors.receiveMessage[PrivateCommand] {
-      case Committed =>
-      case RolledBack => 
-      case _ => 
+    Behaviors.setup { ctx => 
+      Behaviors.receiveMessage[PrivateCommand] {
+        case Committed(session, value) =>
+          if(session eq sessionRef) idle(value, sessionTimeout)
+        case RolledBack(session) =>
+          if(session eq sessionRef) 
+            session ! Rollback() // we let session handle its own stopping
+            // counter-intuitively we 1. RolledBack and then 2. Rollback
+            idle(rollbackValue, sessionTimeout)
+        case Begin(_) => Behavior.unhandled
+      }
     }
 
   /**
@@ -109,10 +102,24 @@ object Transactor {
     */
   private def sessionHandler[T](currentValue: T, commit: ActorRef[Committed[T]], done: Set[Long]): Behavior[Session[T]] =
     Behaviors.receiveMessage[Session[T]] {
-      case Extract =>
-      case Modify => 
-      case Commit => 
-      case Rollback =>
+      case Extract(f, replyTo) => 
+        replyTo ! f(currentValue)
+        Behaviors.same
+      case Modify(f, id, reply, replyTo) => 
+        if(done contains id){
+          replyTo ! reply
+          Behaviors.same
+        } else {
+          replyTo ! reply 
+          val modifiedValue = f(value)
+          val modifiedDone = done + id
+          sessionHandler(modifiedValue, commit, modifiedDone)
+        }
+      case Commit(reply, replyTo) => 
+        replyTo ! reply
+        commit ! Committed(ctx.self, currentValue)
+        Behaviors.stopped
+      case Rollback => Behaviors.stopped
     }
 
 }
