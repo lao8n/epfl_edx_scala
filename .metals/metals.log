@@ -5033,3 +5033,382 @@ WARNING: Unmatched cancel notification for request id 2142
 2020.11.28 15:59:35 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
 2020.11.28 15:59:39 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
 2020.11.28 16:00:49 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.28 16:09:29 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.28 16:10:03 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.28 16:11:33 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.28 16:12:43 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.28 16:13:17 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.28 16:13:24 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.28 16:13:30 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.28 16:13:30 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.28 16:13:41 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.28 16:13:41 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.28 16:13:44 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.28 16:13:44 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.28 16:13:44 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.28 16:13:44 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.28 16:14:40 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.28 16:14:47 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.28 16:14:47 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.28 16:14:47 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.28 16:17:11 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.28 16:17:11 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.28 16:17:19 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.28 16:18:08 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.28 16:18:51 INFO  shutting down Metals
+2020.11.30 21:06:37 INFO  Started: Metals version 0.9.7 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.11.30 21:06:38 INFO  time: initialize in 0.63s
+2020.11.30 21:06:38 WARN  Build server is not auto-connectable.
+2020.11.30 21:06:38 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 21:06:38 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 21:06:38 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_hello_world\src\main\scala\reactive\SupervisionDemo.scala
+2020.11.30 21:06:41 INFO  no build target: using presentation compiler with only scala-library
+2020.11.30 21:59:28 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\test\scala\protocols\TransactorSpec.scala
+2020.11.30 22:01:13 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:06:01 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:06:08 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:06:08 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:12:05 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:12:11 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:12:45 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:12:47 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:12:47 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:12:47 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:12:51 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:13:30 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:14:26 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_hello_world\src\main\scala\reactive\Receptionist.scala
+2020.11.30 22:15:06 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:15:12 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:15:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:16:30 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:17:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:17:58 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:18:33 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+Nov 30, 2020 10:20:14 PM scala.meta.internal.pc.CompletionProvider expected$1
+WARNING: String index out of range: -1
+2020.11.30 22:20:15 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:21:02 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:21:08 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:21:30 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:21:31 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:21:31 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:21:31 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:21:31 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:21:53 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:21:53 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:21:55 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:21:56 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:22:31 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:23:59 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:24:20 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:24:22 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:24:31 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:24:31 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:24:42 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:24:42 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:25:05 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:25:49 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:27:30 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:28:38 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:30:27 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:30:38 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:30:51 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:31:41 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:31:41 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:32:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:34:05 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:35:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:36:05 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:37:35 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:38:03 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:38:11 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:38:11 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:38:13 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:38:13 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.11.30 22:38:15 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:38:44 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:46:54 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:49:01 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:49:05 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:50:09 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:50:36 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:51:07 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:51:41 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:58:00 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 22:59:40 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 23:00:21 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\test\scala\protocols\TransactorSpec.scala
+2020.11.30 23:03:16 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\test\scala\protocols\TransactorSpec.scala
+Nov 30, 2020 11:14:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]).&&(org.scalameta.`package`.debug(ScalametaParser.this.token))
+found that scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]) is false
+where ScalametaParser = scala.meta.internal.parsers.ScalametaParser@43b491
+where ScalametaParser.this.token = case
+where Token = scala.meta.tokens.Token$@15714b7
+java.util.concurrent.CompletionException: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]).&&(org.scalameta.`package`.debug(ScalametaParser.this.token))
+found that scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]) is false
+where ScalametaParser = scala.meta.internal.parsers.ScalametaParser@43b491
+where ScalametaParser.this.token = case
+where Token = scala.meta.tokens.Token$@15714b7
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1606)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]).&&(org.scalameta.`package`.debug(ScalametaParser.this.token))
+found that scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]) is false
+where ScalametaParser = scala.meta.internal.parsers.ScalametaParser@43b491
+where ScalametaParser.this.token = case
+where Token = scala.meta.tokens.Token$@15714b7
+	at org.scalameta.invariants.InvariantFailedException$.raise(Exceptions.scala:19)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$caseClause$1(ScalametaParser.scala:2820)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.caseClause(ScalametaParser.scala:2819)
+	at scala.meta.internal.parsers.ScalametaParser.caseClauses(ScalametaParser.scala:2860)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$blockExpr$1(ScalametaParser.scala:2810)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.blockExpr(ScalametaParser.scala:2809)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$argumentExprsWithUsing$1(ScalametaParser.scala:2783)
+	at scala.meta.internal.parsers.ScalametaParser.inBraces(ScalametaParser.scala:611)
+	at scala.meta.internal.parsers.ScalametaParser.argumentExprsWithUsing(ScalametaParser.scala:2783)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExprRest$3(ScalametaParser.scala:2734)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExprRest$1(ScalametaParser.scala:2734)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExprRest(ScalametaParser.scala:2706)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExprRest$1(ScalametaParser.scala:2728)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExprRest(ScalametaParser.scala:2706)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExpr0$7(ScalametaParser.scala:2658)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExpr0$1(ScalametaParser.scala:2658)
+	at scala.meta.internal.parsers.ScalametaParser.atPosTry(ScalametaParser.scala:697)
+	at scala.meta.internal.parsers.ScalametaParser.autoPosTry(ScalametaParser.scala:707)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExpr0(ScalametaParser.scala:2607)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExpr(ScalametaParser.scala:2605)
+	at scala.meta.internal.parsers.ScalametaParser.prefixExpr(ScalametaParser.scala:2589)
+	at scala.meta.internal.parsers.ScalametaParser.postfixExpr(ScalametaParser.scala:2569)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$expr$15(ScalametaParser.scala:2167)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$expr$1(ScalametaParser.scala:2167)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.expr(ScalametaParser.scala:2033)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$blockStatSeq$2(ScalametaParser.scala:4668)
+	at scala.meta.internal.parsers.ScalametaParser.stat(ScalametaParser.scala:4514)
+	at scala.meta.internal.parsers.ScalametaParser.blockStatSeq(ScalametaParser.scala:4668)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$block$1(ScalametaParser.scala:2816)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.block(ScalametaParser.scala:2815)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$expr$23(ScalametaParser.scala:2307)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$expr$1(ScalametaParser.scala:2261)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.expr(ScalametaParser.scala:2033)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$blockStatSeq$2(ScalametaParser.scala:4668)
+	at scala.meta.internal.parsers.ScalametaParser.stat(ScalametaParser.scala:4514)
+	at scala.meta.internal.parsers.ScalametaParser.blockStatSeq(ScalametaParser.scala:4668)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$block$1(ScalametaParser.scala:2816)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.block(ScalametaParser.scala:2815)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$blockExpr$1(ScalametaParser.scala:2811)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.blockExpr(ScalametaParser.scala:2809)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$argumentExprsWithUsing$1(ScalametaParser.scala:2783)
+	at scala.meta.internal.parsers.ScalametaParser.inBraces(ScalametaParser.scala:611)
+	at scala.meta.internal.parsers.ScalametaParser.argumentExprsWithUsing(ScalametaParser.scala:2783)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExprRest$3(ScalametaParser.scala:2734)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExprRest$1(ScalametaParser.scala:2734)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExprRest(ScalametaParser.scala:2706)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExpr0$7(ScalametaParser.scala:2658)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExpr0$1(ScalametaParser.scala:2658)
+	at scala.meta.internal.parsers.ScalametaParser.atPosTry(ScalametaParser.scala:697)
+	at scala.meta.internal.parsers.ScalametaParser.autoPosTry(ScalametaParser.scala:707)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExpr0(ScalametaParser.scala:2607)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExpr(ScalametaParser.scala:2605)
+	at scala.meta.internal.parsers.ScalametaParser.prefixExpr(ScalametaParser.scala:2589)
+	at scala.meta.internal.parsers.ScalametaParser.postfixExpr(ScalametaParser.scala:2569)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$expr$15(ScalametaParser.scala:2167)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$expr$1(ScalametaParser.scala:2167)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.expr(ScalametaParser.scala:2033)
+	at scala.meta.internal.parsers.ScalametaParser.expr(ScalametaParser.scala:1977)
+	at scala.meta.internal.parsers.ScalametaParser.exprMaybeIndented(ScalametaParser.scala:2005)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$funDefRest$1(ScalametaParser.scala:3975)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.funDefRest(ScalametaParser.scala:3917)
+	at scala.meta.internal.parsers.ScalametaParser.funDefOrDclOrExtensionOrSecondaryCtor(ScalametaParser.scala:3869)
+	at scala.meta.internal.parsers.ScalametaParser.defOrDclOrSecondaryCtor(ScalametaParser.scala:3755)
+	at scala.meta.internal.parsers.ScalametaParser.nonLocalDefOrDcl(ScalametaParser.scala:3740)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$templateStat$1.applyOrElse(ScalametaParser.scala:4595)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$templateStat$1.applyOrElse(ScalametaParser.scala:4589)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4533)
+	at scala.meta.internal.parsers.ScalametaParser.templateStats(ScalametaParser.scala:4588)
+	at scala.meta.internal.parsers.ScalametaParser.templateStatSeq(ScalametaParser.scala:4585)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$templateBody$1(ScalametaParser.scala:4442)
+	at scala.meta.internal.parsers.ScalametaParser.inBraces(ScalametaParser.scala:611)
+	at scala.meta.internal.parsers.ScalametaParser.templateBody(ScalametaParser.scala:4442)
+	at scala.meta.internal.parsers.ScalametaParser.templateBodyOpt(ScalametaParser.scala:4447)
+	at scala.meta.internal.parsers.ScalametaParser.templateOpt(ScalametaParser.scala:4435)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$objectDef$1(ScalametaParser.scala:4177)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.objectDef(ScalametaParser.scala:4169)
+	at scala.meta.internal.parsers.ScalametaParser.tmplDef(ScalametaParser.scala:4053)
+	at scala.meta.internal.parsers.ScalametaParser.topLevelTmplDef(ScalametaParser.scala:4035)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4555)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4543)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4533)
+	at scala.meta.internal.parsers.ScalametaParser.topStatSeq(ScalametaParser.scala:4542)
+	at scala.meta.internal.parsers.ScalametaParser.bracelessPackageStats$1(ScalametaParser.scala:4745)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$9(ScalametaParser.scala:4751)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4751)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4719)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4702)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4701)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4707)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$2(ScalametaParser.scala:137)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:47)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:137)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.internal.parsers.ScalametaParser$$anon$245.apply(ScalametaParser.scala:4763)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.metals.Trees.$anonfun$parse$1(Trees.scala:66)
+	at scala.Option.map(Option.scala:230)
+	at scala.meta.internal.metals.Trees.parse(Trees.scala:64)
+	at scala.meta.internal.metals.Trees.didChange(Trees.scala:38)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$didChange$1(ScalaPresentationCompiler.scala:128)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604)
+	... 3 more
+
+2020.11.30 23:15:24 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 23:26:45 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 23:27:20 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 23:29:46 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.11.30 23:29:53 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.01 00:04:56 INFO  shutting down Metals
+2020.12.03 21:31:19 INFO  Started: Metals version 0.9.7 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.12.03 21:31:19 INFO  time: initialize in 0.67s
+2020.12.03 21:31:20 WARN  Build server is not auto-connectable.
+2020.12.03 21:31:20 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 21:31:20 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 21:31:20 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\test\scala\protocols\TransactorSpec.scala
+2020.12.03 21:31:23 INFO  no build target: using presentation compiler with only scala-library
+2020.12.03 21:54:25 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 21:55:07 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 21:55:17 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 21:59:50 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:01:20 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:01:24 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:03:04 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:03:34 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:03:34 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:03:34 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:03:34 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:03:34 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:04:09 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:04:09 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:04:10 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:04:10 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:04:55 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:04:58 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:05:00 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:05:00 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:05:20 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:05:23 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:07:34 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\test\scala\protocols\TransactorSpec.scala
+2020.12.03 22:08:47 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:10:28 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:10:28 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:10:54 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:12:50 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:13:30 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\build.sbt
+2020.12.03 22:13:32 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\assignment.sbt
+2020.12.03 22:15:55 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:16:08 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:16:15 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:16:15 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:17:15 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:19:35 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\actor_wire_payment\build.sbt
+2020.12.03 22:22:38 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:23:17 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:26:02 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\test\scala\protocols\TransactorSpec.scala
+2020.12.03 22:26:08 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\test\scala\protocols\TransactorSpec.scala
+2020.12.03 22:26:40 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:27:40 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\assignment.sbt
+2020.12.03 22:28:54 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:28:55 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:28:55 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:34:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:34:49 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\assignment.sbt
+2020.12.03 22:34:49 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\build.sbt
+2020.12.03 22:35:11 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\build.sbt
+2020.12.03 22:35:30 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\build.sbt
+2020.12.03 22:41:29 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:41:29 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:46:41 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:46:41 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:46:54 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:49:21 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:49:21 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:49:40 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:49:42 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:49:42 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:49:49 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:49:49 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:50:15 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:50:44 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:50:44 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:50:58 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:50:58 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:50:58 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:51:22 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:51:22 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:53:18 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:54:41 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:54:53 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+Dec 03, 2020 10:56:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1529
+2020.12.03 22:57:03 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:57:03 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:57:05 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:57:37 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:57:42 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:57:53 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:57:58 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:58:25 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 22:58:25 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 22:58:34 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:07:22 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\SelectiveReceive.scala
+2020.12.03 23:07:56 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:08:09 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:09:22 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:09:42 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:09:42 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\test\scala\protocols\TransactorSpec.scala
+2020.12.03 23:09:59 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:10:02 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:11:07 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\build.sbt
+2020.12.03 23:12:19 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\build.sbt

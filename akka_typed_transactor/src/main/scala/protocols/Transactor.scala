@@ -32,7 +32,7 @@ object Transactor {
     *                       terminating the session
     */
   def apply[T](value: T, sessionTimeout: FiniteDuration): Behavior[Command[T]] = 
-    SelectiveReceive(30, idle(value, sessionTimeout))
+    SelectiveReceive(30, idle(value, sessionTimeout).narrow)
 
   /**
     * @return A behavior that defines how to react to any [[PrivateCommand]] when the transactor
@@ -58,13 +58,18 @@ object Transactor {
     Behaviors.setup { ctx =>
       Behaviors.receiveMessage[PrivateCommand[T]] {
         case Begin(replyTo) => 
-          val session = ctx.spawnAnonymous(sessionHandler(value, ctx.self, Set.empty))
+          ctx.log.debug("Received message Begin")
+          val session: ActorRef[Session[T]] = ctx.spawnAnonymous(sessionHandler(value, ctx.self, Set.empty))
           replyTo ! session // so replyTo knows who to send Session[T] message to
-          ctx.scheduleOnce(sessionTimeout, session, RolledBack(session))
           ctx.watchWith(session, RolledBack(session))
+          // cannot use ctx.scheduleOnce(sessionTimeout, session, RolledBack(session)) as ctx.scheduleOnce
+          // as suggested above requires args = target: ActorRef[U], msg: U 
+          // https://doc.akka.io/api/akka/current/akka/actor/typed/scaladsl/ActorContext.html
+          // we use ctx.setReceiveTimeout in sessionHandler instead
           inSession(value, sessionTimeout, session)
-        case _ => 
-          Behavior.ignore
+        case message =>  
+          ctx.log.debug("Received message {}", message)
+          Behaviors.ignore
       }
     }
 
@@ -80,15 +85,20 @@ object Transactor {
     */
   private def inSession[T](rollbackValue: T, sessionTimeout: FiniteDuration, sessionRef: ActorRef[Session[T]]): Behavior[PrivateCommand[T]] =
     Behaviors.setup { ctx => 
-      Behaviors.receiveMessage[PrivateCommand] {
+      ctx.setReceiveTimeout(sessionTimeout, RolledBack(sessionRef))
+      Behaviors.receiveMessage[PrivateCommand[T]] {
         case Committed(session, value) =>
           if(session eq sessionRef) idle(value, sessionTimeout)
+          else Behaviors.ignore
         case RolledBack(session) =>
-          if(session eq sessionRef) 
+          if(session eq sessionRef){
             session ! Rollback() // we let session handle its own stopping
             // counter-intuitively we 1. RolledBack and then 2. Rollback
             idle(rollbackValue, sessionTimeout)
-        case Begin(_) => Behavior.unhandled
+          }
+          else 
+            Behaviors.same
+        case Begin(_) => Behaviors.unhandled
       }
     }
 
@@ -101,25 +111,27 @@ object Transactor {
     * @param done Set of already applied [[Modify]] messages
     */
   private def sessionHandler[T](currentValue: T, commit: ActorRef[Committed[T]], done: Set[Long]): Behavior[Session[T]] =
-    Behaviors.receiveMessage[Session[T]] {
-      case Extract(f, replyTo) => 
-        replyTo ! f(currentValue)
-        Behaviors.same
-      case Modify(f, id, reply, replyTo) => 
-        if(done contains id){
-          replyTo ! reply
+    Behaviors.setup { ctx =>   
+      Behaviors.receiveMessage {
+        case Extract(f, replyTo: ActorRef[Any]) => 
+          ctx.log.debug("Received message Extract {} replyTo {}", f, replyTo)
+          replyTo ! currentValue
           Behaviors.same
-        } else {
-          replyTo ! reply 
-          val modifiedValue = f(value)
-          val modifiedDone = done + id
-          sessionHandler(modifiedValue, commit, modifiedDone)
-        }
-      case Commit(reply, replyTo) => 
-        replyTo ! reply
-        commit ! Committed(ctx.self, currentValue)
-        Behaviors.stopped
-      case Rollback => Behaviors.stopped
+        case Modify(f, id, reply, replyTo: ActorRef[Any]) => 
+          if(done contains id){
+            replyTo ! reply
+            Behaviors.same
+          } else {
+            replyTo ! reply 
+            val modifiedValue = f(currentValue)
+            val modifiedDone = done + id
+            sessionHandler(modifiedValue, commit, modifiedDone)
+          }
+        case Commit(reply, replyTo: ActorRef[Any]) => 
+          replyTo ! reply
+          commit ! Committed(ctx.self, currentValue)
+          Behaviors.stopped
+        case Rollback() => Behaviors.stopped
     }
-
+  }
 }

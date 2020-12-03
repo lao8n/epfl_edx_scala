@@ -268,5 +268,4 @@ trait TransactorSpec {
   //     testkit.runOne()
   //   })
   // }
-
 }
