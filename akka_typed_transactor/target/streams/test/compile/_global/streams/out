@@ -1,7 +1,0 @@
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\test\scala\protocols\TransactorSpec.scala:6:13: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport akka.Done[0m
-[0m[[0m[33mwarn[0m] [0m[0m            ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\test\scala\protocols\TransactorSpec.scala:11:33: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport akka.actor.testkit.typed.Effect[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m

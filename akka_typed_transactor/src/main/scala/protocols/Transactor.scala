@@ -55,23 +55,21 @@ object Transactor {
     *   - Messages other than [[Begin]] should not change the behavior.
     */
   private def idle[T](value: T, sessionTimeout: FiniteDuration): Behavior[PrivateCommand[T]] = 
-    Behaviors.setup { ctx =>
-      Behaviors.receiveMessage[PrivateCommand[T]] {
-        case Begin(replyTo) => 
-          ctx.log.debug("Received message Begin")
-          val session: ActorRef[Session[T]] = ctx.spawnAnonymous(sessionHandler(value, ctx.self, Set.empty))
-          replyTo ! session // so replyTo knows who to send Session[T] message to
-          ctx.watchWith(session, RolledBack(session))
-          // cannot use ctx.scheduleOnce(sessionTimeout, session, RolledBack(session)) as ctx.scheduleOnce
-          // as suggested above requires args = target: ActorRef[U], msg: U 
-          // https://doc.akka.io/api/akka/current/akka/actor/typed/scaladsl/ActorContext.html
-          // we use ctx.setReceiveTimeout in sessionHandler instead
-          inSession(value, sessionTimeout, session)
-        case message =>  
-          ctx.log.debug("Received message {}", message)
-          Behaviors.ignore
-      }
-    }
+    // Cannot use Behaviors.setup as this defers behavior until an actor is started
+    Behaviors.receive {
+      case (ctx, Begin(replyTo)) =>
+        ctx.log.debug("Received message Begin")
+        val session: ActorRef[Session[T]] = ctx.spawnAnonymous(sessionHandler(value, ctx.self, Set.empty))
+        replyTo ! session // so replyTo knows who to send Session[T] message to
+        ctx.watchWith(session, RolledBack(session))
+        // cannot use ctx.scheduleOnce(sessionTimeout, session, RolledBack(session)) as ctx.scheduleOnce
+        // as suggested above requires args = target: ActorRef[U], msg: U 
+        // https://doc.akka.io/api/akka/current/akka/actor/typed/scaladsl/ActorContext.html
+        // we use ctx.setReceiveTimeout in sessionHandler instead
+        inSession(value, sessionTimeout, session)
+      case _ =>
+        Behaviors.same // don't actually want to ignore as want to receive other messages
+  }  
 
   /**
     * @return A behavior that defines how to react to [[PrivateCommand]] messages when the transactor has

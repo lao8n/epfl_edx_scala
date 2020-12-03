@@ -5412,3 +5412,9 @@ WARNING: Unmatched cancel notification for request id 1529
 2020.12.03 23:10:02 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
 2020.12.03 23:11:07 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\build.sbt
 2020.12.03 23:12:19 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\build.sbt
+2020.12.03 23:20:06 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_hello_world\src\main\scala\reactive\Receptionist.scala
+2020.12.03 23:20:27 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:20:27 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:20:41 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:21:50 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:22:08 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
