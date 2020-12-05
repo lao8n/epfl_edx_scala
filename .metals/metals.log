@@ -5418,3 +5418,556 @@ WARNING: Unmatched cancel notification for request id 1529
 2020.12.03 23:20:41 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
 2020.12.03 23:21:50 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
 2020.12.03 23:22:08 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:23:30 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:23:45 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:24:02 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:24:02 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:24:02 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:24:36 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:24:38 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:24:38 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:24:39 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:24:39 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:24:43 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:25:31 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:26:44 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:26:47 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:30:22 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:30:22 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:32:14 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:32:14 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:32:23 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:32:23 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:32:23 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:32:23 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+Dec 03, 2020 11:32:30 PM scala.meta.internal.pc.CompletionProvider expected$1
+WARNING: String index out of range: -1
+2020.12.03 23:32:48 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:33:13 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_hello_world\src\main\scala\reactive\SupervisionDemo.scala
+2020.12.03 23:34:02 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:34:04 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:35:29 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:36:31 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:36:31 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:36:32 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:36:32 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:36:32 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:36:41 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:36:52 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:36:57 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:37:02 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:02 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:02 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:37:02 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:14 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:37:26 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:26 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Exception in thread "pool-3-thread-1" java.lang.Error: java.lang.InterruptedException
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1155)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$onCompilerJobQueue$1(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:103)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	... 2 more
+2020.12.03 23:37:26 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:26 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:26 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:26 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:37:26 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:30 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:30 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:30 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:31 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:31 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:31 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:31 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:32 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:37:32 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:40 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:43 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:37:50 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:38:09 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:38:09 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:38:09 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:38:12 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:38:17 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:38:17 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:38:37 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:38:42 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:38:42 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:39:29 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\test\scala\protocols\TransactorSpec.scala
+2020.12.03 23:43:08 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:43:32 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:43:35 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:44:27 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:44:28 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:44:28 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:44:28 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:44:53 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:45:19 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:46:32 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:48:07 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:48:07 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:48:21 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:50:35 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:50:56 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:51:00 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:51:00 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:51:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:55:04 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_hello_world\src\main\scala\reactive\StashBufferDemo.scala
+2020.12.03 23:55:10 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_hello_world\src\main\scala\reactive\Persistence.scala
+2020.12.03 23:55:16 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_hello_world\src\main\scala\reactive\HelloWorld.scala
+2020.12.03 23:55:17 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_hello_world\src\main\scala\reactive\BuyerSeller.scala
+2020.12.03 23:57:24 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:57:54 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:58:22 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:58:22 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:58:22 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 23:59:00 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.03 23:59:09 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:00:05 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+Dec 04, 2020 12:01:07 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]).&&(org.scalameta.`package`.debug(ScalametaParser.this.token))
+found that scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]) is false
+where ScalametaParser = scala.meta.internal.parsers.ScalametaParser@1c54ec4
+where ScalametaParser.this.token = case
+where Token = scala.meta.tokens.Token$@4727dc
+java.util.concurrent.CompletionException: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]).&&(org.scalameta.`package`.debug(ScalametaParser.this.token))
+found that scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]) is false
+where ScalametaParser = scala.meta.internal.parsers.ScalametaParser@1c54ec4
+where ScalametaParser.this.token = case
+where Token = scala.meta.tokens.Token$@4727dc
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1606)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]).&&(org.scalameta.`package`.debug(ScalametaParser.this.token))
+found that scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]) is false
+where ScalametaParser = scala.meta.internal.parsers.ScalametaParser@1c54ec4
+where ScalametaParser.this.token = case
+where Token = scala.meta.tokens.Token$@4727dc
+	at org.scalameta.invariants.InvariantFailedException$.raise(Exceptions.scala:19)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$caseClause$1(ScalametaParser.scala:2820)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.caseClause(ScalametaParser.scala:2819)
+	at scala.meta.internal.parsers.ScalametaParser.caseClauses(ScalametaParser.scala:2860)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$blockExpr$1(ScalametaParser.scala:2810)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.blockExpr(ScalametaParser.scala:2809)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$argumentExprsWithUsing$1(ScalametaParser.scala:2783)
+	at scala.meta.internal.parsers.ScalametaParser.inBraces(ScalametaParser.scala:611)
+	at scala.meta.internal.parsers.ScalametaParser.argumentExprsWithUsing(ScalametaParser.scala:2783)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExprRest$3(ScalametaParser.scala:2734)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExprRest$1(ScalametaParser.scala:2734)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExprRest(ScalametaParser.scala:2706)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExpr0$7(ScalametaParser.scala:2658)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExpr0$1(ScalametaParser.scala:2658)
+	at scala.meta.internal.parsers.ScalametaParser.atPosTry(ScalametaParser.scala:697)
+	at scala.meta.internal.parsers.ScalametaParser.autoPosTry(ScalametaParser.scala:707)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExpr0(ScalametaParser.scala:2607)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExpr(ScalametaParser.scala:2605)
+	at scala.meta.internal.parsers.ScalametaParser.prefixExpr(ScalametaParser.scala:2589)
+	at scala.meta.internal.parsers.ScalametaParser.postfixExpr(ScalametaParser.scala:2569)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$expr$15(ScalametaParser.scala:2167)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$expr$1(ScalametaParser.scala:2167)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.expr(ScalametaParser.scala:2033)
+	at scala.meta.internal.parsers.ScalametaParser.expr(ScalametaParser.scala:1977)
+	at scala.meta.internal.parsers.ScalametaParser.exprMaybeIndented(ScalametaParser.scala:2005)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$funDefRest$1(ScalametaParser.scala:3975)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.funDefRest(ScalametaParser.scala:3917)
+	at scala.meta.internal.parsers.ScalametaParser.funDefOrDclOrExtensionOrSecondaryCtor(ScalametaParser.scala:3869)
+	at scala.meta.internal.parsers.ScalametaParser.defOrDclOrSecondaryCtor(ScalametaParser.scala:3755)
+	at scala.meta.internal.parsers.ScalametaParser.nonLocalDefOrDcl(ScalametaParser.scala:3740)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$templateStat$1.applyOrElse(ScalametaParser.scala:4595)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$templateStat$1.applyOrElse(ScalametaParser.scala:4589)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4533)
+	at scala.meta.internal.parsers.ScalametaParser.templateStats(ScalametaParser.scala:4588)
+	at scala.meta.internal.parsers.ScalametaParser.templateStatSeq(ScalametaParser.scala:4585)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$templateBody$1(ScalametaParser.scala:4442)
+	at scala.meta.internal.parsers.ScalametaParser.inBraces(ScalametaParser.scala:611)
+	at scala.meta.internal.parsers.ScalametaParser.templateBody(ScalametaParser.scala:4442)
+	at scala.meta.internal.parsers.ScalametaParser.templateBodyOpt(ScalametaParser.scala:4447)
+	at scala.meta.internal.parsers.ScalametaParser.templateOpt(ScalametaParser.scala:4435)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$objectDef$1(ScalametaParser.scala:4177)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.objectDef(ScalametaParser.scala:4169)
+	at scala.meta.internal.parsers.ScalametaParser.tmplDef(ScalametaParser.scala:4053)
+	at scala.meta.internal.parsers.ScalametaParser.topLevelTmplDef(ScalametaParser.scala:4035)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4555)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4543)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4533)
+	at scala.meta.internal.parsers.ScalametaParser.topStatSeq(ScalametaParser.scala:4542)
+	at scala.meta.internal.parsers.ScalametaParser.bracelessPackageStats$1(ScalametaParser.scala:4745)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$9(ScalametaParser.scala:4751)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4751)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4719)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4702)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4701)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4707)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$2(ScalametaParser.scala:137)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:47)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:137)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.internal.parsers.ScalametaParser$$anon$245.apply(ScalametaParser.scala:4763)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.metals.Trees.$anonfun$parse$1(Trees.scala:66)
+	at scala.Option.map(Option.scala:230)
+	at scala.meta.internal.metals.Trees.parse(Trees.scala:64)
+	at scala.meta.internal.metals.Trees.didChange(Trees.scala:38)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$didChange$1(ScalaPresentationCompiler.scala:128)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604)
+	... 3 more
+
+Dec 04, 2020 12:01:07 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]).&&(org.scalameta.`package`.debug(ScalametaParser.this.token))
+found that scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]) is false
+where ScalametaParser = scala.meta.internal.parsers.ScalametaParser@964eb8
+where ScalametaParser.this.token = case
+where Token = scala.meta.tokens.Token$@4727dc
+java.util.concurrent.CompletionException: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]).&&(org.scalameta.`package`.debug(ScalametaParser.this.token))
+found that scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]) is false
+where ScalametaParser = scala.meta.internal.parsers.ScalametaParser@964eb8
+where ScalametaParser.this.token = case
+where Token = scala.meta.tokens.Token$@4727dc
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1606)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]).&&(org.scalameta.`package`.debug(ScalametaParser.this.token))
+found that scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]) is false
+where ScalametaParser = scala.meta.internal.parsers.ScalametaParser@964eb8
+where ScalametaParser.this.token = case
+where Token = scala.meta.tokens.Token$@4727dc
+	at org.scalameta.invariants.InvariantFailedException$.raise(Exceptions.scala:19)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$caseClause$1(ScalametaParser.scala:2820)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.caseClause(ScalametaParser.scala:2819)
+	at scala.meta.internal.parsers.ScalametaParser.caseClauses(ScalametaParser.scala:2860)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$blockExpr$1(ScalametaParser.scala:2810)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.blockExpr(ScalametaParser.scala:2809)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$argumentExprsWithUsing$1(ScalametaParser.scala:2783)
+	at scala.meta.internal.parsers.ScalametaParser.inBraces(ScalametaParser.scala:611)
+	at scala.meta.internal.parsers.ScalametaParser.argumentExprsWithUsing(ScalametaParser.scala:2783)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExprRest$3(ScalametaParser.scala:2734)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExprRest$1(ScalametaParser.scala:2734)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExprRest(ScalametaParser.scala:2706)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExpr0$7(ScalametaParser.scala:2658)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExpr0$1(ScalametaParser.scala:2658)
+	at scala.meta.internal.parsers.ScalametaParser.atPosTry(ScalametaParser.scala:697)
+	at scala.meta.internal.parsers.ScalametaParser.autoPosTry(ScalametaParser.scala:707)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExpr0(ScalametaParser.scala:2607)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExpr(ScalametaParser.scala:2605)
+	at scala.meta.internal.parsers.ScalametaParser.prefixExpr(ScalametaParser.scala:2589)
+	at scala.meta.internal.parsers.ScalametaParser.postfixExpr(ScalametaParser.scala:2569)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$expr$15(ScalametaParser.scala:2167)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$expr$1(ScalametaParser.scala:2167)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.expr(ScalametaParser.scala:2033)
+	at scala.meta.internal.parsers.ScalametaParser.expr(ScalametaParser.scala:1977)
+	at scala.meta.internal.parsers.ScalametaParser.exprMaybeIndented(ScalametaParser.scala:2005)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$funDefRest$1(ScalametaParser.scala:3975)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.funDefRest(ScalametaParser.scala:3917)
+	at scala.meta.internal.parsers.ScalametaParser.funDefOrDclOrExtensionOrSecondaryCtor(ScalametaParser.scala:3869)
+	at scala.meta.internal.parsers.ScalametaParser.defOrDclOrSecondaryCtor(ScalametaParser.scala:3755)
+	at scala.meta.internal.parsers.ScalametaParser.nonLocalDefOrDcl(ScalametaParser.scala:3740)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$templateStat$1.applyOrElse(ScalametaParser.scala:4595)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$templateStat$1.applyOrElse(ScalametaParser.scala:4589)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4533)
+	at scala.meta.internal.parsers.ScalametaParser.templateStats(ScalametaParser.scala:4588)
+	at scala.meta.internal.parsers.ScalametaParser.templateStatSeq(ScalametaParser.scala:4585)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$templateBody$1(ScalametaParser.scala:4442)
+	at scala.meta.internal.parsers.ScalametaParser.inBraces(ScalametaParser.scala:611)
+	at scala.meta.internal.parsers.ScalametaParser.templateBody(ScalametaParser.scala:4442)
+	at scala.meta.internal.parsers.ScalametaParser.templateBodyOpt(ScalametaParser.scala:4447)
+	at scala.meta.internal.parsers.ScalametaParser.templateOpt(ScalametaParser.scala:4435)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$objectDef$1(ScalametaParser.scala:4177)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.objectDef(ScalametaParser.scala:4169)
+	at scala.meta.internal.parsers.ScalametaParser.tmplDef(ScalametaParser.scala:4053)
+	at scala.meta.internal.parsers.ScalametaParser.topLevelTmplDef(ScalametaParser.scala:4035)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4555)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4543)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4533)
+	at scala.meta.internal.parsers.ScalametaParser.topStatSeq(ScalametaParser.scala:4542)
+	at scala.meta.internal.parsers.ScalametaParser.bracelessPackageStats$1(ScalametaParser.scala:4745)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$9(ScalametaParser.scala:4751)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4751)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4719)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4702)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4701)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4707)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$2(ScalametaParser.scala:137)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:47)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:137)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.internal.parsers.ScalametaParser$$anon$245.apply(ScalametaParser.scala:4763)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.metals.Trees.$anonfun$parse$1(Trees.scala:66)
+	at scala.Option.map(Option.scala:230)
+	at scala.meta.internal.metals.Trees.parse(Trees.scala:64)
+	at scala.meta.internal.metals.Trees.didChange(Trees.scala:38)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$didChange$1(ScalaPresentationCompiler.scala:128)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604)
+	... 3 more
+
+2020.12.04 00:01:26 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:02:48 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:03:13 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:03:13 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:03:13 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:03:51 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:03:59 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:04:48 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:04:48 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:04:48 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:04:49 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:04:52 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:05:19 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:05:59 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:06:57 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:07:03 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:07:03 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:07:27 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:08:35 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:08:35 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:08:35 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:08:37 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:08:37 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:09:15 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:09:16 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:09:19 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:09:19 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:09:32 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+Dec 04, 2020 12:09:51 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]).&&(org.scalameta.`package`.debug(ScalametaParser.this.token))
+found that scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]) is false
+where ScalametaParser = scala.meta.internal.parsers.ScalametaParser@4ff393
+where ScalametaParser.this.token = case
+where Token = scala.meta.tokens.Token$@4727dc
+java.util.concurrent.CompletionException: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]).&&(org.scalameta.`package`.debug(ScalametaParser.this.token))
+found that scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]) is false
+where ScalametaParser = scala.meta.internal.parsers.ScalametaParser@4ff393
+where ScalametaParser.this.token = case
+where Token = scala.meta.tokens.Token$@4727dc
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:273)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:280)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1606)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.scalameta.invariants.InvariantFailedException: invariant failed:
+when verifying scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]).&&(org.scalameta.`package`.debug(ScalametaParser.this.token))
+found that scala.meta.classifiers.`package`.XtensionClassifiable[scala.meta.tokens.Token](ScalametaParser.this.token)(scala.meta.tokens.Token.classifiable[scala.meta.tokens.Token]).isNot[scala.meta.tokens.Token.KwCase](Token.this.KwCase.classifier[scala.meta.tokens.Token]) is false
+where ScalametaParser = scala.meta.internal.parsers.ScalametaParser@4ff393
+where ScalametaParser.this.token = case
+where Token = scala.meta.tokens.Token$@4727dc
+	at org.scalameta.invariants.InvariantFailedException$.raise(Exceptions.scala:19)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$caseClause$1(ScalametaParser.scala:2820)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.caseClause(ScalametaParser.scala:2819)
+	at scala.meta.internal.parsers.ScalametaParser.caseClauses(ScalametaParser.scala:2860)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$blockExpr$1(ScalametaParser.scala:2810)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.blockExpr(ScalametaParser.scala:2809)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$argumentExprsWithUsing$1(ScalametaParser.scala:2783)
+	at scala.meta.internal.parsers.ScalametaParser.inBraces(ScalametaParser.scala:611)
+	at scala.meta.internal.parsers.ScalametaParser.argumentExprsWithUsing(ScalametaParser.scala:2783)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExprRest$3(ScalametaParser.scala:2734)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExprRest$1(ScalametaParser.scala:2734)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExprRest(ScalametaParser.scala:2706)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExprRest$1(ScalametaParser.scala:2728)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExprRest(ScalametaParser.scala:2706)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExpr0$7(ScalametaParser.scala:2658)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExpr0$1(ScalametaParser.scala:2658)
+	at scala.meta.internal.parsers.ScalametaParser.atPosTry(ScalametaParser.scala:697)
+	at scala.meta.internal.parsers.ScalametaParser.autoPosTry(ScalametaParser.scala:707)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExpr0(ScalametaParser.scala:2607)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExpr(ScalametaParser.scala:2605)
+	at scala.meta.internal.parsers.ScalametaParser.prefixExpr(ScalametaParser.scala:2589)
+	at scala.meta.internal.parsers.ScalametaParser.postfixExpr(ScalametaParser.scala:2569)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$expr$15(ScalametaParser.scala:2167)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$expr$1(ScalametaParser.scala:2167)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.expr(ScalametaParser.scala:2033)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$blockStatSeq$2(ScalametaParser.scala:4668)
+	at scala.meta.internal.parsers.ScalametaParser.stat(ScalametaParser.scala:4514)
+	at scala.meta.internal.parsers.ScalametaParser.blockStatSeq(ScalametaParser.scala:4668)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$block$1(ScalametaParser.scala:2816)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.block(ScalametaParser.scala:2815)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$expr$23(ScalametaParser.scala:2307)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$expr$1(ScalametaParser.scala:2261)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.expr(ScalametaParser.scala:2033)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$blockStatSeq$2(ScalametaParser.scala:4668)
+	at scala.meta.internal.parsers.ScalametaParser.stat(ScalametaParser.scala:4514)
+	at scala.meta.internal.parsers.ScalametaParser.blockStatSeq(ScalametaParser.scala:4668)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$block$1(ScalametaParser.scala:2816)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.block(ScalametaParser.scala:2815)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$blockExpr$1(ScalametaParser.scala:2811)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.blockExpr(ScalametaParser.scala:2809)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$argumentExprsWithUsing$1(ScalametaParser.scala:2783)
+	at scala.meta.internal.parsers.ScalametaParser.inBraces(ScalametaParser.scala:611)
+	at scala.meta.internal.parsers.ScalametaParser.argumentExprsWithUsing(ScalametaParser.scala:2783)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExprRest$3(ScalametaParser.scala:2734)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExprRest$1(ScalametaParser.scala:2734)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExprRest(ScalametaParser.scala:2706)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExpr0$7(ScalametaParser.scala:2658)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$simpleExpr0$1(ScalametaParser.scala:2658)
+	at scala.meta.internal.parsers.ScalametaParser.atPosTry(ScalametaParser.scala:697)
+	at scala.meta.internal.parsers.ScalametaParser.autoPosTry(ScalametaParser.scala:707)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExpr0(ScalametaParser.scala:2607)
+	at scala.meta.internal.parsers.ScalametaParser.simpleExpr(ScalametaParser.scala:2605)
+	at scala.meta.internal.parsers.ScalametaParser.prefixExpr(ScalametaParser.scala:2589)
+	at scala.meta.internal.parsers.ScalametaParser.postfixExpr(ScalametaParser.scala:2569)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$expr$15(ScalametaParser.scala:2167)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$expr$1(ScalametaParser.scala:2167)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.expr(ScalametaParser.scala:2033)
+	at scala.meta.internal.parsers.ScalametaParser.expr(ScalametaParser.scala:1977)
+	at scala.meta.internal.parsers.ScalametaParser.exprMaybeIndented(ScalametaParser.scala:2005)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$funDefRest$1(ScalametaParser.scala:3975)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.funDefRest(ScalametaParser.scala:3917)
+	at scala.meta.internal.parsers.ScalametaParser.funDefOrDclOrExtensionOrSecondaryCtor(ScalametaParser.scala:3869)
+	at scala.meta.internal.parsers.ScalametaParser.defOrDclOrSecondaryCtor(ScalametaParser.scala:3755)
+	at scala.meta.internal.parsers.ScalametaParser.nonLocalDefOrDcl(ScalametaParser.scala:3740)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$templateStat$1.applyOrElse(ScalametaParser.scala:4595)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$templateStat$1.applyOrElse(ScalametaParser.scala:4589)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4533)
+	at scala.meta.internal.parsers.ScalametaParser.templateStats(ScalametaParser.scala:4588)
+	at scala.meta.internal.parsers.ScalametaParser.templateStatSeq(ScalametaParser.scala:4585)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$templateBody$1(ScalametaParser.scala:4442)
+	at scala.meta.internal.parsers.ScalametaParser.inBraces(ScalametaParser.scala:611)
+	at scala.meta.internal.parsers.ScalametaParser.templateBody(ScalametaParser.scala:4442)
+	at scala.meta.internal.parsers.ScalametaParser.templateBodyOpt(ScalametaParser.scala:4447)
+	at scala.meta.internal.parsers.ScalametaParser.templateOpt(ScalametaParser.scala:4435)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$objectDef$1(ScalametaParser.scala:4177)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.objectDef(ScalametaParser.scala:4169)
+	at scala.meta.internal.parsers.ScalametaParser.tmplDef(ScalametaParser.scala:4053)
+	at scala.meta.internal.parsers.ScalametaParser.topLevelTmplDef(ScalametaParser.scala:4035)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4555)
+	at scala.meta.internal.parsers.ScalametaParser$$anonfun$topStat$1.applyOrElse(ScalametaParser.scala:4543)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.meta.internal.parsers.ScalametaParser.statSeq(ScalametaParser.scala:4533)
+	at scala.meta.internal.parsers.ScalametaParser.topStatSeq(ScalametaParser.scala:4542)
+	at scala.meta.internal.parsers.ScalametaParser.bracelessPackageStats$1(ScalametaParser.scala:4745)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$9(ScalametaParser.scala:4751)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$batchSource$1(ScalametaParser.scala:4751)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.batchSource(ScalametaParser.scala:4719)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$source$1(ScalametaParser.scala:4702)
+	at scala.meta.internal.parsers.ScalametaParser.atPos(ScalametaParser.scala:688)
+	at scala.meta.internal.parsers.ScalametaParser.autoPos(ScalametaParser.scala:704)
+	at scala.meta.internal.parsers.ScalametaParser.source(ScalametaParser.scala:4701)
+	at scala.meta.internal.parsers.ScalametaParser.entrypointSource(ScalametaParser.scala:4707)
+	at scala.meta.internal.parsers.ScalametaParser.$anonfun$parseSource$2(ScalametaParser.scala:137)
+	at scala.meta.internal.parsers.ScalametaParser.parseRule(ScalametaParser.scala:47)
+	at scala.meta.internal.parsers.ScalametaParser.parseSource(ScalametaParser.scala:137)
+	at scala.meta.parsers.Parse$.$anonfun$parseSource$1(Parse.scala:29)
+	at scala.meta.internal.parsers.ScalametaParser$$anon$245.apply(ScalametaParser.scala:4763)
+	at scala.meta.parsers.Api$XtensionParseDialectInput.parse(Api.scala:25)
+	at scala.meta.internal.metals.Trees.$anonfun$parse$1(Trees.scala:66)
+	at scala.Option.map(Option.scala:230)
+	at scala.meta.internal.metals.Trees.parse(Trees.scala:64)
+	at scala.meta.internal.metals.Trees.didChange(Trees.scala:38)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$didChange$1(ScalaPresentationCompiler.scala:128)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1604)
+	... 3 more
+
+2020.12.04 00:09:57 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:11:32 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:11:32 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:11:42 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:12:11 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:13:14 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:17:31 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:18:16 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:18:47 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:18:47 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:18:47 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.04 00:18:50 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.04 00:25:39 INFO  shutting down Metals
+2020.12.05 16:33:18 INFO  Started: Metals version 0.9.7 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.12.05 16:33:19 INFO  time: initialize in 0.52s
+2020.12.05 16:33:19 WARN  Build server is not auto-connectable.
+2020.12.05 16:33:19 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.05 16:33:19 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
+2020.12.05 16:33:19 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\test\scala\protocols\TransactorSpec.scala
+2020.12.05 16:33:22 INFO  no build target: using presentation compiler with only scala-library

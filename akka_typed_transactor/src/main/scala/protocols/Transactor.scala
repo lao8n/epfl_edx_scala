@@ -59,13 +59,17 @@ object Transactor {
     Behaviors.receive {
       case (ctx, Begin(replyTo)) =>
         ctx.log.debug("Received message Begin")
-        val session: ActorRef[Session[T]] = ctx.spawnAnonymous(sessionHandler(value, ctx.self, Set.empty))
+        val session = ctx.spawnAnonymous(sessionHandler(value, ctx.self, Set.empty))
         replyTo ! session // so replyTo knows who to send Session[T] message to
         ctx.watchWith(session, RolledBack(session))
         // cannot use ctx.scheduleOnce(sessionTimeout, session, RolledBack(session)) as ctx.scheduleOnce
         // as suggested above requires args = target: ActorRef[U], msg: U 
         // https://doc.akka.io/api/akka/current/akka/actor/typed/scaladsl/ActorContext.html
-        // we use ctx.setReceiveTimeout in sessionHandler instead
+        // i mistakedly tried ctx.setReceiveTimeout in sessionHandler but that doesn't work as
+        // no RolledBack message was sent
+        // i also mistakedly sent RolledBack to session resulting in mismatched types
+        // i also mistakedly try to send RollBack to session which is also incorrect as no RolledBack is sent
+        ctx.scheduleOnce(sessionTimeout, ctx.self, RolledBack(session))
         inSession(value, sessionTimeout, session)
       case _ =>
         Behaviors.same // don't actually want to ignore as want to receive other messages
@@ -83,19 +87,19 @@ object Transactor {
     */
   private def inSession[T](rollbackValue: T, sessionTimeout: FiniteDuration, sessionRef: ActorRef[Session[T]]): Behavior[PrivateCommand[T]] =
     Behaviors.setup { ctx => 
-      ctx.setReceiveTimeout(sessionTimeout, RolledBack(sessionRef))
       Behaviors.receiveMessage[PrivateCommand[T]] {
         case Committed(session, value) =>
           if(session eq sessionRef) idle(value, sessionTimeout)
-          else Behaviors.ignore
+          else Behaviors.same
         case RolledBack(session) =>
           if(session eq sessionRef){
+            ctx stop session
             session ! Rollback() // we let session handle its own stopping
             // counter-intuitively we 1. RolledBack and then 2. Rollback
             idle(rollbackValue, sessionTimeout)
           }
           else 
-            Behaviors.same
+            Behaviors.same        
         case Begin(_) => Behaviors.unhandled
       }
     }
@@ -112,7 +116,6 @@ object Transactor {
     Behaviors.setup { ctx =>   
       Behaviors.receiveMessage {
         case Extract(f, replyTo: ActorRef[Any]) => 
-          ctx.log.debug("Received message Extract {} replyTo {}", f, replyTo)
           replyTo ! currentValue
           Behaviors.same
         case Modify(f, id, reply, replyTo: ActorRef[Any]) => 

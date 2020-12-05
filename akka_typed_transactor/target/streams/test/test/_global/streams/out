@@ -6,54 +6,43 @@
 [0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(protocols.ProtocolsSuite, sbt.ForkMain$AnnotatedFingerscan@1e7f865, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must properly ignore stale termination notices[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must properly ignore stale termination notices[0m finished, took 0.393 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must properly ignore stale termination notices[0m finished, took 0.359 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must commit[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA Transactor must commit[0m failed: java.lang.[31mAssertionError[0m: assertion failed: In case of timeout, the session should be rolled back, took 0.028 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.assert(Predef.scala:282)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must commit(TransactorSpec.scala:93)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must commit$(TransactorSpec.scala:69)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.ProtocolsSuite.A Transactor must commit([35mProtocolsSuite.scala[0m:[33m6[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must commit[0m finished, took 0.033 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must commit[0m finished, took 0.035 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must have idempotent modifications[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must have idempotent modifications[0m finished, took 0.011 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must have idempotent modifications[0m finished, took 0.006 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must compute[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must compute[0m finished, took 0.516 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must compute[0m finished, took 0.467 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must try in receive order[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must try in receive order[0m finished, took 0.008 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must try in receive order[0m finished, took 0.007 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled[0m finished, took 0.001 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 0)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 0)[0m finished, took 0.007 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 0)[0m finished, took 0.008 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must rollback[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA Transactor must rollback[0m failed: java.lang.[31mAssertionError[0m: expected:<List(Stopped($a))> but was:<List()>, took 0.01 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must rollback(TransactorSpec.scala:154)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must rollback$(TransactorSpec.scala:125)[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.ProtocolsSuite.A Transactor must rollback([35mProtocolsSuite.scala[0m:[33m6[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must rollback[0m finished, took 0.012 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must rollback[0m finished, took 0.013 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must eventually execute the behavior[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must eventually execute the behavior[0m finished, took 0.148 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must eventually execute the behavior[0m finished, took 0.147 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must tolerate worst-case sorting[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must tolerate worst-case sorting[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must timeout[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA Transactor must timeout[0m failed: java.lang.[31mAssertionError[0m: expected:<List(Stopped($a))> but was:<List()>, took 0.002 sec[0m
-[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must timeout(TransactorSpec.scala:192)[0m
+[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA Transactor must timeout[0m failed: java.lang.[31mAssertionError[0m: expected:<List(2)> but was:<List()>, took 0.005 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must timeout(TransactorSpec.scala:197)[0m
 [0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must timeout$(TransactorSpec.scala:170)[0m
 [0m[[0m[31merror[0m] [0m[0m    at protocols.ProtocolsSuite.A Transactor must timeout([35mProtocolsSuite.scala[0m:[33m6[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must timeout[0m finished, took 0.003 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must timeout[0m finished, took 0.006 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 1)[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 1)[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must restart retrying at the head of the queue[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must restart retrying at the head of the queue[0m finished, took 0.004 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must restart retrying at the head of the queue[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must ignore new sessions while in a session[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must ignore new sessions while in a session[0m finished, took 0.004 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m3 failed[0m[34m, [0m[34m0 ignored[0m[34m, 14 total, 1.163s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must ignore new sessions while in a session[0m finished, took 0.005 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 14 total, 1.074s[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 14 events.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for ScalaCheck not available.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
-[0m[[0m[31merror[0m] [0m[0mFailed: Total 14, Failed 3, Errors 0, Passed 11[0m
+[0m[[0m[31merror[0m] [0m[0mFailed: Total 14, Failed 1, Errors 0, Passed 13[0m
 [0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
 [0m[[0m[31merror[0m] [0m[0m	protocols.ProtocolsSuite[0m
 [0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
