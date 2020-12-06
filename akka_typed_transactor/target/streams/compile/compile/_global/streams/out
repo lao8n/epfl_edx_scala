@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:89:61: not found: value session[0m
-[0m[[0m[31merror[0m] [0m[0m      ctx.scheduleOnce(sessionTimeout, ctx.self, RolledBack(session))[0m
-[0m[[0m[31merror[0m] [0m[0m                                                            ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala:7:28: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport com.typesafe.config.ConfigFactory[0m
+[0m[[0m[33mwarn[0m] [0m[0m                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

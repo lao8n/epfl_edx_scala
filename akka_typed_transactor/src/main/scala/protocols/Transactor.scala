@@ -58,7 +58,6 @@ object Transactor {
     // Cannot use Behaviors.setup as this defers behavior until an actor is started
     Behaviors.receive {
       case (ctx, Begin(replyTo)) =>
-        ctx.log.debug("Received message Begin")
         val session = ctx.spawnAnonymous(sessionHandler(value, ctx.self, Set.empty))
         replyTo ! session // so replyTo knows who to send Session[T] message to
         ctx.watchWith(session, RolledBack(session))
@@ -114,10 +113,10 @@ object Transactor {
     */
   private def sessionHandler[T](currentValue: T, commit: ActorRef[Committed[T]], done: Set[Long]): Behavior[Session[T]] =
     Behaviors.setup { ctx =>   
-      Behaviors.receiveMessage {
+      Behaviors.receiveMessage[Session[T]] {
         case Extract(f, replyTo: ActorRef[Any]) => 
           replyTo ! currentValue
-          Behaviors.same
+          sessionHandler(currentValue, commit, done)
         case Modify(f, id, reply, replyTo: ActorRef[Any]) => 
           if(done contains id){
             replyTo ! reply

@@ -3,42 +3,42 @@
 [0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunner for org.scalacheck.ScalaCheckFramework produced 0 initial tasks for 0 tests.[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 1 initial tasks for 1 tests.[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(protocols.ProtocolsSuite, sbt.ForkMain$AnnotatedFingerscan@1e7f865, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(protocols.ProtocolsSuite, sbt.ForkMain$AnnotatedFingerscan@fd5999, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must properly ignore stale termination notices[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must properly ignore stale termination notices[0m finished, took 0.359 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must properly ignore stale termination notices[0m finished, took 0.741 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must commit[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must commit[0m finished, took 0.035 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must commit[0m finished, took 0.073 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must have idempotent modifications[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must have idempotent modifications[0m finished, took 0.006 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must have idempotent modifications[0m finished, took 0.013 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must compute[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must compute[0m finished, took 0.467 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must compute[0m finished, took 0.848 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must try in receive order[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must try in receive order[0m finished, took 0.007 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must try in receive order[0m finished, took 0.012 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled[0m finished, took 0.002 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must still stash unhandled messages after some messages have been handled[0m finished, took 0.008 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 0)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 0)[0m finished, took 0.008 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 0)[0m finished, took 0.02 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must rollback[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must rollback[0m finished, took 0.013 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must rollback[0m finished, took 0.036 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must eventually execute the behavior[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must eventually execute the behavior[0m finished, took 0.147 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must eventually execute the behavior[0m finished, took 0.272 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must tolerate worst-case sorting[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must tolerate worst-case sorting[0m finished, took 0.002 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must tolerate worst-case sorting[0m finished, took 0.005 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must timeout[0m started[0m
-[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA Transactor must timeout[0m failed: java.lang.[31mAssertionError[0m: expected:<List(2)> but was:<List()>, took 0.005 sec[0m
+[0m[[0m[31merror[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[31mA Transactor must timeout[0m failed: java.lang.[31mAssertionError[0m: expected:<List(2)> but was:<List()>, took 0.008 sec[0m
 [0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must timeout(TransactorSpec.scala:197)[0m
 [0m[[0m[31merror[0m] [0m[0m    at protocols.TransactorSpec.A Transactor must timeout$(TransactorSpec.scala:170)[0m
 [0m[[0m[31merror[0m] [0m[0m    at protocols.ProtocolsSuite.A Transactor must timeout([35mProtocolsSuite.scala[0m:[33m6[0m)[0m
 [0m[[0m[31merror[0m] [0m[0m    ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must timeout[0m finished, took 0.006 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must timeout[0m finished, took 0.012 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 1)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 1)[0m finished, took 0.003 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must overflow (size 1)[0m finished, took 0.0 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must restart retrying at the head of the queue[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must restart retrying at the head of the queue[0m finished, took 0.003 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA SelectiveReceive Decorator must restart retrying at the head of the queue[0m finished, took 0.008 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must ignore new sessions while in a session[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must ignore new sessions while in a session[0m finished, took 0.005 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 14 total, 1.074s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest protocols.[33mProtocolsSuite[0m.[36mA Transactor must ignore new sessions while in a session[0m finished, took 0.008 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 14 total, 2.088s[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 14 events.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for ScalaCheck not available.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
