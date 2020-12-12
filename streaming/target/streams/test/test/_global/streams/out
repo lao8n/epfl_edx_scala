@@ -1,0 +1,32 @@
+[0m[[0m[0mdebug[0m] [0m[0mjavaOptions: Vector()[0m
+[0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 1 initial tasks for 1 tests.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(streaming.SimpleStreamingSuite, sbt.ForkMain$AnnotatedFingerscan@2487d1, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mkeep repeating last observed value[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mkeep repeating last observed value[0m finished, took 0.1 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mfirstElementSource should only emit one element[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mfirstElementSource should only emit one element[0m finished, took 0.32 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mfilter even values[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mfilter even values[0m finished, took 0.007 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mfirstElementFuture should only emit one element[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mfirstElementFuture should only emit one element[0m finished, took 0.005 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mprovide a Flow that can filter out even numbers[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mprovide a Flow that can filter out even numbers[0m finished, took 0.006 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mmap simple values to strings[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mmap simple values to strings[0m finished, took 0.002 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mrecover from a failure into a backup stream[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mrecover from a failure into a backup stream[0m finished, took 0.048 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mprovide a Flow that can filter out even numbers by reusing previous flows[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mprovide a Flow that can filter out even numbers by reusing previous flows[0m finished, took 0.006 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36msum until back-pressure goes away[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36msum until back-pressure goes away[0m finished, took 0.028 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mrecover from a failure into a backup element[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest streaming.[33mSimpleStreamingSuite[0m.[36mrecover from a failure into a backup element[0m finished, took 0.029 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 10 total, 2.134s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 10 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
+[0m[[0m[0minfo[0m] [0m[0mPassed: Total 10, Failed 0, Errors 0, Passed 10[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming.SimpleStreamingSuite[0m

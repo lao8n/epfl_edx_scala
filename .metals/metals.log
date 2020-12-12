@@ -6064,3 +6064,53 @@ something's wrong: no file:///C:/Users/lao8n/OneDrive/Documents/epfl%20edx%20sca
 2020.12.06 15:56:00 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\main\scala\protocols\Transactor.scala
 2020.12.06 15:56:00 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\test\scala\protocols\TransactorSpec.scala
 2020.12.06 15:56:03 INFO  no build target: using presentation compiler with only scala-library
+2020.12.06 17:22:10 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\ExtraStreamOps.scala
+2020.12.06 17:22:13 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.06 17:22:20 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreamingInterface.scala
+2020.12.06 17:22:30 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\test\scala\streaming\SimpleStreamingSuite.scala
+2020.12.06 17:22:33 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.06 18:56:31 INFO  shutting down Metals
+2020.12.12 12:31:44 INFO  Started: Metals version 0.9.7 in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala' for client vscode.
+2020.12.12 12:31:45 INFO  time: initialize in 0.67s
+2020.12.12 12:31:46 WARN  Build server is not auto-connectable.
+2020.12.12 12:31:46 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.12 12:31:46 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 12:31:46 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\akka_typed_transactor\src\test\scala\protocols\TransactorSpec.scala
+2020.12.12 12:31:49 INFO  no build target: using presentation compiler with only scala-library
+2020.12.12 12:37:56 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\ExtraStreamOps.scala
+2020.12.12 12:38:03 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 12:38:04 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreamingInterface.scala
+2020.12.12 12:38:07 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 12:59:00 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 12:59:07 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:00:55 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:01:34 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:04:00 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:05:21 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:05:43 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.12 13:05:43 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:06:47 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:06:50 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:07:22 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:08:12 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:08:22 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:10:06 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.12 13:11:39 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:14:43 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:16:04 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:18:02 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:18:03 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:19:43 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:24:18 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+Dec 12, 2020 1:32:16 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+2020.12.12 13:39:45 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:40:43 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:41:23 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:56:27 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:56:36 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:57:39 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:57:47 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:58:16 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:58:41 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
+2020.12.12 13:59:03 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala
