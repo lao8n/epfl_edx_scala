@@ -1,0 +1,4 @@
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala:10:35: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport scala.collection.immutable.SortedSet[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

@@ -1,0 +1,9 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\target\scala-2.13\reactive-streaming_2.13-0.1.0-SNAPSHOT-sources.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming\ExtraStreamOps.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\ExtraStreamOps.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming\SimpleStreaming.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreaming.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming\SimpleStreamingInterface.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\src\main\scala\streaming\SimpleStreamingInterface.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

@@ -1,0 +1,31 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\target\scala-2.13\reactive-streaming-without-resources_2.13-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\target\scala-2.13\classes[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\target\scala-2.13\classes\streaming[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming\ExtraStreamOps$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\target\scala-2.13\classes\streaming\ExtraStreamOps$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming\ExtraStreamOps$ExtraOps$$anon$1$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\target\scala-2.13\classes\streaming\ExtraStreamOps$ExtraOps$$anon$1$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming\ExtraStreamOps$ExtraOps$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\target\scala-2.13\classes\streaming\ExtraStreamOps$ExtraOps$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming\ExtraStreamOps$ExtraOps$$anon$3$$anon$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\target\scala-2.13\classes\streaming\ExtraStreamOps$ExtraOps$$anon$3$$anon$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming\ExtraStreamOps$ExtraOps$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\target\scala-2.13\classes\streaming\ExtraStreamOps$ExtraOps$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming\ExtraStreamOps$ExtraOps.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\target\scala-2.13\classes\streaming\ExtraStreamOps$ExtraOps.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming\ExtraStreamOps.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\target\scala-2.13\classes\streaming\ExtraStreamOps.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming\SimpleStreaming$$anonfun$recoverSingleElement$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\target\scala-2.13\classes\streaming\SimpleStreaming$$anonfun$recoverSingleElement$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming\SimpleStreaming$$anonfun$recoverToAlternateSource$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\target\scala-2.13\classes\streaming\SimpleStreaming$$anonfun$recoverToAlternateSource$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming\SimpleStreaming$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\target\scala-2.13\classes\streaming\SimpleStreaming$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming\SimpleStreaming.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\target\scala-2.13\classes\streaming\SimpleStreaming.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	streaming\SimpleStreamingInterface.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\streaming\target\scala-2.13\classes\streaming\SimpleStreamingInterface.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
