@@ -2,19 +2,23 @@
 [0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
 [0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 1 initial tasks for 1 tests.[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(followers.FollowersSuite, sbt.ForkMain$AnnotatedFingerscan@11dfcde, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(followers.FollowersSuite, sbt.ForkMain$AnnotatedFingerscan@2487d1, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
 [0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36meventParserFlow: successfully parse events (3pts)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36meventParserFlow: successfully parse events (3pts)[0m finished, took 0.157 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36meventParserFlow: successfully parse events (3pts)[0m finished, took 0.112 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreintroduceOrdering: reintroduce ordering, 2 off (3pts)[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreintroduceOrdering: reintroduce ordering, 2 off (3pts)[0m finished, took 0.005 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreframedFlow: chunks containing exactly one message should pass through (2pts)[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreframedFlow: chunks containing exactly one message should pass through (2pts)[0m finished, took 0.002 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreintroduceOrdering: pass through a sorted stream directly (2pts)[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreintroduceOrdering: pass through a sorted stream directly (2pts)[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreframedFlow: chunks containing fragments of messages should be re-assembled (3pts)[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreframedFlow: chunks containing fragments of messages should be re-assembled (3pts)[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreframedFlow: reject an input stream that is completed in the middle of a frame (3pts)[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreframedFlow: reject an input stream that is completed in the middle of a frame (3pts)[0m finished, took 0.003 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 4 total, 1.326s[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 4 events.[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 6 total, 1.24s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 6 events.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
-[0m[[0m[0minfo[0m] [0m[0mPassed: Total 4, Failed 0, Errors 0, Passed 4[0m
+[0m[[0m[0minfo[0m] [0m[0mPassed: Total 6, Failed 0, Errors 0, Passed 6[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	followers.FollowersSuite[0m

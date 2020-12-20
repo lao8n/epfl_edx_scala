@@ -1,4 +1,7 @@
 [0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala:10:35: Unused import[0m
 [0m[[0m[33mwarn[0m] [0m[0mimport scala.collection.immutable.SortedSet[0m
 [0m[[0m[33mwarn[0m] [0m[0m                                  ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala:128:15: private method unimplementedSink in object Server is never used[0m
+[0m[[0m[33mwarn[0m] [0m[0m  private def unimplementedSink[A, B]: Sink[A, B] = Sink.ignore.mapMaterializedValue(_ => ??? : B)[0m
+[0m[[0m[33mwarn[0m] [0m[0m              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m

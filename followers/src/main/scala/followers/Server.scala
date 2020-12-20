@@ -48,7 +48,7 @@ object Server extends ServerModuleInterface {
     */
   val eventParserFlow: Flow[ByteString, Event, NotUsed] =
     reframedFlow
-      .map(message => Event.parse(message))
+      .map(Event.parse)
 
   /**
     * Implement a Sink that will look for the first [[Identity]]
@@ -61,7 +61,9 @@ object Server extends ServerModuleInterface {
     * (and have a look at `Keep.right`).
     */
   val identityParserSink: Sink[ByteString, Future[Identity]] =
-    unimplementedSink
+    reframedFlow
+      .map(Identity.parse)
+      .toMat(Sink.head)(Keep.right)
 
   /**
     * A flow that consumes unordered messages and produces messages ordered by `sequenceNr`.
@@ -76,7 +78,27 @@ object Server extends ServerModuleInterface {
     * operation around in the operator.
     */
   val reintroduceOrdering: Flow[Event, Event, NotUsed] =
-    unimplementedFlow
+    Flow[Event]
+      .statefulMapConcat { () =>
+        var eventBuffer = Map.empty[Int, Event]
+        var nextSequenceNr = 1
+        event => {
+          if(event.sequenceNr == nextSequenceNr){
+            // mutable state but still safe as we redefine every event
+            var eventsToEmit = Set(event) 
+            nextSequenceNr += 1
+            while(eventBuffer contains nextSequenceNr){
+              eventsToEmit += eventBuffer(nextSequenceNr)
+              eventBuffer -= nextSequenceNr
+              nextSequenceNr += 1
+            }
+            eventsToEmit
+          } else {
+            eventBuffer += (event.sequenceNr -> event)
+            Set.empty[Event]
+          }
+        }
+      }
 
   /**
     * A flow that associates a state of [[Followers]] to
