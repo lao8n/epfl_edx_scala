@@ -1,0 +1,61 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\reactive-followers-without-resources_2.13-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\ExtraStreamOps$ExtraOps$$anon$1$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\ExtraStreamOps$ExtraOps$$anon$1$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\ExtraStreamOps$ExtraOps$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\ExtraStreamOps$ExtraOps$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\ExtraStreamOps$ExtraOps$$anon$3$$anon$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\ExtraStreamOps$ExtraOps$$anon$3$$anon$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\ExtraStreamOps$ExtraOps$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\ExtraStreamOps$ExtraOps$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\ExtraStreamOps$ExtraOps.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\ExtraStreamOps$ExtraOps.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\ExtraStreamOps.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\ExtraStreamOps.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model\Event$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model\Event$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model\Event$Broadcast$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model\Event$Broadcast$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model\Event$Broadcast.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model\Event$Broadcast.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model\Event$Follow$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model\Event$Follow$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model\Event$Follow.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model\Event$Follow.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model\Event$PrivateMsg$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model\Event$PrivateMsg$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model\Event$PrivateMsg.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model\Event$PrivateMsg.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model\Event$StatusUpdate$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model\Event$StatusUpdate$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model\Event$StatusUpdate.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model\Event$StatusUpdate.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model\Event$Unfollow$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model\Event$Unfollow$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model\Event$Unfollow.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model\Event$Unfollow.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model\Event.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model\Event.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model\Identity$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model\Identity$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model\Identity.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model\Identity.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model\package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model\package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\model\package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\model\package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\Server$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\Server$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\Server.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\Server.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\ServerInterface.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\ServerInterface.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	followers\ServerModuleInterface.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\target\scala-2.13\classes\followers\ServerModuleInterface.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
