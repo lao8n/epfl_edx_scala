@@ -2,23 +2,114 @@
 [0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
 [0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 1 initial tasks for 1 tests.[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(followers.FollowersSuite, sbt.ForkMain$AnnotatedFingerscan@2487d1, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(followers.FollowersSuite, sbt.ForkMain$AnnotatedFingerscan@1f1dc0e, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
 [0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36meventParserFlow: successfully parse events (3pts)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36meventParserFlow: successfully parse events (3pts)[0m finished, took 0.112 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36meventParserFlow: successfully parse events (3pts)[0m finished, took 0.151 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mclientFlow: ensure that users get notified from private messages (6pts)[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[31mclientFlow: ensure that users get notified from private messages (6pts)[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.045 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.Server$.$anonfun$unimplementedFlow$2(Server.scala:150)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.Transform.apply(TraversalBuilder.scala:159)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:523)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:449)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:441)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.scaladsl.RunnableGraph.run(Flow.scala:704)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.Server.this(Server.scala:192)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.FollowersSuite.clientFlow: ensure that users get notified from private messages (6pts)([35mFollowersSuite.scala[0m:[33m216[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mclientFlow: ensure that users get notified from private messages (6pts)[0m finished, took 0.05 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreintroduceOrdering: reintroduce ordering, 2 off (3pts)[0m started[0m
 [0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreintroduceOrdering: reintroduce ordering, 2 off (3pts)[0m finished, took 0.005 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreframedFlow: chunks containing exactly one message should pass through (2pts)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreframedFlow: chunks containing exactly one message should pass through (2pts)[0m finished, took 0.002 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreframedFlow: chunks containing exactly one message should pass through (2pts)[0m finished, took 0.003 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mclientFlow: handle one client following another (6pts)[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[31mclientFlow: handle one client following another (6pts)[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.001 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.Server$.$anonfun$unimplementedFlow$2(Server.scala:150)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.Transform.apply(TraversalBuilder.scala:159)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:523)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:449)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:441)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.scaladsl.RunnableGraph.run(Flow.scala:704)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.Server.this(Server.scala:192)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.FollowersSuite.clientFlow: handle one client following another (6pts)([35mFollowersSuite.scala[0m:[33m182[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mclientFlow: handle one client following another (6pts)[0m finished, took 0.003 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36moutgoingFlow: filter out events that should not be delivered to the given user (3pts)[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[31moutgoingFlow: filter out events that should not be delivered to the given user (3pts)[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.002 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.Server$.$anonfun$unimplementedFlow$2(Server.scala:150)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.Transform.apply(TraversalBuilder.scala:159)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:523)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:449)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:441)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.scaladsl.RunnableGraph.run(Flow.scala:704)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.Server.this(Server.scala:192)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.FollowersSuite.outgoingFlow: filter out events that should not be delivered to the given user (3pts)([35mFollowersSuite.scala[0m:[33m162[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36moutgoingFlow: filter out events that should not be delivered to the given user (3pts)[0m finished, took 0.004 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36midentityParserSink: extract identity (4pts)[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36midentityParserSink: extract identity (4pts)[0m finished, took 0.008 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36misNotified: notify the followers of an user that updates his status (3pts)[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36misNotified: notify the followers of an user that updates his status (3pts)[0m finished, took 0.002 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreintroduceOrdering: pass through a sorted stream directly (2pts)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreintroduceOrdering: pass through a sorted stream directly (2pts)[0m finished, took 0.003 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreintroduceOrdering: pass through a sorted stream directly (2pts)[0m finished, took 0.007 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36meventsFlow: reframe, reorder and compute followers (3pts)[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[31meventsFlow: reframe, reorder and compute followers (3pts)[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.001 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.Server$.$anonfun$unimplementedFlow$2(Server.scala:150)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.Transform.apply(TraversalBuilder.scala:159)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:523)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:449)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:441)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.scaladsl.RunnableGraph.run(Flow.scala:704)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.Server.this(Server.scala:192)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.FollowersSuite.eventsFlow: reframe, reorder and compute followers (3pts)([35mFollowersSuite.scala[0m:[33m148[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36meventsFlow: reframe, reorder and compute followers (3pts)[0m finished, took 0.002 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mfollowersFlow: remove a follower (3pts)[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mfollowersFlow: remove a follower (3pts)[0m finished, took 0.007 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36meventsFlow: downstream should receive completion when the event source is completed (3pts)[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[31meventsFlow: downstream should receive completion when the event source is completed (3pts)[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.001 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.Server$.$anonfun$unimplementedFlow$2(Server.scala:150)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.Transform.apply(TraversalBuilder.scala:159)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:523)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:449)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:441)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.scaladsl.RunnableGraph.run(Flow.scala:704)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.Server.this(Server.scala:192)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.FollowersSuite.eventsFlow: downstream should receive completion when the event source is completed (3pts)([35mFollowersSuite.scala[0m:[33m136[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36meventsFlow: downstream should receive completion when the event source is completed (3pts)[0m finished, took 0.002 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mfollowersFlow: add a follower (3pts)[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mfollowersFlow: add a follower (3pts)[0m finished, took 0.002 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36misNotified: always notify users of broadcast messages[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36misNotified: always notify users of broadcast messages[0m finished, took 0.002 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mclientFlow: ensure that event before issuing a Follow is not sent to that follower (6pts)[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[31mclientFlow: ensure that event before issuing a Follow is not sent to that follower (6pts)[0m failed: scala.[31mNotImplementedError[0m: an implementation is missing, took 0.002 sec[0m
+[0m[[0m[31merror[0m] [0m[0m    at scala.Predef$.???(Predef.scala:347)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.Server$.$anonfun$unimplementedFlow$2(Server.scala:150)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.Transform.apply(TraversalBuilder.scala:159)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:523)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:449)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.impl.PhasedFusingActorMaterializer.materialize(PhasedFusingActorMaterializer.scala:441)[0m
+[0m[[0m[31merror[0m] [0m[0m    at akka.stream.scaladsl.RunnableGraph.run(Flow.scala:704)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.Server.this(Server.scala:192)[0m
+[0m[[0m[31merror[0m] [0m[0m    at followers.FollowersSuite.clientFlow: ensure that event before issuing a Follow is not sent to that follower (6pts)([35mFollowersSuite.scala[0m:[33m200[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m    ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mclientFlow: ensure that event before issuing a Follow is not sent to that follower (6pts)[0m finished, took 0.003 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreframedFlow: chunks containing fragments of messages should be re-assembled (3pts)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreframedFlow: chunks containing fragments of messages should be re-assembled (3pts)[0m finished, took 0.002 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreframedFlow: chunks containing fragments of messages should be re-assembled (3pts)[0m finished, took 0.004 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36midentityParserSink: re-frame incoming bytes (2pts)[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36midentityParserSink: re-frame incoming bytes (2pts)[0m finished, took 0.001 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreframedFlow: reject an input stream that is completed in the middle of a frame (3pts)[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreframedFlow: reject an input stream that is completed in the middle of a frame (3pts)[0m finished, took 0.003 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 6 total, 1.24s[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 6 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest followers.[33mFollowersSuite[0m.[36mreframedFlow: reject an input stream that is completed in the middle of a frame (3pts)[0m finished, took 0.005 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[31m6 failed[0m[34m, [0m[34m0 ignored[0m[34m, 18 total, 2.185s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 18 events.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
-[0m[[0m[0minfo[0m] [0m[0mPassed: Total 6, Failed 0, Errors 0, Passed 6[0m
-[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	followers.FollowersSuite[0m
+[0m[[0m[31merror[0m] [0m[0mFailed: Total 18, Failed 6, Errors 0, Passed 12[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	followers.FollowersSuite[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

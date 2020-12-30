@@ -1,10 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\test\scala\followers\FollowersSuite.scala:15:32: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport followers.model.{Event, Identity}[0m
-[0m[[0m[33mwarn[0m] [0m[0m                               ^[0m
 [0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\test\scala\followers\FollowersSuite.scala:20:19: Unused import[0m
 [0m[[0m[33mwarn[0m] [0m[0mimport scala.util.Random[0m
 [0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\test\scala\followers\FollowersSuite.scala:25:17: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0m  import system.dispatcher[0m
-[0m[[0m[33mwarn[0m] [0m[0m                ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

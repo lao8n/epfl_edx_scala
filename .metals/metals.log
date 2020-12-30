@@ -6233,3 +6233,24 @@ WARNING: Unmatched cancel notification for request id 47
 2020.12.20 15:10:25 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala
 Dec 20, 2020 3:10:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
 WARNING: Unmatched cancel notification for request id 131
+2020.12.20 15:41:18 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.20 15:42:43 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.20 15:42:43 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala
+2020.12.20 15:42:43 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.20 15:53:57 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala
+2020.12.20 15:54:31 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala
+2020.12.20 15:55:32 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\test\scala\followers\FollowersSuite.scala
+2020.12.20 15:55:39 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\model\Event.scala
+2020.12.20 15:56:03 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\test\scala\followers\FollowersSuite.scala
+2020.12.20 15:56:31 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\test\scala\followers\FollowersSuite.scala
+2020.12.20 16:04:41 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala
+2020.12.20 16:05:04 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\model\Identity.scala
+2020.12.20 16:05:06 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\model\package.scala
+2020.12.20 16:06:08 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala
+2020.12.20 16:06:15 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala
+2020.12.20 16:06:15 WARN  no build tool detected in workspace 'C:\Users\lao8n\OneDrive\Documents\epfl edx scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.20 16:06:15 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\model\Event.scala
+Dec 20, 2020 4:13:26 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1372
+2020.12.20 16:13:30 WARN  no build target for: C:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala
+2020.12.20 16:14:43 INFO  shutting down Metals

@@ -1,7 +1,22 @@
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala:137:40: The unicode arrow `⇒` is deprecated, use `=>` instead. If you still wish to display it as one character, consider using a font with programming ligatures such as Fira Code.[0m
+[0m[[0m[33mwarn[0m] [0m[0m      case (Event.Follow(_, _, to), _) ⇒ to == userId[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala:139:36: The unicode arrow `⇒` is deprecated, use `=>` instead. If you still wish to display it as one character, consider using a font with programming ligatures such as Fira Code.[0m
+[0m[[0m[33mwarn[0m] [0m[0m      case (Event.Broadcast(_), _) ⇒ true[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                   ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala:141:44: The unicode arrow `⇒` is deprecated, use `=>` instead. If you still wish to display it as one character, consider using a font with programming ligatures such as Fira Code.[0m
+[0m[[0m[33mwarn[0m] [0m[0m      case (Event.PrivateMsg(_, _, to), _) ⇒ to == userId[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala:143:53: The unicode arrow `⇒` is deprecated, use `=>` instead. If you still wish to display it as one character, consider using a font with programming ligatures such as Fira Code.[0m
+[0m[[0m[33mwarn[0m] [0m[0m      case (Event.StatusUpdate(_, from), followers) ⇒ followers get(userId) exists(_.contains(from))[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                    ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala:145:14: The unicode arrow `⇒` is deprecated, use `=>` instead. If you still wish to display it as one character, consider using a font with programming ligatures such as Fira Code.[0m
+[0m[[0m[33mwarn[0m] [0m[0m      case _ ⇒ false[0m
+[0m[[0m[33mwarn[0m] [0m[0m             ^[0m
 [0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala:10:35: Unused import[0m
 [0m[[0m[33mwarn[0m] [0m[0mimport scala.collection.immutable.SortedSet[0m
 [0m[[0m[33mwarn[0m] [0m[0m                                  ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala:128:15: private method unimplementedSink in object Server is never used[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\lao8n\OneDrive\Documents\epfl edx scala\followers\src\main\scala\followers\Server.scala:152:15: private method unimplementedSink in object Server is never used[0m
 [0m[[0m[33mwarn[0m] [0m[0m  private def unimplementedSink[A, B]: Sink[A, B] = Sink.ignore.mapMaterializedValue(_ => ??? : B)[0m
 [0m[[0m[33mwarn[0m] [0m[0m              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0m7 warnings found[0m
